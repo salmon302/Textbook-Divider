@@ -1,0 +1,57 @@
+2025-02-04 11:04:30,679 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 11:04:30,679 - tests.scripts.test_improvements - INFO - Starting test: test_complex_formatting
+2025-02-04 11:04:30,680 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 11:04:30,680 - tests.scripts.test_improvements - INFO - Processing complex file: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt
+2025-02-04 11:04:30,683 - tests.scripts.test_improvements - INFO - Test completed successfully: test_complex_formatting
+2025-02-04 11:04:30,684 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 11:04:30,684 - tests.scripts.test_improvements - INFO - Starting test: test_enhanced_chapter_detection
+2025-02-04 11:04:30,684 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 11:04:30,685 - tests.scripts.test_improvements - INFO - Test completed successfully: test_enhanced_chapter_detection
+2025-02-04 11:04:30,685 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 11:04:30,685 - tests.scripts.test_improvements - INFO - Starting test: test_error_handling
+2025-02-04 11:04:30,685 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 11:04:30,685 - tests.scripts.test_improvements - INFO - Testing invalid file format
+2025-02-04 11:04:30,686 - tests.scripts.test_improvements - ERROR - Test failed: test_error_handling
+2025-02-04 11:04:30,686 - tests.scripts.test_improvements - ERROR - Failed to process book: Unsupported file format: .xyz
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 62, in process_book
+    handler = self._get_validated_handler(input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 91, in _get_validated_handler
+    raise ValueError(f"Unsupported file format: {input_path.suffix}")
+ValueError: Unsupported file format: .xyz
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_improvements.py", line 111, in test_error_handling
+    self.divider.process_book("nonexistent.xyz", str(self.output_dir))
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 85, in process_book
+    raise ProcessingError(f"Failed to process book: {str(e)}")
+textbook_divider.main.ProcessingError: Failed to process book: Unsupported file format: .xyz
+2025-02-04 11:04:30,688 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 11:04:30,688 - tests.scripts.test_improvements - INFO - Starting test: test_formatting_preservation
+2025-02-04 11:04:30,688 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 11:04:30,689 - tests.scripts.test_improvements - INFO - Test completed successfully: test_formatting_preservation
+2025-02-04 11:04:30,690 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 11:04:30,690 - tests.scripts.test_improvements - INFO - Starting test: test_metadata_generation
+2025-02-04 11:04:30,690 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 11:04:30,690 - tests.scripts.test_improvements - INFO - Processing test file: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/sample.txt
+2025-02-04 11:04:30,692 - tests.scripts.test_improvements - INFO - Test completed successfully: test_metadata_generation
+2025-02-04 11:04:30,692 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 11:04:30,692 - tests.scripts.test_improvements - INFO - Starting test: test_nested_chapter_structure
+2025-02-04 11:04:30,692 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 11:04:30,693 - tests.scripts.test_improvements - INFO - Processing file for nested structure: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt
+2025-02-04 11:04:30,694 - tests.scripts.test_improvements - INFO - Test completed successfully: test_nested_chapter_structure
+2025-02-04 11:04:30,694 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 11:04:30,694 - tests.scripts.test_improvements - INFO - Starting test: test_pdf_processing
+2025-02-04 11:04:30,694 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 11:04:30,695 - tests.scripts.test_improvements - INFO - Processing PDF file: /home/seth-n/CLionProjects/Textbook Divider/tests/data/samples/test.pdf
+2025-02-04 11:04:31,026 - tests.scripts.test_improvements - INFO - Test completed successfully: test_pdf_processing
+2025-02-04 11:04:31,027 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 11:04:31,027 - tests.scripts.test_improvements - INFO - Starting test: test_text_block_processing
+2025-02-04 11:04:31,027 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 11:04:31,029 - tests.scripts.test_improvements - INFO - Test completed successfully: test_text_block_processing

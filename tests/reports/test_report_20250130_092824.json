@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-01-30T09:28:24.051825",
+  "duration": 0.02689337730407715,
+  "suites": [
+    {
+      "name": "Chapter Detection Tests",
+      "total": 7,
+      "failures": 1,
+      "errors": 0,
+      "success": false,
+      "failure_details": [
+        "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_chapter_detection.py\", line 42, in test_mixed_formats\n    self.assertEqual(chapters[0].number, 1)\nAssertionError: 0 != 1\n"
+      ],
+      "error_details": []
+    },
+    {
+      "name": "Improvement Tests",
+      "total": 7,
+      "failures": 2,
+      "errors": 1,
+      "success": false,
+      "failure_details": [
+        "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py\", line 130, in test_complex_formatting\n    self.assertIn('*emphasized*', content)\nAssertionError: '*emphasized*' not found in 'Chapter 1: Numbered item one\\n==================================================\\nConfidence: 0.90\\n==================================================\\n\\n1. Numbered item one\\n\\nSection 1: 2\\n----------------------------------------\\n\\n1.2 Code and Tables ------------------\\n\\n```python def example(): return \"Test code block\" ```\\n\\n| Header 1 | Header 2 | |----------|----------| | Cell 1 | Cell 2 | | Cell 3 | Cell 4 |'\n",
+        "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py\", line 33, in test_enhanced_chapter_detection\n    self.assertEqual(len(chapters), 3)\nAssertionError: 0 != 3\n"
+      ],
+      "error_details": [
+        "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py\", line 62, in process_book\n    handler = self._get_validated_handler(input_path)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py\", line 91, in _get_validated_handler\n    raise ValueError(f\"Unsupported file format: {input_path.suffix}\")\nValueError: Unsupported file format: .xyz\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py\", line 85, in test_error_handling\n    self.divider.process_book(\"nonexistent.xyz\", str(self.output_dir))\n  File \"/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py\", line 85, in process_book\n    raise ProcessingError(f\"Failed to process book: {str(e)}\")\ntextbook_divider.main.ProcessingError: Failed to process book: Unsupported file format: .xyz\n"
+      ]
+    }
+  ],
+  "overall_success": false
+}

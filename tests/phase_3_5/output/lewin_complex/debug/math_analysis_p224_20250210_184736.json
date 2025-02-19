@@ -1,0 +1,14 @@
+{
+  "page": 224,
+  "node_count": 0,
+  "edge_count": 0,
+  "node_types": {},
+  "relationships": [],
+  "network_analysis": {
+    "nodes": 0,
+    "edges": 0,
+    "layout_type": "LayoutType.COMPLEX",
+    "confidence": 0.0,
+    "isomorphisms": 0
+  }
+}

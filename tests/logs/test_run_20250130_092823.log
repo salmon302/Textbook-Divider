@@ -1,0 +1,122 @@
+2025-01-30 09:28:23,777 - __main__ - INFO - Starting test run
+2025-01-30 09:28:24,024 - __main__ - INFO - 
+Running Chapter Detection Tests...
+2025-01-30 09:28:24,025 - __main__ - INFO - Running test suite: Chapter Detection Tests
+2025-01-30 09:28:24,027 - __main__ - INFO - Test passed: test_chapter_boundaries (test_chapter_detection.TestChapterDetection.test_chapter_boundaries)
+2025-01-30 09:28:24,027 - __main__ - INFO - Test passed: test_complex_titles (test_chapter_detection.TestChapterDetection.test_complex_titles)
+2025-01-30 09:28:24,027 - __main__ - INFO - Test passed: test_false_positives (test_chapter_detection.TestChapterDetection.test_false_positives)
+2025-01-30 09:28:24,028 - __main__ - ERROR - Failure in test_mixed_formats (test_chapter_detection.TestChapterDetection.test_mixed_formats)
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_chapter_detection.py", line 42, in test_mixed_formats
+    self.assertEqual(chapters[0].number, 1)
+AssertionError: 0 != 1
+
+2025-01-30 09:28:24,029 - __main__ - INFO - Test passed: test_nested_chapters (test_chapter_detection.TestChapterDetection.test_nested_chapters)
+2025-01-30 09:28:24,030 - __main__ - INFO - Test passed: test_roman_numerals (test_chapter_detection.TestChapterDetection.test_roman_numerals)
+2025-01-30 09:28:24,030 - __main__ - INFO - Test passed: test_standard_chapters (test_chapter_detection.TestChapterDetection.test_standard_chapters)
+2025-01-30 09:28:24,030 - __main__ - ERROR - 
+Detailed test failures:
+2025-01-30 09:28:24,030 - __main__ - ERROR - 
+FAILURE: Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_chapter_detection.py", line 42, in test_mixed_formats
+    self.assertEqual(chapters[0].number, 1)
+AssertionError: 0 != 1
+
+2025-01-30 09:28:24,031 - __main__ - INFO - 
+Running Improvement Tests...
+2025-01-30 09:28:24,031 - __main__ - INFO - Running test suite: Improvement Tests
+2025-01-30 09:28:24,033 - textbook_divider.main - INFO - Processing book: /home/seth-n/CLionProjects/Textbook Divider/tests/sample_books/complex_sample.txt
+2025-01-30 09:28:24,033 - textbook_divider.main - INFO - Reading and processing content...
+2025-01-30 09:28:24,034 - textbook_divider.main - INFO - Detecting chapters...
+2025-01-30 09:28:24,035 - textbook_divider.main - INFO - Successfully processed 8 chapters
+2025-01-30 09:28:24,036 - __main__ - ERROR - Failure in test_complex_formatting (test_improvements.TestImprovements.test_complex_formatting)
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py", line 130, in test_complex_formatting
+    self.assertIn('*emphasized*', content)
+AssertionError: '*emphasized*' not found in 'Chapter 1: Numbered item one\n==================================================\nConfidence: 0.90\n==================================================\n\n1. Numbered item one\n\nSection 1: 2\n----------------------------------------\n\n1.2 Code and Tables ------------------\n\n```python def example(): return "Test code block" ```\n\n| Header 1 | Header 2 | |----------|----------| | Cell 1 | Cell 2 | | Cell 3 | Cell 4 |'
+
+2025-01-30 09:28:24,040 - __main__ - ERROR - Failure in test_enhanced_chapter_detection (test_improvements.TestImprovements.test_enhanced_chapter_detection)
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py", line 33, in test_enhanced_chapter_detection
+    self.assertEqual(len(chapters), 3)
+AssertionError: 0 != 3
+
+2025-01-30 09:28:24,041 - textbook_divider.main - INFO - Processing book: nonexistent.xyz
+2025-01-30 09:28:24,041 - textbook_divider.main - ERROR - Error processing book: Unsupported file format: .xyz
+2025-01-30 09:28:24,043 - __main__ - ERROR - Error in test_error_handling (test_improvements.TestImprovements.test_error_handling)
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 62, in process_book
+    handler = self._get_validated_handler(input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 91, in _get_validated_handler
+    raise ValueError(f"Unsupported file format: {input_path.suffix}")
+ValueError: Unsupported file format: .xyz
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py", line 85, in test_error_handling
+    self.divider.process_book("nonexistent.xyz", str(self.output_dir))
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 85, in process_book
+    raise ProcessingError(f"Failed to process book: {str(e)}")
+textbook_divider.main.ProcessingError: Failed to process book: Unsupported file format: .xyz
+
+2025-01-30 09:28:24,044 - __main__ - INFO - Test passed: test_formatting_preservation (test_improvements.TestImprovements.test_formatting_preservation)
+2025-01-30 09:28:24,044 - textbook_divider.main - INFO - Processing book: /home/seth-n/CLionProjects/Textbook Divider/tests/sample_books/sample.txt
+2025-01-30 09:28:24,044 - textbook_divider.main - INFO - Reading and processing content...
+2025-01-30 09:28:24,045 - textbook_divider.main - INFO - Detecting chapters...
+2025-01-30 09:28:24,046 - textbook_divider.main - INFO - Successfully processed 3 chapters
+2025-01-30 09:28:24,046 - __main__ - INFO - Test passed: test_metadata_generation (test_improvements.TestImprovements.test_metadata_generation)
+2025-01-30 09:28:24,047 - textbook_divider.main - INFO - Processing book: /home/seth-n/CLionProjects/Textbook Divider/tests/sample_books/complex_sample.txt
+2025-01-30 09:28:24,047 - textbook_divider.main - INFO - Reading and processing content...
+2025-01-30 09:28:24,048 - textbook_divider.main - INFO - Detecting chapters...
+2025-01-30 09:28:24,050 - textbook_divider.main - INFO - Successfully processed 8 chapters
+2025-01-30 09:28:24,050 - __main__ - INFO - Test passed: test_nested_chapter_structure (test_improvements.TestImprovements.test_nested_chapter_structure)
+2025-01-30 09:28:24,051 - __main__ - INFO - Test passed: test_text_block_processing (test_improvements.TestImprovements.test_text_block_processing)
+2025-01-30 09:28:24,051 - __main__ - ERROR - 
+Detailed test failures:
+2025-01-30 09:28:24,051 - __main__ - ERROR - 
+FAILURE: Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py", line 130, in test_complex_formatting
+    self.assertIn('*emphasized*', content)
+AssertionError: '*emphasized*' not found in 'Chapter 1: Numbered item one\n==================================================\nConfidence: 0.90\n==================================================\n\n1. Numbered item one\n\nSection 1: 2\n----------------------------------------\n\n1.2 Code and Tables ------------------\n\n```python def example(): return "Test code block" ```\n\n| Header 1 | Header 2 | |----------|----------| | Cell 1 | Cell 2 | | Cell 3 | Cell 4 |'
+
+2025-01-30 09:28:24,051 - __main__ - ERROR - 
+FAILURE: Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py", line 33, in test_enhanced_chapter_detection
+    self.assertEqual(len(chapters), 3)
+AssertionError: 0 != 3
+
+2025-01-30 09:28:24,051 - __main__ - ERROR - 
+ERROR: Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 62, in process_book
+    handler = self._get_validated_handler(input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 91, in _get_validated_handler
+    raise ValueError(f"Unsupported file format: {input_path.suffix}")
+ValueError: Unsupported file format: .xyz
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py", line 85, in test_error_handling
+    self.divider.process_book("nonexistent.xyz", str(self.output_dir))
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 85, in process_book
+    raise ProcessingError(f"Failed to process book: {str(e)}")
+textbook_divider.main.ProcessingError: Failed to process book: Unsupported file format: .xyz
+
+2025-01-30 09:28:24,052 - __main__ - INFO - 
+Test Summary:
+2025-01-30 09:28:24,052 - __main__ - INFO - Total time: 0.03 seconds
+2025-01-30 09:28:24,052 - __main__ - INFO - 
+Chapter Detection Tests:
+2025-01-30 09:28:24,052 - __main__ - INFO -   Tests run: 7
+2025-01-30 09:28:24,052 - __main__ - INFO -   Failures: 1
+2025-01-30 09:28:24,052 - __main__ - INFO -   Errors: 0
+2025-01-30 09:28:24,052 - __main__ - INFO -   Success: False
+2025-01-30 09:28:24,052 - __main__ - INFO - 
+Improvement Tests:
+2025-01-30 09:28:24,052 - __main__ - INFO -   Tests run: 7
+2025-01-30 09:28:24,053 - __main__ - INFO -   Failures: 2
+2025-01-30 09:28:24,053 - __main__ - INFO -   Errors: 1
+2025-01-30 09:28:24,053 - __main__ - INFO -   Success: False

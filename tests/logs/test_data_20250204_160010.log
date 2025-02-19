@@ -1,0 +1,47 @@
+2025-02-04 16:00:10,322 - test_data - DEBUG - Processing Result: {
+  "success": false,
+  "error": "'OMRProcessor' object has no attribute 'audiveris'",
+  "has_music": false,
+  "fallback": true,
+  "layout": {
+    "columns": 1,
+    "staff_positions": []
+  }
+}
+2025-02-04 16:00:10,339 - test_data - DEBUG - Detected Staff Positions: {
+  "staff_positions": [
+    [
+      99,
+      100,
+      101
+    ],
+    [
+      119,
+      120,
+      121
+    ],
+    [
+      139,
+      140,
+      141
+    ],
+    [
+      159,
+      160,
+      161
+    ],
+    [
+      179,
+      180,
+      181
+    ]
+  ]
+}
+2025-02-04 16:00:10,346 - test_data - DEBUG - Symbol Detection Confidence: {
+  "symbol_confidence": {
+    "notes": 0.0,
+    "clefs": 0.0,
+    "time_signatures": 0.0,
+    "accidentals": 0.0
+  }
+}

@@ -1,0 +1,107 @@
+2025-02-04 10:37:20,318 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:37:20,318 - tests.scripts.test_improvements - INFO - Starting test: test_complex_formatting
+2025-02-04 10:37:20,320 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:37:20,321 - tests.scripts.test_improvements - INFO - Processing complex file: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt
+2025-02-04 10:37:20,328 - tests.scripts.test_improvements - ERROR - Test failed: test_complex_formatting
+2025-02-04 10:37:20,328 - tests.scripts.test_improvements - ERROR - '```python' not found in 'Chapter 1: Advanced Mathematics\n==================================================\nConfidence: 1.00\n==================================================\n\nChapter 1: Advanced Mathematics\n\nChapter 1: Advanced Mathematics\n\nThis chapter contains *emphasized* and **bold** text.'
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_improvements.py", line 166, in test_complex_formatting
+    self.assertIn('```python', content)
+  File "/usr/lib/python3.12/unittest/case.py", line 1152, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.12/unittest/case.py", line 715, in fail
+    raise self.failureException(msg)
+AssertionError: '```python' not found in 'Chapter 1: Advanced Mathematics\n==================================================\nConfidence: 1.00\n==================================================\n\nChapter 1: Advanced Mathematics\n\nChapter 1: Advanced Mathematics\n\nThis chapter contains *emphasized* and **bold** text.'
+2025-02-04 10:37:20,331 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:37:20,331 - tests.scripts.test_improvements - INFO - Starting test: test_enhanced_chapter_detection
+2025-02-04 10:37:20,332 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:37:20,332 - tests.scripts.test_improvements - ERROR - Test failed: test_enhanced_chapter_detection
+2025-02-04 10:37:20,333 - tests.scripts.test_improvements - ERROR - False is not true
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_improvements.py", line 48, in test_enhanced_chapter_detection
+    self.assertTrue(chapters[1].is_subchapter)
+  File "/usr/lib/python3.12/unittest/case.py", line 727, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+2025-02-04 10:37:20,334 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:37:20,334 - tests.scripts.test_improvements - INFO - Starting test: test_error_handling
+2025-02-04 10:37:20,335 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:37:20,335 - tests.scripts.test_improvements - INFO - Testing invalid file format
+2025-02-04 10:37:20,335 - tests.scripts.test_improvements - ERROR - Test failed: test_error_handling
+2025-02-04 10:37:20,335 - tests.scripts.test_improvements - ERROR - Failed to process book: Unsupported file format: .xyz
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 62, in process_book
+    handler = self._get_validated_handler(input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 91, in _get_validated_handler
+    raise ValueError(f"Unsupported file format: {input_path.suffix}")
+ValueError: Unsupported file format: .xyz
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_improvements.py", line 111, in test_error_handling
+    self.divider.process_book("nonexistent.xyz", str(self.output_dir))
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 85, in process_book
+    raise ProcessingError(f"Failed to process book: {str(e)}")
+textbook_divider.main.ProcessingError: Failed to process book: Unsupported file format: .xyz
+2025-02-04 10:37:20,337 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:37:20,338 - tests.scripts.test_improvements - INFO - Starting test: test_formatting_preservation
+2025-02-04 10:37:20,338 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:37:20,338 - tests.scripts.test_improvements - INFO - Test completed successfully: test_formatting_preservation
+2025-02-04 10:37:20,339 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:37:20,339 - tests.scripts.test_improvements - INFO - Starting test: test_metadata_generation
+2025-02-04 10:37:20,339 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:37:20,339 - tests.scripts.test_improvements - INFO - Processing test file: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/sample.txt
+2025-02-04 10:37:20,340 - tests.scripts.test_improvements - ERROR - Test failed: test_metadata_generation
+2025-02-04 10:37:20,340 - tests.scripts.test_improvements - ERROR - Failed to process book: No content extracted from file
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 65, in process_book
+    content = self._process_content(handler, input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 104, in _process_content
+    raise ValueError("No content extracted from file")
+ValueError: No content extracted from file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_improvements.py", line 90, in test_metadata_generation
+    self.divider.process_book(str(test_file), str(output_dir))
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 85, in process_book
+    raise ProcessingError(f"Failed to process book: {str(e)}")
+textbook_divider.main.ProcessingError: Failed to process book: No content extracted from file
+2025-02-04 10:37:20,342 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:37:20,342 - tests.scripts.test_improvements - INFO - Starting test: test_nested_chapter_structure
+2025-02-04 10:37:20,342 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:37:20,342 - tests.scripts.test_improvements - INFO - Processing file for nested structure: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt
+2025-02-04 10:37:20,343 - tests.scripts.test_improvements - ERROR - Test failed: test_nested_chapter_structure
+2025-02-04 10:37:20,344 - tests.scripts.test_improvements - ERROR - 2 not greater than or equal to 4
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_improvements.py", line 186, in test_nested_chapter_structure
+    self.assertGreaterEqual(metadata['processing_stats']['detected_chapters'], 4)  # 2 main + 2 sub per chapter
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/case.py", line 1275, in assertGreaterEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.12/unittest/case.py", line 715, in fail
+    raise self.failureException(msg)
+AssertionError: 2 not greater than or equal to 4
+2025-02-04 10:37:20,345 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:37:20,346 - tests.scripts.test_improvements - INFO - Starting test: test_text_block_processing
+2025-02-04 10:37:20,346 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:37:20,346 - tests.scripts.test_improvements - INFO - Test completed successfully: test_text_block_processing

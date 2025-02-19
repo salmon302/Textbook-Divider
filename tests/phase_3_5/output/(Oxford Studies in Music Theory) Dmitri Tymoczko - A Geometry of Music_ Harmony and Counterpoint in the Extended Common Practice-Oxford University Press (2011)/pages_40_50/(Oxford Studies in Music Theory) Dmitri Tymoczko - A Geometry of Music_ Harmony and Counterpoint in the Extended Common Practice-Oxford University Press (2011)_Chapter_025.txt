@@ -1,0 +1,66 @@
+25
+Second, we should be careful not to assume that there is any one thing that “listen-
+ing” is. It is possible that some listeners are adept at recovering a large amount of the 
+structure in muscial pieces, but many listeners are not. The heterogeneity of musical 
+abilities makes it difﬁ cult to abstract away from individual variation in favor of some 
+idealized “competent” listener. Can we describe as “competent” the listener who loves 
+Beethoven, but who performs poorly on standard ear-training tests? What about the 
+listener who hates music but perceives it very accurately? Does the “ideal” musical 
+listener have absolute pitch? A perfect memory for every musical detail? Is the point of 
+listening to music to experience aesthetic enjoyment, or is it to recover a kind of musi-
+cal “syntax” that the composer placed in his or her music? Personally, I suspect there is 
+no uncontroversial answer to these questions: there simply is no “competent” or “ideal” 
+listener that is analogous to the “idealized speaker” of contemporary linguistics.
+Third, listeners’ perceptions may in some respects be more crude and statisti-
+cal than we would initially think. We do not determine the meaning of sentences 
+by estimating the proportion of nouns to verbs, but we do respond very strongly to 
+relatively crude global features of the musical stimulus. Does the piece use consonant 
+or dissonant harmonies? Does it restrict itself, over moderate spans of musical time, 
+to a small set of notes, and do these notes themselves change over larger time spans? 
+Do melodies in general move by short distances? The answers to these questions tell 
+us an enormous amount about how untrained listeners will respond to a piece. Hence 
+my ﬁ ve features might be compared to a set of basic tools which composers can use 
+to perform their musical magic.
+Fourth, musical heterogeneity poses special problems for composers, who con-
+front an audience of widely varying interests and abilities. Traditional tonal compos-
+ers dealt with this by writing music that was immediately attractive, largely by virtue 
+of exploiting the ﬁ ve features. Many composers also built into their music layers of 
+additional, more complicated structure—complex thematic and formal interrela-
+tionships, intricate rhythmic devices, sophisticated contrapuntal tricks, and so on. 
+The result was a kind of music that listeners could engage with in multiple ways: 
+laypersons could simply enjoy a piece for the gross statistical features it shared with 
+many other compositions in the same style, while cognoscenti could become more 
+involved in the subtleties particular to that work.
+I ﬁ nd it fascinating that so many twentieth-century musicians chose to aban-
+don this strategy. Composers such as Schoenberg, Webern, Berg, and Varèse—and 
+later Babbitt, Boulez, Cage, Xenakis, and Stockhausen—wrote music that listen-
+ers often found quite unpleasant. In many cases, this was because these compos-
+ers rejected not just acoustic consonance, but also harmonic consistency, conjunct 
+melodic motion, limited macroharmony, and centricity. Some early modernist com-
+posers may have hoped that ordinary listeners would adapt to this new musical style, 
+adjusting their ears to the absence of familiar musical structures and coming to enjoy 
+atonality as deeply and directly as traditional music. But after several decades of 
+avant-garde exploration, composers began to realize that this might never occur. The 
+locus classicus of this new perspective is Milton Babbitt’s 1958 manifesto “Who Cares 
+if You Listen?”—in which he cheerfully acknowledged that his music was not enjoyed 
+
+
+theory
+26
+by laypersons, but only by a specialist musical community analogous to the specialist 
+community of professional mathematicians.28
+Rather than criticizing this point of view, let me just say that I am interested 
+in music that does not make this choice: I like music that brings people together, 
+rather than dividing them, and I think the traditional strategy—writing immediately 
+attractive music that also contains deeper levels of structure—is as potent as it ever 
+was. (Indeed, it may be all the more necessary in an economic and cultural environ-
+ment in which notated music is somewhat marginal.) In this book, therefore, I will 
+be primarily concerned with effects that can be achieved within a broadly attrac-
+tive sound-world. From a technical standpoint, this restriction is relatively uncon-
+straining, as a large number of avant-garde techniques are easily applied within a 
+ consonant  harmonic context: it is perfectly possible, for example, to write music that 
+is diatonic, or more generally macroharmonically consonant, while also being serial, 
+aleatoric, indeterminate, wildly polyrhythmic, and so on.29 Thus, the choice between 
+superﬁ cial accessibility and off-putting dissonance is not forced on us by our interest 
+in particular musical techniques. Instead, it is a relatively independent reﬂ ection of 
+our own aesthetic preferences.

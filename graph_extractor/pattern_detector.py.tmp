@@ -1,0 +1,18 @@
+from typing import Dict, List
+from .graph_types import Node, Edge, LayoutType
+
+class TransformationNetwork:
+	def __init__(self):
+		self.nodes: Dict[str, Node] = {}
+		self.edges: List[Edge] = []
+		self.layout_type: LayoutType = LayoutType.COMPLEX
+		self.confidence: float = 0.0
+
+	def add_node(self, node: Node) -> None:
+		self.nodes[node.id] = node
+
+	def add_edge(self, edge: Edge) -> None:
+		self.edges.append(edge)
+
+	def __len__(self):
+		return len(self.nodes)

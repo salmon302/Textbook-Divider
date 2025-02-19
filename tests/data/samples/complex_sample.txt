@@ -1,0 +1,49 @@
+Chapter 1: Advanced Text Processing
+================================
+
+This chapter demonstrates *emphasized* and **bold** text formatting.
+
+1.1 Lists and Quotes
+-------------------
+
+• First bullet point
+• Second bullet point with *emphasis*
+• Third point with **strong** emphasis
+
+1. Numbered item one
+2. Numbered item two
+   - Sub-bullet a
+   - Sub-bullet b
+
+> Important quote block
+> Spanning multiple lines
+> With some *formatting*
+
+1.2 Code and Tables
+------------------
+
+```python
+def example():
+	return "Test code block"
+```
+
+| Header 1 | Header 2 |
+|----------|----------|
+| Cell 1   | Cell 2   |
+| Cell 3   | Cell 4   |
+
+Chapter 2: Complex Structures
+===========================
+
+2.1 Mathematical Formulas
+------------------------
+
+The quadratic formula: x = (-b ± √(b² - 4ac)) / 2a
+
+2.2 Special Characters
+---------------------
+
+• Em dash test — with spaces
+• Ellipsis test...
+• Quote marks: "smart quotes" and 'apostrophes'
+• Copyright (c) and (tm) symbols

@@ -1,0 +1,1398 @@
+{
+  "page": 214,
+  "node_count": 70,
+  "edge_count": 277,
+  "node_types": {
+    "NodeType.SET_CLASS": 5,
+    "NodeType.PITCH_CLASS": 52,
+    "NodeType.INTERVAL": 4,
+    "NodeType.GROUP": 9
+  },
+  "relationships": [
+    {
+      "type": "related",
+      "source": "s",
+      "target": "E"
+    },
+    {
+      "type": "related",
+      "source": "s",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "s",
+      "target": "B"
+    },
+    {
+      "type": "related",
+      "source": "s",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "s",
+      "target": "D"
+    },
+    {
+      "type": "related",
+      "source": "s",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "s",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "i",
+      "target": "y"
+    },
+    {
+      "type": "related",
+      "source": "i",
+      "target": "i"
+    },
+    {
+      "type": "related",
+      "source": "y",
+      "target": "i"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "B"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "D"
+    },
+    {
+      "type": "related",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "B"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "D"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "D"
+    },
+    {
+      "type": "related",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "D"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "D",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "D",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "A"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "E"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "A"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "E"
+    },
+    {
+      "type": "related",
+      "source": "D",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "A"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "E"
+    },
+    {
+      "type": "related",
+      "source": "D",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "E"
+    },
+    {
+      "type": "related",
+      "source": "A",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "E"
+    },
+    {
+      "type": "related",
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "E"
+    },
+    {
+      "type": "related",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "A"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "A"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "D",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "D",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "A"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "A"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "A"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "F",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "F",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "A"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "A"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "A"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "F",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "F",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "A",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "A",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "B"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "D"
+    },
+    {
+      "type": "related",
+      "source": "A",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "A",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "B"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "D"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "B"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "D"
+    },
+    {
+      "type": "related",
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "B"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "D"
+    },
+    {
+      "type": "related",
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "C",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "D"
+    },
+    {
+      "type": "related",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "D"
+    },
+    {
+      "type": "related",
+      "source": "F",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "F",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "F"
+    },
+    {
+      "type": "related",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "F"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "F"
+    },
+    {
+      "type": "related",
+      "source": "F",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "F",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "F"
+    },
+    {
+      "type": "related",
+      "source": "D",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "D",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "F"
+    },
+    {
+      "type": "related",
+      "source": "F",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "F"
+    },
+    {
+      "type": "related",
+      "source": "D",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "F",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "D"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "F",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "D",
+      "target": "F"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "A"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "A"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "A"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "C",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "A"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "B"
+    },
+    {
+      "type": "related",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "B"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "A"
+    },
+    {
+      "type": "related",
+      "source": "A",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "A",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "E"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "B"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "A"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "B"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "E",
+      "target": "A"
+    },
+    {
+      "type": "related",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "E",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "B"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "G",
+      "target": "A"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "A"
+    },
+    {
+      "type": "related",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "B",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "A",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "A",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "related",
+      "source": "G",
+      "target": "G"
+    },
+    {
+      "type": "transform",
+      "source": "G",
+      "target": "a"
+    },
+    {
+      "type": "transform",
+      "source": "G",
+      "target": "i"
+    },
+    {
+      "type": "transform",
+      "source": "G",
+      "target": "i"
+    }
+  ]
+}

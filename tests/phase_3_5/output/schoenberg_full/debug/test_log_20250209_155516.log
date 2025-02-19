@@ -1,0 +1,475 @@
+2025-02-09 15:55:16,290 - __main__ - INFO - Starting full book processing: 125 pages
+2025-02-09 15:55:16,290 - __main__ - INFO - Processing page 1/125 (0.8%)
+2025-02-09 15:55:17,373 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_1/preprocessed_p1_20250209_155516.png
+2025-02-09 15:55:17,492 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess__tj11wz5_input.PNG', '/tmp/tess__tj11wz5', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:55:18,668 - __main__ - INFO - Processing page 2/125 (1.6%)
+2025-02-09 15:55:20,997 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_2/preprocessed_p2_20250209_155516.png
+2025-02-09 15:55:21,190 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_jry0w7k6_input.PNG', '/tmp/tess_jry0w7k6', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:55:23,758 - __main__ - WARNING - Page 2: No text content extracted
+2025-02-09 15:55:23,758 - __main__ - INFO - Processing page 3/125 (2.4%)
+2025-02-09 15:55:26,240 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_3/preprocessed_p3_20250209_155516.png
+2025-02-09 15:55:26,341 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_zy8r1pw3_input.PNG', '/tmp/tess_zy8r1pw3', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:55:27,877 - __main__ - INFO - Processing page 4/125 (3.2%)
+2025-02-09 15:55:30,683 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_4/preprocessed_p4_20250209_155516.png
+2025-02-09 15:55:30,872 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_0f_f6ym8_input.PNG', '/tmp/tess_0f_f6ym8', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:55:35,184 - __main__ - INFO - Processing page 5/125 (4.0%)
+2025-02-09 15:55:38,035 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_5/preprocessed_p5_20250209_155516.png
+2025-02-09 15:55:38,210 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_r_47orpo_input.PNG', '/tmp/tess_r_47orpo', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:55:43,545 - __main__ - INFO - Processing page 6/125 (4.8%)
+2025-02-09 15:55:46,290 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_6/preprocessed_p6_20250209_155516.png
+2025-02-09 15:55:46,451 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_c3d6yvqo_input.PNG', '/tmp/tess_c3d6yvqo', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:55:50,690 - __main__ - INFO - Processing page 7/125 (5.6%)
+2025-02-09 15:55:53,583 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_7/preprocessed_p7_20250209_155516.png
+2025-02-09 15:55:53,767 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_ytm7jspe_input.PNG', '/tmp/tess_ytm7jspe', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:55:58,296 - __main__ - INFO - Processing page 8/125 (6.4%)
+2025-02-09 15:56:01,037 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_8/preprocessed_p8_20250209_155516.png
+2025-02-09 15:56:01,208 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_lot4ihm8_input.PNG', '/tmp/tess_lot4ihm8', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:56:06,131 - __main__ - INFO - Processing page 9/125 (7.2%)
+2025-02-09 15:56:09,015 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_9/preprocessed_p9_20250209_155516.png
+2025-02-09 15:56:09,209 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_2vd74nrx_input.PNG', '/tmp/tess_2vd74nrx', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:56:17,590 - __main__ - INFO - Processing page 10/125 (8.0%)
+2025-02-09 15:56:18,858 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_10/preprocessed_p10_20250209_155516.png
+2025-02-09 15:56:18,924 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_ng6uctpr_input.PNG', '/tmp/tess_ng6uctpr', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:56:20,324 - __main__ - INFO - Progress: 10/125 pages
+2025-02-09 15:56:20,324 - __main__ - INFO - Speed: 0.16 pages/second
+2025-02-09 15:56:20,324 - __main__ - INFO - Estimated time remaining: 12.3 minutes
+2025-02-09 15:56:20,325 - __main__ - INFO - Processing page 11/125 (8.8%)
+2025-02-09 15:56:20,986 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_11/preprocessed_p11_20250209_155516.png
+2025-02-09 15:56:21,069 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_k_m2_mop_input.PNG', '/tmp/tess_k_m2_mop', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:56:24,431 - __main__ - INFO - Processing page 12/125 (9.6%)
+2025-02-09 15:56:25,552 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_12/preprocessed_p12_20250209_155516.png
+2025-02-09 15:56:25,754 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_8xnw8xrd_input.PNG', '/tmp/tess_8xnw8xrd', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:56:31,400 - __main__ - INFO - Processing page 13/125 (10.4%)
+2025-02-09 15:56:32,624 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_13/preprocessed_p13_20250209_155516.png
+2025-02-09 15:56:32,828 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_nmrc_23n_input.PNG', '/tmp/tess_nmrc_23n', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:56:38,285 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_13/music_detection_p13_20250209_155516.png
+2025-02-09 15:56:38,288 - __main__ - INFO - Processing page 14/125 (11.2%)
+2025-02-09 15:56:39,359 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_14/preprocessed_p14_20250209_155516.png
+2025-02-09 15:56:39,537 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_9afjyb0c_input.PNG', '/tmp/tess_9afjyb0c', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:56:43,262 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_14/music_detection_p14_20250209_155516.png
+2025-02-09 15:56:43,266 - __main__ - INFO - Processing page 15/125 (12.0%)
+2025-02-09 15:56:44,650 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_15/preprocessed_p15_20250209_155516.png
+2025-02-09 15:56:44,858 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_w_mo1pt8_input.PNG', '/tmp/tess_w_mo1pt8', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:56:54,011 - __main__ - INFO - Processing page 16/125 (12.8%)
+2025-02-09 15:56:55,132 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_16/preprocessed_p16_20250209_155516.png
+2025-02-09 15:56:55,316 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_sog6gr93_input.PNG', '/tmp/tess_sog6gr93', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:57:00,791 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_16/music_detection_p16_20250209_155516.png
+2025-02-09 15:57:00,795 - __main__ - INFO - Processing page 17/125 (13.6%)
+2025-02-09 15:57:02,003 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_17/preprocessed_p17_20250209_155516.png
+2025-02-09 15:57:02,187 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_x6x8p7y3_input.PNG', '/tmp/tess_x6x8p7y3', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:57:06,575 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_17/music_detection_p17_20250209_155516.png
+2025-02-09 15:57:06,585 - __main__ - INFO - Processing page 18/125 (14.4%)
+2025-02-09 15:57:07,763 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_18/preprocessed_p18_20250209_155516.png
+2025-02-09 15:57:07,939 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_tpxd7hu5_input.PNG', '/tmp/tess_tpxd7hu5', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:57:11,186 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_18/music_detection_p18_20250209_155516.png
+2025-02-09 15:57:11,194 - __main__ - INFO - Processing page 19/125 (15.2%)
+2025-02-09 15:57:12,478 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_19/preprocessed_p19_20250209_155516.png
+2025-02-09 15:57:12,668 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_6osxuafy_input.PNG', '/tmp/tess_6osxuafy', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:57:19,830 - __main__ - INFO - Processing page 20/125 (16.0%)
+2025-02-09 15:57:20,816 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_20/preprocessed_p20_20250209_155516.png
+2025-02-09 15:57:20,990 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_wuantl7q_input.PNG', '/tmp/tess_wuantl7q', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:57:24,526 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_20/music_detection_p20_20250209_155516.png
+2025-02-09 15:57:24,536 - __main__ - INFO - Progress: 20/125 pages
+2025-02-09 15:57:24,537 - __main__ - INFO - Speed: 0.16 pages/second
+2025-02-09 15:57:24,537 - __main__ - INFO - Estimated time remaining: 11.2 minutes
+2025-02-09 15:57:24,537 - __main__ - INFO - Processing page 21/125 (16.8%)
+2025-02-09 15:57:26,011 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_21/preprocessed_p21_20250209_155516.png
+2025-02-09 15:57:26,218 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_32wbpc0x_input.PNG', '/tmp/tess_32wbpc0x', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:57:35,323 - __main__ - INFO - Processing page 22/125 (17.6%)
+2025-02-09 15:57:36,806 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_22/preprocessed_p22_20250209_155516.png
+2025-02-09 15:57:37,003 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_hd4pqgp__input.PNG', '/tmp/tess_hd4pqgp_', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:57:42,397 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_22/music_detection_p22_20250209_155516.png
+2025-02-09 15:57:42,402 - __main__ - INFO - Processing page 23/125 (18.4%)
+2025-02-09 15:57:43,549 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_23/preprocessed_p23_20250209_155516.png
+2025-02-09 15:57:43,716 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_rmbltyvf_input.PNG', '/tmp/tess_rmbltyvf', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:57:47,810 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_23/music_detection_p23_20250209_155516.png
+2025-02-09 15:57:47,816 - __main__ - INFO - Processing page 24/125 (19.2%)
+2025-02-09 15:57:49,285 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_24/preprocessed_p24_20250209_155516.png
+2025-02-09 15:57:49,475 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_twwri4tr_input.PNG', '/tmp/tess_twwri4tr', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:57:58,263 - __main__ - INFO - Processing page 25/125 (20.0%)
+2025-02-09 15:57:59,871 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_25/preprocessed_p25_20250209_155516.png
+2025-02-09 15:58:00,054 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_0jp2jdkc_input.PNG', '/tmp/tess_0jp2jdkc', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:58:07,470 - __main__ - INFO - Processing page 26/125 (20.8%)
+2025-02-09 15:58:08,806 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_26/preprocessed_p26_20250209_155516.png
+2025-02-09 15:58:08,988 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess__mfaey_m_input.PNG', '/tmp/tess__mfaey_m', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:58:15,337 - __main__ - INFO - Processing page 27/125 (21.6%)
+2025-02-09 15:58:16,490 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_27/preprocessed_p27_20250209_155516.png
+2025-02-09 15:58:16,646 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_u88k1o94_input.PNG', '/tmp/tess_u88k1o94', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:58:19,446 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_27/music_detection_p27_20250209_155516.png
+2025-02-09 15:58:19,453 - __main__ - INFO - Processing page 28/125 (22.4%)
+2025-02-09 15:58:20,837 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_28/preprocessed_p28_20250209_155516.png
+2025-02-09 15:58:21,016 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_su30vra__input.PNG', '/tmp/tess_su30vra_', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:58:24,453 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_28/music_detection_p28_20250209_155516.png
+2025-02-09 15:58:24,458 - __main__ - INFO - Processing page 29/125 (23.2%)
+2025-02-09 15:58:25,782 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_29/preprocessed_p29_20250209_155516.png
+2025-02-09 15:58:25,945 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_wbinad8m_input.PNG', '/tmp/tess_wbinad8m', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:58:28,673 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_29/music_detection_p29_20250209_155516.png
+2025-02-09 15:58:28,678 - __main__ - INFO - Processing page 30/125 (24.0%)
+2025-02-09 15:58:29,989 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_30/preprocessed_p30_20250209_155516.png
+2025-02-09 15:58:30,166 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_p47yf5yb_input.PNG', '/tmp/tess_p47yf5yb', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:58:33,081 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_30/music_detection_p30_20250209_155516.png
+2025-02-09 15:58:33,085 - __main__ - INFO - Progress: 30/125 pages
+2025-02-09 15:58:33,085 - __main__ - INFO - Speed: 0.15 pages/second
+2025-02-09 15:58:33,085 - __main__ - INFO - Estimated time remaining: 10.4 minutes
+2025-02-09 15:58:33,085 - __main__ - INFO - Processing page 31/125 (24.8%)
+2025-02-09 15:58:34,237 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_31/preprocessed_p31_20250209_155516.png
+2025-02-09 15:58:34,405 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_g3wwegj8_input.PNG', '/tmp/tess_g3wwegj8', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:58:37,214 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_31/music_detection_p31_20250209_155516.png
+2025-02-09 15:58:37,217 - __main__ - INFO - Processing page 32/125 (25.6%)
+2025-02-09 15:58:38,596 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_32/preprocessed_p32_20250209_155516.png
+2025-02-09 15:58:38,755 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_776pyhkh_input.PNG', '/tmp/tess_776pyhkh', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:58:41,990 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_32/music_detection_p32_20250209_155516.png
+2025-02-09 15:58:41,993 - __main__ - INFO - Processing page 33/125 (26.4%)
+2025-02-09 15:58:43,511 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_33/preprocessed_p33_20250209_155516.png
+2025-02-09 15:58:43,707 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_fbadymwp_input.PNG', '/tmp/tess_fbadymwp', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:58:47,376 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_33/music_detection_p33_20250209_155516.png
+2025-02-09 15:58:47,381 - __main__ - INFO - Processing page 34/125 (27.2%)
+2025-02-09 15:58:48,817 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_34/preprocessed_p34_20250209_155516.png
+2025-02-09 15:58:49,020 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_t74ldh1e_input.PNG', '/tmp/tess_t74ldh1e', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:58:52,599 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_34/music_detection_p34_20250209_155516.png
+2025-02-09 15:58:52,602 - __main__ - INFO - Processing page 35/125 (28.0%)
+2025-02-09 15:58:54,082 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_35/preprocessed_p35_20250209_155516.png
+2025-02-09 15:58:54,281 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_z0gmm0co_input.PNG', '/tmp/tess_z0gmm0co', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:58:58,467 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_35/music_detection_p35_20250209_155516.png
+2025-02-09 15:58:58,474 - __main__ - INFO - Processing page 36/125 (28.8%)
+2025-02-09 15:59:00,150 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_36/preprocessed_p36_20250209_155516.png
+2025-02-09 15:59:00,358 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_mse_shij_input.PNG', '/tmp/tess_mse_shij', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:59:03,443 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_36/music_detection_p36_20250209_155516.png
+2025-02-09 15:59:03,453 - __main__ - INFO - Processing page 37/125 (29.6%)
+2025-02-09 15:59:04,797 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_37/preprocessed_p37_20250209_155516.png
+2025-02-09 15:59:04,995 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_a5sgu042_input.PNG', '/tmp/tess_a5sgu042', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:59:08,116 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_37/music_detection_p37_20250209_155516.png
+2025-02-09 15:59:08,122 - __main__ - INFO - Processing page 38/125 (30.4%)
+2025-02-09 15:59:09,687 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_38/preprocessed_p38_20250209_155516.png
+2025-02-09 15:59:09,883 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_wsvv9e46_input.PNG', '/tmp/tess_wsvv9e46', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:59:13,111 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_38/music_detection_p38_20250209_155516.png
+2025-02-09 15:59:13,115 - __main__ - INFO - Processing page 39/125 (31.2%)
+2025-02-09 15:59:14,420 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_39/preprocessed_p39_20250209_155516.png
+2025-02-09 15:59:14,614 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_ytjb5e2o_input.PNG', '/tmp/tess_ytjb5e2o', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:59:18,978 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_39/music_detection_p39_20250209_155516.png
+2025-02-09 15:59:18,986 - __main__ - INFO - Processing page 40/125 (32.0%)
+2025-02-09 15:59:20,524 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_40/preprocessed_p40_20250209_155516.png
+2025-02-09 15:59:20,753 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_dgutdlac_input.PNG', '/tmp/tess_dgutdlac', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:59:29,152 - __main__ - INFO - Progress: 40/125 pages
+2025-02-09 15:59:29,153 - __main__ - INFO - Speed: 0.16 pages/second
+2025-02-09 15:59:29,153 - __main__ - INFO - Estimated time remaining: 9.0 minutes
+2025-02-09 15:59:29,153 - __main__ - INFO - Processing page 41/125 (32.8%)
+2025-02-09 15:59:30,926 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_41/preprocessed_p41_20250209_155516.png
+2025-02-09 15:59:31,162 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_hag60bec_input.PNG', '/tmp/tess_hag60bec', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:59:44,360 - __main__ - INFO - Processing page 42/125 (33.6%)
+2025-02-09 15:59:45,678 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_42/preprocessed_p42_20250209_155516.png
+2025-02-09 15:59:45,878 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_gy702oru_input.PNG', '/tmp/tess_gy702oru', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:59:50,317 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_42/music_detection_p42_20250209_155516.png
+2025-02-09 15:59:50,327 - __main__ - INFO - Processing page 43/125 (34.4%)
+2025-02-09 15:59:51,799 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_43/preprocessed_p43_20250209_155516.png
+2025-02-09 15:59:51,992 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_mw2x2ov__input.PNG', '/tmp/tess_mw2x2ov_', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:59:55,313 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_43/music_detection_p43_20250209_155516.png
+2025-02-09 15:59:55,317 - __main__ - INFO - Processing page 44/125 (35.2%)
+2025-02-09 15:59:56,594 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_44/preprocessed_p44_20250209_155516.png
+2025-02-09 15:59:56,774 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_ce5jf2yd_input.PNG', '/tmp/tess_ce5jf2yd', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:59:59,335 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_44/music_detection_p44_20250209_155516.png
+2025-02-09 15:59:59,338 - __main__ - INFO - Processing page 45/125 (36.0%)
+2025-02-09 16:00:00,606 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_45/preprocessed_p45_20250209_155516.png
+2025-02-09 16:00:00,791 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_9018ahwt_input.PNG', '/tmp/tess_9018ahwt', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:00:03,760 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_45/music_detection_p45_20250209_155516.png
+2025-02-09 16:00:03,764 - __main__ - INFO - Processing page 46/125 (36.8%)
+2025-02-09 16:00:05,021 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_46/preprocessed_p46_20250209_155516.png
+2025-02-09 16:00:05,206 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_fk_47_g8_input.PNG', '/tmp/tess_fk_47_g8', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:00:08,708 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_46/music_detection_p46_20250209_155516.png
+2025-02-09 16:00:08,713 - __main__ - INFO - Processing page 47/125 (37.6%)
+2025-02-09 16:00:09,963 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_47/preprocessed_p47_20250209_155516.png
+2025-02-09 16:00:10,137 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_r10_g_lb_input.PNG', '/tmp/tess_r10_g_lb', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:00:12,931 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_47/music_detection_p47_20250209_155516.png
+2025-02-09 16:00:12,937 - __main__ - INFO - Processing page 48/125 (38.4%)
+2025-02-09 16:00:14,273 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_48/preprocessed_p48_20250209_155516.png
+2025-02-09 16:00:14,457 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_0sl9bcn6_input.PNG', '/tmp/tess_0sl9bcn6', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:00:18,258 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_48/music_detection_p48_20250209_155516.png
+2025-02-09 16:00:18,262 - __main__ - INFO - Processing page 49/125 (39.2%)
+2025-02-09 16:00:19,562 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_49/preprocessed_p49_20250209_155516.png
+2025-02-09 16:00:19,749 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_oqblsrz2_input.PNG', '/tmp/tess_oqblsrz2', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:00:23,125 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_49/music_detection_p49_20250209_155516.png
+2025-02-09 16:00:23,132 - __main__ - INFO - Processing page 50/125 (40.0%)
+2025-02-09 16:00:24,455 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_50/preprocessed_p50_20250209_155516.png
+2025-02-09 16:00:24,630 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_4z78y62m_input.PNG', '/tmp/tess_4z78y62m', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:00:27,255 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_50/music_detection_p50_20250209_155516.png
+2025-02-09 16:00:27,268 - __main__ - INFO - Progress: 50/125 pages
+2025-02-09 16:00:27,268 - __main__ - INFO - Speed: 0.16 pages/second
+2025-02-09 16:00:27,268 - __main__ - INFO - Estimated time remaining: 7.8 minutes
+2025-02-09 16:00:27,269 - __main__ - INFO - Processing page 51/125 (40.8%)
+2025-02-09 16:00:28,413 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_51/preprocessed_p51_20250209_155516.png
+2025-02-09 16:00:28,564 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_8ts0f2dq_input.PNG', '/tmp/tess_8ts0f2dq', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:00:31,216 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_51/music_detection_p51_20250209_155516.png
+2025-02-09 16:00:31,220 - __main__ - INFO - Processing page 52/125 (41.6%)
+2025-02-09 16:00:32,804 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_52/preprocessed_p52_20250209_155516.png
+2025-02-09 16:00:33,009 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_dv3ze9eg_input.PNG', '/tmp/tess_dv3ze9eg', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:00:41,043 - __main__ - INFO - Processing page 53/125 (42.4%)
+2025-02-09 16:00:42,664 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_53/preprocessed_p53_20250209_155516.png
+2025-02-09 16:00:42,962 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_g3u91nbf_input.PNG', '/tmp/tess_g3u91nbf', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:00:49,786 - __main__ - INFO - Processing page 54/125 (43.2%)
+2025-02-09 16:00:51,031 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_54/preprocessed_p54_20250209_155516.png
+2025-02-09 16:00:51,192 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_bt2i_v92_input.PNG', '/tmp/tess_bt2i_v92', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:00:55,427 - __main__ - INFO - Processing page 55/125 (44.0%)
+2025-02-09 16:00:56,476 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_55/preprocessed_p55_20250209_155516.png
+2025-02-09 16:00:56,627 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_020xrlz7_input.PNG', '/tmp/tess_020xrlz7', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:00:59,177 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_55/music_detection_p55_20250209_155516.png
+2025-02-09 16:00:59,182 - __main__ - INFO - Processing page 56/125 (44.8%)
+2025-02-09 16:01:00,479 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_56/preprocessed_p56_20250209_155516.png
+2025-02-09 16:01:00,635 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_6evovfib_input.PNG', '/tmp/tess_6evovfib', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:01:03,059 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_56/music_detection_p56_20250209_155516.png
+2025-02-09 16:01:03,065 - __main__ - INFO - Processing page 57/125 (45.6%)
+2025-02-09 16:01:04,473 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_57/preprocessed_p57_20250209_155516.png
+2025-02-09 16:01:04,659 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_jycri09w_input.PNG', '/tmp/tess_jycri09w', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:01:09,329 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_57/music_detection_p57_20250209_155516.png
+2025-02-09 16:01:09,333 - __main__ - INFO - Processing page 58/125 (46.4%)
+2025-02-09 16:01:10,663 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_58/preprocessed_p58_20250209_155516.png
+2025-02-09 16:01:10,869 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_6sfy_5pb_input.PNG', '/tmp/tess_6sfy_5pb', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:01:19,199 - __main__ - INFO - Processing page 59/125 (47.2%)
+2025-02-09 16:01:20,481 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_59/preprocessed_p59_20250209_155516.png
+2025-02-09 16:01:20,626 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_irh59j1q_input.PNG', '/tmp/tess_irh59j1q', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:01:22,979 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_59/music_detection_p59_20250209_155516.png
+2025-02-09 16:01:22,984 - __main__ - INFO - Processing page 60/125 (48.0%)
+2025-02-09 16:01:24,357 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_60/preprocessed_p60_20250209_155516.png
+2025-02-09 16:01:24,541 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_8_4xd91y_input.PNG', '/tmp/tess_8_4xd91y', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:01:30,522 - __main__ - INFO - Progress: 60/125 pages
+2025-02-09 16:01:30,522 - __main__ - INFO - Speed: 0.16 pages/second
+2025-02-09 16:01:30,522 - __main__ - INFO - Estimated time remaining: 6.8 minutes
+2025-02-09 16:01:30,522 - __main__ - INFO - Processing page 61/125 (48.8%)
+2025-02-09 16:01:32,265 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_61/preprocessed_p61_20250209_155516.png
+2025-02-09 16:01:32,462 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_s4n0zuue_input.PNG', '/tmp/tess_s4n0zuue', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:01:39,162 - __main__ - INFO - Processing page 62/125 (49.6%)
+2025-02-09 16:01:40,737 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_62/preprocessed_p62_20250209_155516.png
+2025-02-09 16:01:40,944 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_794xjqwv_input.PNG', '/tmp/tess_794xjqwv', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:01:51,144 - __main__ - INFO - Processing page 63/125 (50.4%)
+2025-02-09 16:01:52,257 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_63/preprocessed_p63_20250209_155516.png
+2025-02-09 16:01:52,405 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_gyqfa2tp_input.PNG', '/tmp/tess_gyqfa2tp', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:01:55,376 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_63/music_detection_p63_20250209_155516.png
+2025-02-09 16:01:55,379 - __main__ - INFO - Processing page 64/125 (51.2%)
+2025-02-09 16:01:56,445 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_64/preprocessed_p64_20250209_155516.png
+2025-02-09 16:01:56,603 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_6bfvkl6v_input.PNG', '/tmp/tess_6bfvkl6v', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:01:59,212 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_64/music_detection_p64_20250209_155516.png
+2025-02-09 16:01:59,216 - __main__ - INFO - Processing page 65/125 (52.0%)
+2025-02-09 16:02:00,295 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_65/preprocessed_p65_20250209_155516.png
+2025-02-09 16:02:00,445 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_cs4vbpjw_input.PNG', '/tmp/tess_cs4vbpjw', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:02:04,329 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_65/music_detection_p65_20250209_155516.png
+2025-02-09 16:02:04,334 - __main__ - INFO - Processing page 66/125 (52.8%)
+2025-02-09 16:02:05,631 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_66/preprocessed_p66_20250209_155516.png
+2025-02-09 16:02:05,835 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess__0qnhweh_input.PNG', '/tmp/tess__0qnhweh', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:02:10,434 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_66/music_detection_p66_20250209_155516.png
+2025-02-09 16:02:10,441 - __main__ - INFO - Processing page 67/125 (53.6%)
+2025-02-09 16:02:11,730 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_67/preprocessed_p67_20250209_155516.png
+2025-02-09 16:02:11,890 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_6pe9p35n_input.PNG', '/tmp/tess_6pe9p35n', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:02:15,146 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_67/music_detection_p67_20250209_155516.png
+2025-02-09 16:02:15,152 - __main__ - INFO - Processing page 68/125 (54.4%)
+2025-02-09 16:02:16,406 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_68/preprocessed_p68_20250209_155516.png
+2025-02-09 16:02:16,591 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_6lalxn9a_input.PNG', '/tmp/tess_6lalxn9a', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:02:19,503 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_68/music_detection_p68_20250209_155516.png
+2025-02-09 16:02:19,508 - __main__ - INFO - Processing page 69/125 (55.2%)
+2025-02-09 16:02:20,839 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_69/preprocessed_p69_20250209_155516.png
+2025-02-09 16:02:21,097 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_dscdfcph_input.PNG', '/tmp/tess_dscdfcph', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:02:28,588 - __main__ - INFO - Processing page 70/125 (56.0%)
+2025-02-09 16:02:29,032 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_70/preprocessed_p70_20250209_155516.png
+2025-02-09 16:02:29,111 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_931t39uk_input.PNG', '/tmp/tess_931t39uk', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:02:30,868 - __main__ - INFO - Progress: 70/125 pages
+2025-02-09 16:02:30,868 - __main__ - INFO - Speed: 0.16 pages/second
+2025-02-09 16:02:30,868 - __main__ - INFO - Estimated time remaining: 5.7 minutes
+2025-02-09 16:02:30,868 - __main__ - INFO - Processing page 71/125 (56.8%)
+2025-02-09 16:02:31,428 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_71/preprocessed_p71_20250209_155516.png
+2025-02-09 16:02:31,520 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_b9rkkeoi_input.PNG', '/tmp/tess_b9rkkeoi', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:02:33,834 - __main__ - INFO - Processing page 72/125 (57.6%)
+2025-02-09 16:02:35,287 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_72/preprocessed_p72_20250209_155516.png
+2025-02-09 16:02:35,492 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_e6qyt9v1_input.PNG', '/tmp/tess_e6qyt9v1', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:02:49,157 - __main__ - INFO - Processing page 73/125 (58.4%)
+2025-02-09 16:02:50,912 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_73/preprocessed_p73_20250209_155516.png
+2025-02-09 16:02:51,161 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_45d8egu6_input.PNG', '/tmp/tess_45d8egu6', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:03:00,661 - __main__ - INFO - Processing page 74/125 (59.2%)
+2025-02-09 16:03:02,360 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_74/preprocessed_p74_20250209_155516.png
+2025-02-09 16:03:02,681 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_ug697qkx_input.PNG', '/tmp/tess_ug697qkx', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:03:09,783 - __main__ - INFO - Processing page 75/125 (60.0%)
+2025-02-09 16:03:11,197 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_75/preprocessed_p75_20250209_155516.png
+2025-02-09 16:03:11,366 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_xdsl068c_input.PNG', '/tmp/tess_xdsl068c', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:03:13,925 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_75/music_detection_p75_20250209_155516.png
+2025-02-09 16:03:13,929 - __main__ - INFO - Processing page 76/125 (60.8%)
+2025-02-09 16:03:15,069 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_76/preprocessed_p76_20250209_155516.png
+2025-02-09 16:03:15,242 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_3vzkli1f_input.PNG', '/tmp/tess_3vzkli1f', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:03:17,812 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_76/music_detection_p76_20250209_155516.png
+2025-02-09 16:03:17,815 - __main__ - INFO - Processing page 77/125 (61.6%)
+2025-02-09 16:03:19,096 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_77/preprocessed_p77_20250209_155516.png
+2025-02-09 16:03:19,269 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_8khpkvsl_input.PNG', '/tmp/tess_8khpkvsl', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:03:21,712 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_77/music_detection_p77_20250209_155516.png
+2025-02-09 16:03:21,717 - __main__ - INFO - Processing page 78/125 (62.4%)
+2025-02-09 16:03:23,072 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_78/preprocessed_p78_20250209_155516.png
+2025-02-09 16:03:23,280 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_qry3wf71_input.PNG', '/tmp/tess_qry3wf71', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:03:26,303 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_78/music_detection_p78_20250209_155516.png
+2025-02-09 16:03:26,318 - __main__ - INFO - Processing page 79/125 (63.2%)
+2025-02-09 16:03:27,438 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_79/preprocessed_p79_20250209_155516.png
+2025-02-09 16:03:27,608 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_xhxu4a56_input.PNG', '/tmp/tess_xhxu4a56', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:03:29,938 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_79/music_detection_p79_20250209_155516.png
+2025-02-09 16:03:29,944 - __main__ - INFO - Processing page 80/125 (64.0%)
+2025-02-09 16:03:31,345 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_80/preprocessed_p80_20250209_155516.png
+2025-02-09 16:03:31,564 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess__38ti4vh_input.PNG', '/tmp/tess__38ti4vh', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:03:37,428 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_80/music_detection_p80_20250209_155516.png
+2025-02-09 16:03:37,432 - __main__ - INFO - Progress: 80/125 pages
+2025-02-09 16:03:37,432 - __main__ - INFO - Speed: 0.16 pages/second
+2025-02-09 16:03:37,432 - __main__ - INFO - Estimated time remaining: 4.7 minutes
+2025-02-09 16:03:37,432 - __main__ - INFO - Processing page 81/125 (64.8%)
+2025-02-09 16:03:38,652 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_81/preprocessed_p81_20250209_155516.png
+2025-02-09 16:03:38,829 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_bd9v7lcr_input.PNG', '/tmp/tess_bd9v7lcr', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:03:43,366 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_81/music_detection_p81_20250209_155516.png
+2025-02-09 16:03:43,371 - __main__ - INFO - Processing page 82/125 (65.6%)
+2025-02-09 16:03:44,956 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_82/preprocessed_p82_20250209_155516.png
+2025-02-09 16:03:45,111 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_xzgohrcg_input.PNG', '/tmp/tess_xzgohrcg', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:04:02,972 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_82/music_detection_p82_20250209_155516.png
+2025-02-09 16:04:02,979 - __main__ - INFO - Processing page 83/125 (66.4%)
+2025-02-09 16:04:04,450 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_83/preprocessed_p83_20250209_155516.png
+2025-02-09 16:04:04,638 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_uiy04d5y_input.PNG', '/tmp/tess_uiy04d5y', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:04:10,869 - __main__ - INFO - Processing page 84/125 (67.2%)
+2025-02-09 16:04:12,038 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_84/preprocessed_p84_20250209_155516.png
+2025-02-09 16:04:12,186 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_7b1npix0_input.PNG', '/tmp/tess_7b1npix0', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:04:14,182 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_84/music_detection_p84_20250209_155516.png
+2025-02-09 16:04:14,187 - __main__ - INFO - Processing page 85/125 (68.0%)
+2025-02-09 16:04:15,242 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_85/preprocessed_p85_20250209_155516.png
+2025-02-09 16:04:15,392 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_qun_ifzf_input.PNG', '/tmp/tess_qun_ifzf', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:04:17,313 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_85/music_detection_p85_20250209_155516.png
+2025-02-09 16:04:17,317 - __main__ - INFO - Processing page 86/125 (68.8%)
+2025-02-09 16:04:18,179 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_86/preprocessed_p86_20250209_155516.png
+2025-02-09 16:04:18,312 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_opfwb1ic_input.PNG', '/tmp/tess_opfwb1ic', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:04:20,190 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_86/music_detection_p86_20250209_155516.png
+2025-02-09 16:04:20,195 - __main__ - INFO - Processing page 87/125 (69.6%)
+2025-02-09 16:04:21,715 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_87/preprocessed_p87_20250209_155516.png
+2025-02-09 16:04:21,924 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_9gaui2mx_input.PNG', '/tmp/tess_9gaui2mx', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:04:28,308 - __main__ - INFO - Processing page 88/125 (70.4%)
+2025-02-09 16:04:29,861 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_88/preprocessed_p88_20250209_155516.png
+2025-02-09 16:04:30,076 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_5xhn9z_f_input.PNG', '/tmp/tess_5xhn9z_f', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:04:35,920 - __main__ - INFO - Processing page 89/125 (71.2%)
+2025-02-09 16:04:37,330 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_89/preprocessed_p89_20250209_155516.png
+2025-02-09 16:04:37,505 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_3op0v4d9_input.PNG', '/tmp/tess_3op0v4d9', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:04:42,809 - __main__ - INFO - Processing page 90/125 (72.0%)
+2025-02-09 16:04:44,229 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_90/preprocessed_p90_20250209_155516.png
+2025-02-09 16:04:44,451 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_647nyzy2_input.PNG', '/tmp/tess_647nyzy2', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:04:54,160 - __main__ - INFO - Progress: 90/125 pages
+2025-02-09 16:04:54,160 - __main__ - INFO - Speed: 0.16 pages/second
+2025-02-09 16:04:54,160 - __main__ - INFO - Estimated time remaining: 3.7 minutes
+2025-02-09 16:04:54,160 - __main__ - INFO - Processing page 91/125 (72.8%)
+2025-02-09 16:04:55,331 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_91/preprocessed_p91_20250209_155516.png
+2025-02-09 16:04:55,518 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_9tqgzkb9_input.PNG', '/tmp/tess_9tqgzkb9', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:04:58,312 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_91/music_detection_p91_20250209_155516.png
+2025-02-09 16:04:58,316 - __main__ - INFO - Processing page 92/125 (73.6%)
+2025-02-09 16:04:59,594 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_92/preprocessed_p92_20250209_155516.png
+2025-02-09 16:04:59,756 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_3d8earq7_input.PNG', '/tmp/tess_3d8earq7', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:05:01,997 - __main__ - INFO - Processing page 93/125 (74.4%)
+2025-02-09 16:05:03,169 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_93/preprocessed_p93_20250209_155516.png
+2025-02-09 16:05:03,330 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_ymnccsyy_input.PNG', '/tmp/tess_ymnccsyy', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:05:06,451 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_93/music_detection_p93_20250209_155516.png
+2025-02-09 16:05:06,457 - __main__ - INFO - Processing page 94/125 (75.2%)
+2025-02-09 16:05:07,640 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_94/preprocessed_p94_20250209_155516.png
+2025-02-09 16:05:07,803 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_1w1k1rpz_input.PNG', '/tmp/tess_1w1k1rpz', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:05:11,194 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_94/music_detection_p94_20250209_155516.png
+2025-02-09 16:05:11,198 - __main__ - INFO - Processing page 95/125 (76.0%)
+2025-02-09 16:05:12,179 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_95/preprocessed_p95_20250209_155516.png
+2025-02-09 16:05:12,334 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_6i7kereu_input.PNG', '/tmp/tess_6i7kereu', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:05:17,539 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_95/music_detection_p95_20250209_155516.png
+2025-02-09 16:05:17,543 - __main__ - INFO - Processing page 96/125 (76.8%)
+2025-02-09 16:05:18,990 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_96/preprocessed_p96_20250209_155516.png
+2025-02-09 16:05:19,169 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_wjgrx0pj_input.PNG', '/tmp/tess_wjgrx0pj', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:05:26,527 - __main__ - INFO - Processing page 97/125 (77.6%)
+2025-02-09 16:05:27,938 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_97/preprocessed_p97_20250209_155516.png
+2025-02-09 16:05:28,125 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_g7io31fo_input.PNG', '/tmp/tess_g7io31fo', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:05:34,894 - __main__ - INFO - Processing page 98/125 (78.4%)
+2025-02-09 16:05:36,258 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_98/preprocessed_p98_20250209_155516.png
+2025-02-09 16:05:36,433 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_uea8d9bb_input.PNG', '/tmp/tess_uea8d9bb', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:05:41,763 - __main__ - INFO - Processing page 99/125 (79.2%)
+2025-02-09 16:05:42,886 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_99/preprocessed_p99_20250209_155516.png
+2025-02-09 16:05:43,047 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_jqyp2l54_input.PNG', '/tmp/tess_jqyp2l54', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:05:46,616 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_99/music_detection_p99_20250209_155516.png
+2025-02-09 16:05:46,622 - __main__ - INFO - Processing page 100/125 (80.0%)
+2025-02-09 16:05:47,622 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_100/preprocessed_p100_20250209_155516.png
+2025-02-09 16:05:47,769 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_yvfqwi89_input.PNG', '/tmp/tess_yvfqwi89', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:05:49,759 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_100/music_detection_p100_20250209_155516.png
+2025-02-09 16:05:49,764 - __main__ - INFO - Progress: 100/125 pages
+2025-02-09 16:05:49,764 - __main__ - INFO - Speed: 0.16 pages/second
+2025-02-09 16:05:49,764 - __main__ - INFO - Estimated time remaining: 2.6 minutes
+2025-02-09 16:05:49,764 - __main__ - INFO - Processing page 101/125 (80.8%)
+2025-02-09 16:05:51,203 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_101/preprocessed_p101_20250209_155516.png
+2025-02-09 16:05:51,370 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_gbsxjjzh_input.PNG', '/tmp/tess_gbsxjjzh', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:05:56,927 - __main__ - INFO - Processing page 102/125 (81.6%)
+2025-02-09 16:05:58,258 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_102/preprocessed_p102_20250209_155516.png
+2025-02-09 16:05:58,435 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess__h2khasv_input.PNG', '/tmp/tess__h2khasv', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:06:04,912 - __main__ - INFO - Processing page 103/125 (82.4%)
+2025-02-09 16:06:06,325 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_103/preprocessed_p103_20250209_155516.png
+2025-02-09 16:06:06,509 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_2e15v06g_input.PNG', '/tmp/tess_2e15v06g', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:06:13,887 - __main__ - INFO - Processing page 104/125 (83.2%)
+2025-02-09 16:06:15,285 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_104/preprocessed_p104_20250209_155516.png
+2025-02-09 16:06:15,471 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_5c13345l_input.PNG', '/tmp/tess_5c13345l', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:06:21,236 - __main__ - INFO - Processing page 105/125 (84.0%)
+2025-02-09 16:06:22,961 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_105/preprocessed_p105_20250209_155516.png
+2025-02-09 16:06:23,195 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_rki6jru6_input.PNG', '/tmp/tess_rki6jru6', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:06:31,510 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_105/music_detection_p105_20250209_155516.png
+2025-02-09 16:06:31,516 - __main__ - INFO - Processing page 106/125 (84.8%)
+2025-02-09 16:06:32,630 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_106/preprocessed_p106_20250209_155516.png
+2025-02-09 16:06:32,816 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_z6m8dyd7_input.PNG', '/tmp/tess_z6m8dyd7', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:06:38,913 - __main__ - INFO - Processing page 107/125 (85.6%)
+2025-02-09 16:06:40,260 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_107/preprocessed_p107_20250209_155516.png
+2025-02-09 16:06:40,458 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_0idurf9y_input.PNG', '/tmp/tess_0idurf9y', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:06:48,416 - __main__ - INFO - Processing page 108/125 (86.4%)
+2025-02-09 16:06:49,946 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_108/preprocessed_p108_20250209_155516.png
+2025-02-09 16:06:50,134 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_reyt0m12_input.PNG', '/tmp/tess_reyt0m12', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:07:00,651 - __main__ - INFO - Processing page 109/125 (87.2%)
+2025-02-09 16:07:02,231 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_109/preprocessed_p109_20250209_155516.png
+2025-02-09 16:07:02,456 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_kyx042kb_input.PNG', '/tmp/tess_kyx042kb', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:07:10,083 - __main__ - INFO - Processing page 110/125 (88.0%)
+2025-02-09 16:07:11,367 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_110/preprocessed_p110_20250209_155516.png
+2025-02-09 16:07:11,542 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_36qwss4u_input.PNG', '/tmp/tess_36qwss4u', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:07:17,117 - __main__ - INFO - Progress: 110/125 pages
+2025-02-09 16:07:17,117 - __main__ - INFO - Speed: 0.15 pages/second
+2025-02-09 16:07:17,118 - __main__ - INFO - Estimated time remaining: 1.6 minutes
+2025-02-09 16:07:17,118 - __main__ - INFO - Processing page 111/125 (88.8%)
+2025-02-09 16:07:18,345 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_111/preprocessed_p111_20250209_155516.png
+2025-02-09 16:07:18,514 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_dapksgs9_input.PNG', '/tmp/tess_dapksgs9', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:07:23,727 - __main__ - INFO - Processing page 112/125 (89.6%)
+2025-02-09 16:07:24,909 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_112/preprocessed_p112_20250209_155516.png
+2025-02-09 16:07:25,087 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_t9fksvjq_input.PNG', '/tmp/tess_t9fksvjq', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:07:31,119 - __main__ - INFO - Processing page 113/125 (90.4%)
+2025-02-09 16:07:32,480 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_113/preprocessed_p113_20250209_155516.png
+2025-02-09 16:07:32,663 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_0h8vkvu5_input.PNG', '/tmp/tess_0h8vkvu5', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:07:38,551 - __main__ - INFO - Processing page 114/125 (91.2%)
+2025-02-09 16:07:39,980 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_114/preprocessed_p114_20250209_155516.png
+2025-02-09 16:07:40,173 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_je9s_29g_input.PNG', '/tmp/tess_je9s_29g', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:07:49,126 - __main__ - INFO - Processing page 115/125 (92.0%)
+2025-02-09 16:07:50,859 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_115/preprocessed_p115_20250209_155516.png
+2025-02-09 16:07:51,072 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_fju84_pq_input.PNG', '/tmp/tess_fju84_pq', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:08:01,527 - __main__ - INFO - Processing page 116/125 (92.8%)
+2025-02-09 16:08:03,231 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_116/preprocessed_p116_20250209_155516.png
+2025-02-09 16:08:03,440 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_hdeca48v_input.PNG', '/tmp/tess_hdeca48v', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:08:11,337 - __main__ - INFO - Processing page 117/125 (93.6%)
+2025-02-09 16:08:12,899 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_117/preprocessed_p117_20250209_155516.png
+2025-02-09 16:08:13,087 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_pzwcdpvz_input.PNG', '/tmp/tess_pzwcdpvz', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:08:22,280 - __main__ - INFO - Processing page 118/125 (94.4%)
+2025-02-09 16:08:23,267 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_118/preprocessed_p118_20250209_155516.png
+2025-02-09 16:08:23,444 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_kaly682q_input.PNG', '/tmp/tess_kaly682q', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:08:28,293 - __main__ - INFO - Processing page 119/125 (95.2%)
+2025-02-09 16:08:29,409 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_119/preprocessed_p119_20250209_155516.png
+2025-02-09 16:08:29,579 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_c1r5djr3_input.PNG', '/tmp/tess_c1r5djr3', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:08:35,993 - __main__ - INFO - Processing page 120/125 (96.0%)
+2025-02-09 16:08:37,047 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_120/preprocessed_p120_20250209_155516.png
+2025-02-09 16:08:37,227 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_646mpmye_input.PNG', '/tmp/tess_646mpmye', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:08:44,295 - __main__ - INFO - Progress: 120/125 pages
+2025-02-09 16:08:44,295 - __main__ - INFO - Speed: 0.15 pages/second
+2025-02-09 16:08:44,295 - __main__ - INFO - Estimated time remaining: 0.6 minutes
+2025-02-09 16:08:44,295 - __main__ - INFO - Processing page 121/125 (96.8%)
+2025-02-09 16:08:45,388 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_121/preprocessed_p121_20250209_155516.png
+2025-02-09 16:08:45,561 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_s33y49sc_input.PNG', '/tmp/tess_s33y49sc', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:08:52,643 - __main__ - INFO - Processing page 122/125 (97.6%)
+2025-02-09 16:08:53,825 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_122/preprocessed_p122_20250209_155516.png
+2025-02-09 16:08:53,998 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_6cqvrulx_input.PNG', '/tmp/tess_6cqvrulx', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:09:01,661 - __main__ - INFO - Processing page 123/125 (98.4%)
+2025-02-09 16:09:02,781 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_123/preprocessed_p123_20250209_155516.png
+2025-02-09 16:09:02,953 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_wk1ogd1g_input.PNG', '/tmp/tess_wk1ogd1g', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:09:10,552 - __main__ - INFO - Processing page 124/125 (99.2%)
+2025-02-09 16:09:11,181 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_124/preprocessed_p124_20250209_155516.png
+2025-02-09 16:09:11,302 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_3gobnvip_input.PNG', '/tmp/tess_3gobnvip', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:09:13,752 - __main__ - INFO - Processing page 125/125 (100.0%)
+2025-02-09 16:09:14,830 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_full/debug/page_125/preprocessed_p125_20250209_155516.png
+2025-02-09 16:09:14,899 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_fjss47a9_input.PNG', '/tmp/tess_fjss47a9', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:09:17,400 - __main__ - INFO - Processing complete: 99.2% success rate
+2025-02-09 16:09:17,400 - __main__ - INFO - Total time: 14.0 minutes
+2025-02-09 16:09:17,400 - __main__ - INFO - Average time per page: 6.73 seconds

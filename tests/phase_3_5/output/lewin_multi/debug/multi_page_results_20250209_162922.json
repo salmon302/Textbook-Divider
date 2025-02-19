@@ -1,0 +1,12 @@
+{
+  "timestamp": "20250209_162922",
+  "pages_processed": 5,
+  "success_rate": 1.0,
+  "results": {
+    "10": true,
+    "25": true,
+    "50": true,
+    "75": true,
+    "100": true
+  }
+}

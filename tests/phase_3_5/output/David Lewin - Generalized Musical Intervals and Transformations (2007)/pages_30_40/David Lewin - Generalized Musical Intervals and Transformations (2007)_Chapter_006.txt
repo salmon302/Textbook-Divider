@@ -1,0 +1,18 @@
+6
+
+
+Mathematical Preliminaries 
+1.9.2
+transposing-by-2; let I, J, and K be the respective operations of inverting-
+about-C, inverting-about-B, and inverting-about-Cft. Then, as we observed
+earlier, IT2 = J (1.2.5). On the other hand, T2I = K. Thus the operations T2
+and I do not commute. (Remember that we are using left orthography.
+"IT2 = J" means: "Given any sample pitch-class s, if you invert-about-C the
+2-transpose of s, you will obtain the inversion-about-B of the given s."
+"T2I = K" means: "Given any sample pitch-class s, if you transpose-by-2
+the inversion-about-C of s, you will obtain the inversion-about-C# of the
+given s.")
+1.8.2 
+DEFINITION: Given a binary composition BIN on a family X, an
+element c of X is central if c commutes with every x in X. The family of all
+central c is the center of the system (X, BIN).

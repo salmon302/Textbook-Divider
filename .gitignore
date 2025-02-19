@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Project specific
+tests/output/*
+!tests/output/.gitkeep
+cmake-build-debug/
+
+# Misc
+.DS_Store
+
+# Textbooks and Research Materials
+*.pdf
+*.epub
+*.mobi
+*.djvu
+textbooks/
+research_materials/
+input_files/
+data/textbooks/
+data/research/
+
+# Large Files
+# Block any file >= 100MB
+**/[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]*

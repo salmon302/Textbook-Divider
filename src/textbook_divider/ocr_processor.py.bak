@@ -1,0 +1,570 @@
+import re
+import os
+import logging
+import multiprocessing
+from pathlib import Path
+from typing import Union, List, Dict, Optional, Any
+
+import cv2
+import numpy as np
+import PyPDF2
+import pytesseract
+from PIL import Image, ImageEnhance, ImageFilter
+from pdf2image import convert_from_path
+from pdfminer.high_level import extract_text
+
+from .parallel_processor import ParallelProcessor
+
+
+class OCRProcessor:
+	# Feature patterns for text analysis
+	feature_patterns = {
+		'math': [
+			r'[∫∑∏√∆∇]',
+			r'\$.*?\$',
+			r'[=<>+\-*/^()]',
+			r'\b\d+(?:\.\d+)?\b'
+		],
+		'music': [
+			r'[♩♪♫♬𝄞𝄢]',
+			r'\b(?:sharp|flat|natural)\b',
+			r'\b(?:major|minor|chord)\b'
+		]
+	}
+	SUPPORTED_LANGUAGES = {
+		'eng': 'English',
+		'fra': 'French',
+		'deu': 'German',
+		'spa': 'Spanish',
+		'ita': 'Italian'
+	}
+	
+	def __init__(self, lang: str = 'eng', enable_gpu: bool = False, cache_size: int = 1000):
+		if lang not in self.SUPPORTED_LANGUAGES:
+			raise ValueError(f"Unsupported language: {lang}")
+		self.lang = lang
+		self.enable_gpu = enable_gpu
+		self.logger = logging.getLogger(__name__)
+		pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
+		self.config = self._build_tesseract_config()
+		self.preprocessing_params = {
+			'dpi': 400,
+			'contrast_limit': 3.0,
+			'denoise_strength': 5,
+			'sharpness': 2.0,
+			'batch_size': 4
+		}
+		self.parallel_processor = ParallelProcessor(
+			max_workers=min(multiprocessing.cpu_count(), 4),
+			memory_limit_mb=500
+		)
+		self._cache = {}
+		self._cache_size = cache_size
+		self.stats = {'processed': 0, 'failed': 0, 'cache_hits': 0}
+
+
+	def _build_tesseract_config(self) -> str:
+		config = [
+			'--oem 1',  # LSTM only
+			'--psm 1',  # Auto-detect page segmentation
+			'-c preserve_interword_spaces=1',
+			'-c textord_tablefind_recognize_tables=1',
+			'-c textord_min_linesize=2.5',
+			'-c tessedit_write_images=0',
+			'-c tessedit_create_txt=1',
+			'-c tessedit_pageseg_mode=1',
+			'-c tessedit_do_invert=0',
+			'-c tessedit_unrej_any_wd=1',
+			'-c tessedit_fix_fuzzy_spaces=1',
+			'-c tessedit_char_blacklist=§¶',
+			'-c tessedit_enable_doc_dict=1'
+		]
+		if self.enable_gpu:
+			config.append('--opencl')
+		return ' '.join(config)
+
+	def process_image(self, image_path: Union[str, Image.Image]) -> str:
+		try:
+			if isinstance(image_path, str):
+				image = Image.open(image_path)
+			else:
+				image = image_path
+
+			if image.mode not in ('L', 'RGB'):
+				image = image.convert('RGB')
+
+			enhanced_image = self.preprocess_image(image)
+			data = pytesseract.image_to_data(
+				enhanced_image,
+				lang=self.lang,
+				config=self.config,
+				output_type=pytesseract.Output.DICT
+			)
+			
+			# Filter words by confidence
+			text = ' '.join(word for word, conf in zip(data['text'], data['conf']) 
+						  if conf > 60)
+			
+			return self.clean_text(text)
+
+		except Exception as e:
+			self.logger.error(f"OCR Error: {str(e)}")
+			return ""
+
+
+
+
+	def preprocess_image(self, image: Image.Image) -> Image.Image:
+		img_array = np.array(image)
+		if len(img_array.shape) == 3:
+			gray = cv2.cvtColor(img_array, cv2.COLOR_RGB2GRAY)
+		else:
+			gray = img_array
+		
+		angle = self._get_skew_angle(gray)
+		if abs(angle) > 0.5:
+			gray = self._rotate_image(gray, angle)
+		
+		clahe = cv2.createCLAHE(
+			clipLimit=self.preprocessing_params['contrast_limit'],
+			tileGridSize=(8,8)
+		)
+		gray = clahe.apply(gray)
+		
+		gray = cv2.fastNlMeansDenoising(
+			gray,
+			None,
+			self.preprocessing_params['denoise_strength'],
+			7,
+			21
+		)
+		
+		binary = cv2.adaptiveThreshold(
+			gray,
+			255,
+			cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+			cv2.THRESH_BINARY,
+			11,
+			2
+		)
+		
+		kernel = np.ones((2,2), np.uint8)
+		binary = cv2.morphologyEx(binary, cv2.MORPH_OPEN, kernel)
+		
+		enhanced = Image.fromarray(binary)
+		enhancer = ImageEnhance.Sharpness(enhanced)
+		return enhancer.enhance(self.preprocessing_params['sharpness'])
+
+	def clean_text(self, text: str) -> str:
+		if not text:
+			return ""
+		# Remove musical notation and symbols
+		text = re.sub(r'[♩♪♫♬𝄞𝄢]', '', text)
+		text = re.sub(r'[\u2600-\u26FF]', '', text)  # Remove misc symbols
+		
+		# Keep only printable chars and newlines
+		text = ''.join(char for char in text if char.isprintable() or char in '\n\t')
+		
+		# Fix common OCR errors
+		text = self._fix_common_errors(text)
+		text = self._fix_word_breaks(text)
+		text = self._normalize_spacing(text)
+		text = self._fix_paragraph_breaks(text)
+		
+		# Clean up chapter headings
+		text = re.sub(r'(?i)ch[a-z]*\s*(\d+)', r'Chapter \1', text)
+		text = re.sub(r'(?i)part\s*(\d+)', r'Part \1', text)
+		text = re.sub(r'(?i)section\s*(\d+)', r'Section \1', text)
+		
+		return text
+
+	def _fix_common_errors(self, text: str) -> str:
+		replacements = {
+			r'l(?=[A-Z])': 'I',
+			r'(?<=\d)O|o(?=\d)': '0',
+			r'(?<=\d)l(?=\d)': '1',
+			r'\bI\b': '1',
+			r'rn\b': 'm',
+			r'\bm\b': 'in',
+			r'["]': '"',
+			r"[']": "'",
+			r'[-]': '-',
+			r'\s+[-]\s+': ' - ',
+			r'(?<=\d),(?=\d)': '.',  # Fix decimal points
+			r'(?<=[a-z])\.(?=[a-z])': ' ',  # Fix merged sentences
+			r'(?<=\d)o(?=\d)': '0',  # Fix zero recognition
+			r'(?<=[A-Za-z])1(?=[A-Za-z])': 'l'  # Fix 'l' recognition
+		}
+		for pattern, replacement in replacements.items():
+			text = re.sub(pattern, replacement, text)
+		return text
+
+	def _fix_word_breaks(self, text: str) -> str:
+		text = text.replace('\u00AD', '')
+		lines = text.split('\n')
+		result = []
+		skip_next = False
+		
+		for i, line in enumerate(lines):
+			if skip_next:
+				skip_next = False
+				continue
+			if i < len(lines) - 1 and line.endswith('-'):
+				next_line = lines[i + 1].lstrip()
+				if next_line and next_line[0].islower():
+					result.append(line[:-1] + next_line)
+					skip_next = True
+					continue
+			result.append(line)
+		
+		return '\n'.join(result)
+
+	def _normalize_spacing(self, text: str) -> str:
+		text = ' '.join(text.split())
+		text = re.sub(r'\s+([.,!?:;])', r'\1', text)
+		text = re.sub(r'([.,!?:;])\s*([A-Z])', r'\1 \2', text)
+		text = re.sub(r'\s*\(\s*', ' (', text)
+		text = re.sub(r'\s*\)\s*', ') ', text)
+		return text
+
+	def _fix_paragraph_breaks(self, text: str) -> str:
+		paragraphs = text.split('\n\n')
+		cleaned = []
+		for para in paragraphs:
+			para = ' '.join(line.strip() for line in para.split('\n'))
+			para = ' '.join(para.split())
+			if para:
+				cleaned.append(para)
+		return '\n\n'.join(cleaned)
+
+	def _get_skew_angle(self, image: np.ndarray) -> float:
+		edges = cv2.Canny(image, 50, 150, apertureSize=3)
+		lines = cv2.HoughLines(edges, 1, np.pi/180, 100)
+		if lines is not None:
+			angles = []
+			for rho, theta in lines[:, 0]:
+				angle = np.degrees(theta) - 90
+				if abs(angle) < 45:
+					angles.append(angle)
+			if angles:
+				return np.median(angles)
+		return 0.0
+
+	def _rotate_image(self, image: np.ndarray, angle: float) -> np.ndarray:
+		(h, w) = image.shape[:2]
+		center = (w // 2, h // 2)
+		M = cv2.getRotationMatrix2D(center, angle, 1.0)
+		return cv2.warpAffine(image, M, (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
+
+	def process_images(self, image_paths: List[str]) -> str:
+		"""Process multiple images in parallel with batch preprocessing"""
+		# Group images into batches
+		batch_size = self.preprocessing_params['batch_size']
+		batches = [image_paths[i:i + batch_size] for i in range(0, len(image_paths), batch_size)]
+		
+		all_results = []
+		for batch in batches:
+			# Preprocess batch in parallel
+			preprocessed = self.parallel_processor.process_batch(
+				items=batch,
+				process_func=self._preprocess_single_image
+			)
+			
+			# Process preprocessed images
+			result = self.parallel_processor.process_batch(
+				items=[(img, path) for img, path in zip(preprocessed['results'], batch)],
+				process_func=self._process_preprocessed_image
+			)
+			
+			all_results.extend(result['results'])
+		
+		texts = [text for text in all_results if text and text.strip()]
+		self.stats['processed'] += len(all_results)
+		
+		return '\n\n'.join(texts)
+
+	def _preprocess_single_image(self, image_path: str) -> np.ndarray:
+		"""Preprocess a single image"""
+		try:
+			# Check cache first
+			if image_path in self._cache:
+				self.stats['cache_hits'] += 1
+				return self._cache[image_path]
+
+			image = Image.open(image_path)
+			if image.mode not in ('L', 'RGB'):
+				image = image.convert('RGB')
+
+			# Process image
+			processed = self.preprocess_image(image)
+			
+			# Update cache with LRU policy
+			if len(self._cache) >= self._cache_size:
+				self._cache.pop(next(iter(self._cache)))
+			self._cache[image_path] = processed
+
+			return processed
+
+		except Exception as e:
+			self.logger.error(f"Preprocessing failed for {image_path}: {str(e)}")
+			return None
+
+	def _process_preprocessed_image(self, data: tuple) -> str:
+		"""Process a preprocessed image"""
+		preprocessed_image, image_path = data
+		if preprocessed_image is None:
+			return ""
+			
+		try:
+			# Convert numpy array back to PIL Image
+			image = Image.fromarray(preprocessed_image)
+			
+			# Run OCR
+			data = pytesseract.image_to_data(
+				image,
+				lang=self.lang,
+				config=self.config,
+				output_type=pytesseract.Output.DICT
+			)
+			
+			# Filter words by confidence
+			text = ' '.join(word for word, conf in zip(data['text'], data['conf']) 
+						  if conf > 60)
+			
+			return self.clean_text(text)
+
+		except Exception as e:
+			self.logger.error(f"OCR failed for {image_path}: {str(e)}")
+			return ""
+
+	def get_stats(self) -> Dict[str, Any]:
+		"""Get processing statistics"""
+		return {
+			**self.stats,
+			'worker_stats': self.parallel_processor.worker_stats
+		}
+
+	def extract_text_with_fallback(self, pdf_path: str, page_num: int) -> str:
+		"""Extract text using multiple fallback methods"""
+		try:
+			# Try PyPDF2 first
+			with open(pdf_path, 'rb') as file:
+				reader = PyPDF2.PdfReader(file)
+				if 0 <= page_num < len(reader.pages):
+					text = reader.pages[page_num].extract_text()
+					if text.strip():
+						return text
+
+			# Try PDFMiner if PyPDF2 fails
+			text = extract_text(pdf_path, page_numbers=[page_num])
+			if text.strip():
+				return text
+
+			# OCR fallback
+			images = convert_from_path(pdf_path, first_page=page_num+1, last_page=page_num+1)
+			if images:
+				return self.process_image(images[0])
+
+		except Exception as e:
+			self.logger.error(f"Text extraction failed for page {page_num}: {e}")
+			return ""
+
+	def detect_features(self, text: str) -> Dict[str, bool]:
+		"""Detect mathematical and musical features in text"""
+		features = {'math': False, 'music': False}
+		
+		for feature, patterns in self.feature_patterns.items():
+			for pattern in patterns:
+				if re.search(pattern, text):
+					features[feature] = True
+					break
+		
+		return features
+
+	def preprocess_image(self, image: Image.Image) -> np.ndarray:
+		"""Memory-optimized image preprocessing"""
+		# Convert to numpy array
+		img_array = np.array(image)
+		
+		# Free original image memory
+		image.close()
+		del image
+		
+		# Convert to grayscale
+		if len(img_array.shape) == 3:
+			gray = cv2.cvtColor(img_array, cv2.COLOR_RGB2GRAY)
+			del img_array  # Free memory
+		else:
+			gray = img_array
+			
+		# Optimize memory usage in preprocessing steps
+		angle = self._get_skew_angle(gray)
+		if abs(angle) > 0.5:
+			gray = self._rotate_image(gray, angle)
+		
+		# Apply CLAHE
+		clahe = cv2.createCLAHE(
+			clipLimit=self.preprocessing_params['contrast_limit'],
+			tileGridSize=(8,8)
+		)
+		gray = clahe.apply(gray)
+		
+		# Denoise
+		gray = cv2.fastNlMeansDenoising(
+			gray,
+			None,
+			self.preprocessing_params['denoise_strength'],
+			7,
+			21
+		)
+		
+		# Binarization
+		binary = cv2.adaptiveThreshold(
+			gray,
+			255,
+			cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+			cv2.THRESH_BINARY,
+			11,
+			2
+		)
+		del gray  # Free memory
+		
+		# Morphological operations
+		kernel = np.ones((2,2), np.uint8)
+		binary = cv2.morphologyEx(binary, cv2.MORPH_OPEN, kernel)
+		
+		return binary
+
+	def clean_text(self, text: str) -> str:
+		"""Clean and normalize OCR output text"""
+		if not text:
+			return ""
+		
+		# Remove musical notation and symbols
+		text = re.sub(r'[♩♪♫♬𝄞𝄢]', '', text)
+		text = re.sub(r'[\u2600-\u26FF]', '', text)  # Remove misc symbols
+		
+		# Keep only printable chars and newlines
+		text = ''.join(char for char in text if char.isprintable() or char in '\n\t')
+		
+		# Fix common OCR errors
+		text = self._fix_common_errors(text)
+		text = self._fix_word_breaks(text)
+		text = self._normalize_spacing(text)
+		text = self._fix_paragraph_breaks(text)
+		
+		# Clean up chapter headings
+		text = re.sub(r'(?i)ch[a-z]*\s*(\d+)', r'Chapter \1', text)
+		text = re.sub(r'(?i)part\s*(\d+)', r'Part \1', text)
+		text = re.sub(r'(?i)section\s*(\d+)', r'Section \1', text)
+		
+		return text
+
+	def _fix_common_errors(self, text: str) -> str:
+		"""Fix common OCR recognition errors"""
+		replacements = {
+			r'l(?=[A-Z])': 'I',
+			r'(?<=\d)O|o(?=\d)': '0',
+			r'(?<=\d)l(?=\d)': '1',
+			r'\bI\b': '1',
+			r'rn\b': 'm',
+			r'\bm\b': 'in',
+			r'["]': '"',
+			r"[']": "'",
+			r'[-]': '-',
+			r'\s+[-]\s+': ' - ',
+			r'(?<=\d),(?=\d)': '.',
+			r'(?<=[a-z])\.(?=[a-z])': ' ',
+			r'(?<=\d)o(?=\d)': '0',
+			r'(?<=[A-Za-z])1(?=[A-Za-z])': 'l'
+		}
+		for pattern, replacement in replacements.items():
+			text = re.sub(pattern, replacement, text)
+		return text
+
+	def _fix_word_breaks(self, text: str) -> str:
+		"""Fix word breaks and hyphenation"""
+		text = text.replace('\u00AD', '')
+		lines = text.split('\n')
+		result = []
+		skip_next = False
+		
+		for i, line in enumerate(lines):
+			if skip_next:
+				skip_next = False
+				continue
+			if i < len(lines) - 1 and line.endswith('-'):
+				next_line = lines[i + 1].lstrip()
+				if next_line and next_line[0].islower():
+					result.append(line[:-1] + next_line)
+					skip_next = True
+					continue
+			result.append(line)
+		
+		return '\n'.join(result)
+
+	def _normalize_spacing(self, text: str) -> str:
+		"""Normalize spacing and punctuation"""
+		text = ' '.join(text.split())
+		text = re.sub(r'\s+([.,!?:;])', r'\1', text)
+		text = re.sub(r'([.,!?:;])\s*([A-Z])', r'\1 \2', text)
+		text = re.sub(r'\s*\(\s*', ' (', text)
+		text = re.sub(r'\s*\)\s*', ') ', text)
+		return text
+
+	def _fix_paragraph_breaks(self, text: str) -> str:
+		"""Fix paragraph breaks and formatting"""
+		paragraphs = text.split('\n\n')
+		cleaned = []
+		for para in paragraphs:
+			para = ' '.join(line.strip() for line in para.split('\n'))
+			para = ' '.join(para.split())
+			if para:
+				cleaned.append(para)
+		return '\n\n'.join(cleaned)
+
+	def _get_skew_angle(self, image: np.ndarray) -> float:
+		"""Detect skew angle of the image"""
+		edges = cv2.Canny(image, 50, 150, apertureSize=3)
+		lines = cv2.HoughLines(edges, 1, np.pi/180, 100)
+		if lines is not None:
+			angles = []
+			for rho, theta in lines[:, 0]:
+				angle = np.degrees(theta) - 90
+				if abs(angle) < 45:
+					angles.append(angle)
+			if angles:
+				return np.median(angles)
+		return 0.0
+
+	def _rotate_image(self, image: np.ndarray, angle: float) -> np.ndarray:
+		"""Rotate image by given angle"""
+		(h, w) = image.shape[:2]
+		center = (w // 2, h // 2)
+		M = cv2.getRotationMatrix2D(center, angle, 1.0)
+		return cv2.warpAffine(image, M, (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
+
+	def extract_text_with_fallback(self, pdf_path: str, page_num: int) -> str:
+		"""Extract text using multiple fallback methods"""
+		try:
+			# Try PyPDF2 first
+			with open(pdf_path, 'rb') as file:
+				reader = PyPDF2.PdfReader(file)
+				if 0 <= page_num < len(reader.pages):
+					text = reader.pages[page_num].extract_text()
+					if text.strip():
+						return text
+
+			# Try PDFMiner if PyPDF2 fails
+			text = extract_text(pdf_path, page_numbers=[page_num])
+			if text.strip():
+				return text
+
+			# OCR fallback
+			images = convert_from_path(pdf_path, first_page=page_num+1, last_page=page_num+1)
+			if images:
+				return self.process_image(images[0])
+
+		except Exception as e:
+			self.logger.error(f"Text extraction failed for page {page_num}: {e}")
+			return ""

@@ -1,0 +1,44 @@
+2025-02-04 16:00:06,580 - scripts.test_omr_detection - INFO - Starting test: test_real_book_processing
+2025-02-04 16:00:06,580 - scripts.test_omr_detection - DEBUG - Test function signature: (self)
+2025-02-04 16:00:10,323 - scripts.test_omr_detection - ERROR - Test failed: test_real_book_processing
+2025-02-04 16:00:10,323 - scripts.test_omr_detection - ERROR - False is not true
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_omr_detection.py", line 87, in test_real_book_processing
+    self.assertTrue(result['success'])
+  File "/usr/lib/python3.12/unittest/case.py", line 727, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+2025-02-04 16:00:10,337 - scripts.test_omr_detection - INFO - Starting test: test_staff_detection
+2025-02-04 16:00:10,337 - scripts.test_omr_detection - DEBUG - Test function signature: (self)
+2025-02-04 16:00:10,339 - scripts.test_omr_detection - ERROR - Test failed: test_staff_detection
+2025-02-04 16:00:10,339 - scripts.test_omr_detection - ERROR - 3 != 5
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_omr_detection.py", line 45, in test_staff_detection
+    self.assertEqual(len(staff_positions[0]), 5)  # Should detect 5 lines per staff
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/case.py", line 885, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python3.12/unittest/case.py", line 878, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 3 != 5
+2025-02-04 16:00:10,344 - scripts.test_omr_detection - INFO - Starting test: test_symbol_detection
+2025-02-04 16:00:10,345 - scripts.test_omr_detection - DEBUG - Test function signature: (self)
+2025-02-04 16:00:10,347 - scripts.test_omr_detection - ERROR - Test failed: test_symbol_detection
+2025-02-04 16:00:10,347 - scripts.test_omr_detection - ERROR - 0.0 not greater than 0.5
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_omr_detection.py", line 56, in test_symbol_detection
+    self.assertGreater(symbol_confidence['notes'], 0.5)
+  File "/usr/lib/python3.12/unittest/case.py", line 1269, in assertGreater
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.12/unittest/case.py", line 715, in fail
+    raise self.failureException(msg)
+AssertionError: 0.0 not greater than 0.5

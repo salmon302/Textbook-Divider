@@ -1,0 +1,32 @@
+{
+  "metrics": {
+    "processing_time": 1415.6017079353333,
+    "memory_usage": 292.1796875,
+    "omr_detections": 0,
+    "text_blocks": 0,
+    "mixed_blocks": 0,
+    "staff_accuracy": 0.0,
+    "note_accuracy": 0.0,
+    "processing_errors": [],
+    "mixed_content_quality": 0.0,
+    "engine": "unknown",
+    "staff_positions": [],
+    "raw_confidence": {},
+    "recoveries": []
+  },
+  "omr_results": {
+    "success": true,
+    "musical_notation": [
+      {
+        "page": 2,
+        "staff_positions": [
+          [
+            256,
+            271,
+            282,
+            292,
+            303
+          ]
+        ],
+        "symbol_confidence": {
+          "notes": 

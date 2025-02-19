@@ -1,0 +1,101 @@
+{
+  "page": 214,
+  "node_count": 13,
+  "edge_count": 12,
+  "node_types": {
+    "NodeType.TRANSFORMATION": 13
+  },
+  "relationships": [
+    {
+      "type": "",
+      "source": "RICH",
+      "target": "RICH",
+      "confidence": 1.0,
+      "is_isomorphism": false
+    },
+    {
+      "type": "",
+      "source": "RICH",
+      "target": "RICH",
+      "confidence": 1.0,
+      "is_isomorphism": false
+    },
+    {
+      "type": "",
+      "source": "RICH",
+      "target": "RICH",
+      "confidence": 1.0,
+      "is_isomorphism": false
+    },
+    {
+      "type": "",
+      "source": "RICH",
+      "target": "RICH",
+      "confidence": 1.0,
+      "is_isomorphism": false
+    },
+    {
+      "type": "",
+      "source": "RICH",
+      "target": "RICH",
+      "confidence": 1.0,
+      "is_isomorphism": false
+    },
+    {
+      "type": "",
+      "source": "RICH",
+      "target": "TCH",
+      "confidence": 1.0,
+      "is_isomorphism": false
+    },
+    {
+      "type": "",
+      "source": "TCH",
+      "target": "TCH",
+      "confidence": 1.0,
+      "is_isomorphism": false
+    },
+    {
+      "type": "",
+      "source": "TCH",
+      "target": "TCH",
+      "confidence": 1.0,
+      "is_isomorphism": false
+    },
+    {
+      "type": "",
+      "source": "TCH",
+      "target": "TCH",
+      "confidence": 1.0,
+      "is_isomorphism": false
+    },
+    {
+      "type": "",
+      "source": "TCH",
+      "target": "TCH",
+      "confidence": 1.0,
+      "is_isomorphism": false
+    },
+    {
+      "type": "",
+      "source": "TCH",
+      "target": "TCH",
+      "confidence": 1.0,
+      "is_isomorphism": false
+    },
+    {
+      "type": "",
+      "source": "TCH",
+      "target": "TCH",
+      "confidence": 1.0,
+      "is_isomorphism": false
+    }
+  ],
+  "network_analysis": {
+    "nodes": 0,
+    "edges": 0,
+    "layout_type": "LayoutType.COMPLEX",
+    "confidence": 0.0,
+    "isomorphisms": 0
+  }
+}

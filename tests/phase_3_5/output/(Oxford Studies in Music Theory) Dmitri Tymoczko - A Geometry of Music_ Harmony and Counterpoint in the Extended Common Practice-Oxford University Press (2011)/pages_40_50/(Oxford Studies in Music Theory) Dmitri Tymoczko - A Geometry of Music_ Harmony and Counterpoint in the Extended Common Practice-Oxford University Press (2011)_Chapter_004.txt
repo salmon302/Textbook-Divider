@@ -1,0 +1,5 @@
+4 Consequently, pitch-class space is circular only in an abstract sense. One shouldn’t think of it as being 
+embedded in a larger two-dimensional space, the way an ordinary circle exists on a two-dimensional piece 
+of paper. Instead, one should think of it as a one-dimensional space unto itself. Here it can be useful to imag-
+ine a pointlike inhabitant of the space: from its perspective, “circularity” consists in the fact that a “straight 
+line”—for example, a counterclockwise path—eventually returns to its starting point.

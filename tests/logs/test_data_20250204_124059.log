@@ -1,0 +1,138 @@
+2025-02-04 12:40:59,452 - test_data - DEBUG - Generated Output Files: [
+  "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output/complex_test/complex_sample_Chapter_001.txt",
+  "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output/complex_test/complex_sample_Chapter_002.txt"
+]
+2025-02-04 12:40:59,452 - test_data - DEBUG - First Chapter Content Preview: Chapter 1: Advanced Mathematics
+==================================================
+Confidence: 1.00
+==================================================
+
+Chapter 1: Advanced Mathematics
+
+This chapter co...
+2025-02-04 12:40:59,452 - test_data - DEBUG - Second Chapter Content Preview: Chapter 2: Musical Theory
+==================================================
+Confidence: 1.00
+==================================================
+
+Chapter 2: Musical Theory
+
+Section 1: Basic Notation
+-...
+2025-02-04 12:40:59,453 - test_data - DEBUG - Test Content: 
+		Chapter 1: Introduction
+		This is the introduction content.
+		
+		1.1 Subsection
+		This is a subsection.
+		
+		Chapter 2 - Advanced Topics
+		This is the advanced content.
+		
+2025-02-04 12:40:59,454 - test_data - DEBUG - Detected Chapters: [
+  {
+    "number": 1,
+    "title": "Introduction",
+    "is_subchapter": false,
+    "confidence": 1.0,
+    "parent_chapter": null
+  },
+  {
+    "number": 1,
+    "title": "Subsection",
+    "is_subchapter": true,
+    "confidence": 0.95,
+    "parent_chapter": 1
+  },
+  {
+    "number": 2,
+    "title": "- Advanced Topics",
+    "is_subchapter": false,
+    "confidence": 1.0,
+    "parent_chapter": null
+  }
+]
+2025-02-04 12:40:59,458 - test_data - DEBUG - Test Content: 
+		Chapter 1: Typography Test
+		
+		This text has *emphasis* and **strong** formatting.
+		
+		1. First item
+		2. Second item
+		
+		> Important quote
+		> With multiple lines
+		
+2025-02-04 12:40:59,459 - test_data - DEBUG - Processed Content: Chapter 1: Typography Test
+
+This text has *emphasis* and **strong** formatting.
+
+1. First item
+2. Second item
+
+		> Important quote
+		> With multiple lines
+2025-02-04 12:40:59,462 - test_data - DEBUG - Chapter Structure Metadata: {
+  "processing_stats": {
+    "start_time": "2025-02-04T12:40:59.460657",
+    "end_time": "2025-02-04T12:40:59.461891",
+    "processing_time": "0:00:00.001234",
+    "detected_chapters": 6,
+    "ocr_confidence": 0.0
+  }
+}
+2025-02-04 12:40:59,462 - test_data - DEBUG - Generated Metadata: {
+  "processing_stats": {
+    "start_time": "2025-02-04T12:40:59.460657",
+    "end_time": "2025-02-04T12:40:59.461891",
+    "processing_time": "0:00:00.001234",
+    "detected_chapters": 6,
+    "ocr_confidence": 0.0
+  }
+}
+2025-02-04 12:46:32,599 - test_data - DEBUG - Extracted Content Preview: Sea ee eat ee IFT ast aera ee oats ee CURD ay ae 5 3 q a aia SESS A eae Waa opment) a - et ‘ Ss Steen ah stp frees VE;
+SPOR eter aye tac IL TET Seal a ernie Ciageet eee seca aroha Meas: ellrer ces pee en eee ee eet ere e acs dips at dade eager eed eal SEM cE Tea Maes me eee i Sinead oui =e a Denim Meee enagey Pe Ss pals Really SAN a TS Sg Dt any dere RI ea tr i ye irae pot a SELELR bettie:
+MUSE pemceete ars pes eS Pn wie ga lh Apatlit mihon SRS pe epareeees a Tr Ge wai Ae eSq dalag opm a D. 5 ae ap Pecks eee tas ASY He char Pullin JF yh UT ant sree A eu A ees TRUE) ERA Goleta ain eel ee lee ‘i arash we q tiered Patalet eens e SA ancy.
+Ten reeg eal aS Utes ees 5 ean, ep. ce oD.
+Mune Spee a oy dt ox oa Sa CESS Beg 2 ess ie;
+Sas i: 1 Rtas ees iat coe: — 9 eee EA Sie f Bie eee i = iets a fe is i oie Y re as a fs Leen Br eeiat Hee eee BE 3: ra Sere Wao eC eee ny epee aD - dt i oe el RE Ae cre BY ee a Ci ee ee Sy ere ees here g Ce Riiguianleees in a eG De ic erers SU eat aaa MERE Wheres WERE
+2025-02-04 12:46:32,604 - test_data - DEBUG - Test Content: 
+		• First list item
+		• Second list item
+		
+		Normal paragraph text.
+		
+		> This is a quote
+		> Multiple lines
+		
+		```python
+		def test():
+			pass
+		```
+		
+2025-02-04 12:46:32,604 - test_data - DEBUG - Processed Blocks: [
+  {
+    "type": "list",
+    "content": "\t\t\u2022 First list item\n\t\t\u2022 Second list item"
+  },
+  {
+    "type": "paragraph",
+    "content": "\t\tNormal paragraph text."
+  },
+  {
+    "type": "quote",
+    "content": "\t\t> This is a quote\n\t\t> Multiple lines"
+  },
+  {
+    "type": "code",
+    "content": "\t\t```python"
+  },
+  {
+    "type": "paragraph",
+    "content": "\t\tdef test():\n\t\t\tpass"
+  },
+  {
+    "type": "code",
+    "content": "\t\t```"
+  }
+]

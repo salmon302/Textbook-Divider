@@ -1,0 +1,17 @@
+Chapter 1: Getting Started
+This is the first chapter content.
+
+1.1 Introduction
+Basic introduction to the topic.
+
+1.2 Prerequisites
+What you need to know.
+
+Chapter 2: Core Concepts
+Main concepts are explained here.
+
+2.1 Basic Theory
+Fundamental theoretical concepts.
+
+2.2 Applications
+Practical applications and examples.

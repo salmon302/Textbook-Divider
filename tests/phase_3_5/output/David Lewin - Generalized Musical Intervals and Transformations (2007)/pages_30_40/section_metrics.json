@@ -1,0 +1,15 @@
+{
+  "processing_time": 0.9715249538421631,
+  "omr_detections": 0,
+  "text_blocks": 0,
+  "mixed_blocks": 0,
+  "staff_accuracy": 0.0,
+  "note_accuracy": 0.0,
+  "complex_notation_count": 0,
+  "mixed_content_quality": 0.0,
+  "memory_usage": 0.0,
+  "processing_errors": [
+    "'OMRProcessor' object has no attribute 'analyze_results'"
+  ],
+  "debug_info": {}
+}

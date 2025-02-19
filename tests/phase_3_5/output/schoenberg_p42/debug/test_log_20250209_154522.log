@@ -1,0 +1,7 @@
+2025-02-09 15:45:22,144 - __main__ - INFO - Testing musical notation detection
+2025-02-09 15:45:23,430 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/music_detection_20250209_154522.png
+2025-02-09 15:45:23,430 - __main__ - INFO - Detected 8 musical regions
+2025-02-09 15:45:23,431 - __main__ - INFO - Testing text extraction
+2025-02-09 15:45:23,661 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/preprocessed_20250209_154522.png
+2025-02-09 15:45:23,945 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_4qer426c_input.PNG', '/tmp/tess_4qer426c', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:45:28,416 - __main__ - INFO - Successfully extracted 2044 characters

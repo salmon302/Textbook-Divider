@@ -1,0 +1,5 @@
+2 Octave equivalence seems to be nearly universal in human cultures (Dowling and Harwood 1986), 
+and there is some evidence for it in nonhuman animals (Wright et al. 2000).
+Figure 2.2.1 Circular pitch class space. The 
+number 0.17 refers to the pitch class seventeen 
+cents above the pitch class C, while the number

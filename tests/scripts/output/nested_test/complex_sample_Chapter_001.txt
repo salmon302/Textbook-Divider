@@ -1,0 +1,25 @@
+Chapter 1: Advanced Mathematics
+==================================================
+Confidence: 1.00
+==================================================
+
+Chapter 1: Advanced Mathematics
+
+This chapter contains *emphasized* and **bold** text.
+
+Section 1: Mathematical Concepts
+----------------------------------------
+
+1.1 Mathematical Concepts
+Let's explore some mathematical concepts:
+• Function f(x) = x2 + 2x + 1
+• Set theory: A ∈ B, A ∩ B
+• Matrix [1 2; 3 4]
+
+```python
+def example():
+	return "code block"
+```
+
+> Important quote block
+> With multiple lines

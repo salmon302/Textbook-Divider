@@ -1,0 +1,18 @@
+Chapter 2: Musical Theory
+==================================================
+Confidence: 1.00
+==================================================
+
+Chapter 2: Musical Theory
+
+Section 1: Basic Notation
+----------------------------------------
+
+2.1 Basic Notation
+♩ Quarter note
+♪ Eighth note
+𝄞 Treble clef
+
+| Header 1 | Header 2 |
+|----------|----------|
+| Cell 1   | Cell 2   |

@@ -1,0 +1,11 @@
+{
+  "timestamp": "20250209_153504",
+  "input_file": "/home/seth-n/CLionProjects/Textbook Divider/data/input/Arnold Schoenberg, Gerald Strang, Leonard Stein - Fundamentals of Musical Composition (1982, Faber & Faber) - libgen.li.pdf",
+  "output_dir": "/home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42",
+  "debug_dir": "/home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug",
+  "test_parameters": {
+    "ocr_confidence_threshold": 0.7,
+    "staff_detection_threshold": 0.8,
+    "symbol_confidence_threshold": 0.75
+  }
+}

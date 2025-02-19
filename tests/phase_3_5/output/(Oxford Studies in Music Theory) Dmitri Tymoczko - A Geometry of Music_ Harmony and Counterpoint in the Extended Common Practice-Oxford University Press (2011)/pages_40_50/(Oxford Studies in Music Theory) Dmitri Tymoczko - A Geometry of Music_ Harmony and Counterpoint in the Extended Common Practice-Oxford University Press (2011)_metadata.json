@@ -1,0 +1,12 @@
+{
+  "title": "(Oxford Studies in Music Theory) Dmitri Tymoczko - A Geometry of Music_ Harmony and Counterpoint in the Extended Common Practice-Oxford University Press (2011)",
+  "chapters": 22,
+  "plugins_used": [
+    "ocr_processor",
+    "omr_processor"
+  ],
+  "processing_stats": {
+    "ocr_used": false,
+    "musical_content_detected": false
+  }
+}

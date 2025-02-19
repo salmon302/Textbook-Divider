@@ -1,0 +1,6 @@
+{
+  "page": 158,
+  "text_content": "Generalized Set Theory (2) 6.2.3\n\nadvances one hour towards E along the clock of pitch classes, clockwise or\ncounterclockwise by whichever route is shorter. The effect of w\u00ae on the clock\nof pitch classes is portrayed by figure 6.1.\n\nCc\nBCH\n\nCab\n\nG F\nFIGURE 6.1\n\nw= is not an operation; it is neither 1-to-I nor onto. Nevertheless it is a\nuseful transformation to have at hand for analyzing \u201cAngst und Hoffen,\u201d\u2019 the\nseventh song from Schoenberg\u2019s Book of the Hanging Gardens op. 15. Figure\n6.2 shows the pitches in the two chords that form the opening \u2018Angst und\nHoffen\u201d motto, chords X and Y.\n\nx Y\n\nFIGURE 6.2\n\nHere INJ(X, Y)(w\u00ae) = 2: When the transformation w\u00ae is applied to the\nnotes of X, 2 of those notes map into notes of Y. The D of chord X,\nspecifically, maps into the Ep of chord Y and the Bb of chord X maps into the\nBb of chord Y. Thus \u201ctwo-thirds of X\u201d is mapped into Y by the wedge. If only\nthe Gp of X wedged into Y then all of X would wedge into Y. That would\nhappen if the Fp of Y were an F natural. So we can consider the Fp of Y (in this\ncontext!) as a \u201cwrong note\u201d or a \u201cblue note\u201d; it substitutes for the F natural\n\n125\n",
+  "text_length": 1139,
+  "timestamp": "20250209_235758"
+}

@@ -1,0 +1,4 @@
+2025-02-09 15:38:13,826 - __main__ - INFO - Testing OCR extraction
+2025-02-09 15:38:14,071 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/preprocessed_20250209_153813.png
+2025-02-09 15:38:14,284 - pytesseract - DEBUG - ['tesseract', '/tmp/tess_19754af9_input.PNG', '/tmp/tess_19754af9', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:38:17,843 - __main__ - INFO - Successfully extracted 2044 characters

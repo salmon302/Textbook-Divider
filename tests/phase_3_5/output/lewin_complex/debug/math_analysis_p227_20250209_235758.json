@@ -1,0 +1,46 @@
+{
+  "page": 227,
+  "node_count": 13,
+  "edge_count": 7,
+  "node_types": {
+    "NodeType.SET_CLASS": 3,
+    "NodeType.PITCH_CLASS": 10
+  },
+  "relationships": [
+    {
+      "type": "related",
+      "source": "j",
+      "target": "B"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "B"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "B"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "C"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "B",
+      "target": "C"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Chapter 2: Methods
+==================================================
+Confidence: 0.80
+==================================================
+
+Chapter 2: Methods
+This is the second chapter.
+It demonstrates chapter detection.

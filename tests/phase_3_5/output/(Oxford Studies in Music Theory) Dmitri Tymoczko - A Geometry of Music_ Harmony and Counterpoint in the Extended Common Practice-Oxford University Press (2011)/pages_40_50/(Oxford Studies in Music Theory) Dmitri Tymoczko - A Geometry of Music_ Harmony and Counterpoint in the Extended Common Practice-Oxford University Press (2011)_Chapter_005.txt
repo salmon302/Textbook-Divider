@@ -1,0 +1,39 @@
+2.5 refers to the pitch class Dμ, or D quarter-
+tone sharp, halfway between D and Ef.
+
+
+Harmony and Voice Leading
+31
+corresponds to the quality that is common to all the pitches sharing the same chroma: 
+thus, the point “2” represents the quality (“D-ishness”) that is shared by the pitches 
+D0, D1, D2, D3, and so on.3  Alternatively, we can take points on the circle to represent 
+categories of notes all sharing the same chroma.
+It is important to understand that pitch and pitch-class space are not separate 
+and independent: pitch-class space is formed out of pitch space when we choose to 
+ignore, or abstract away from, octave information.4 As a result, many properties of 
+linear pitch space are transferred to circular pitch-class space. For example, it is not 
+necessary to devise a new system of naming pitch classes, as we can simply use pitch 
+names in the range 0 £ x < 12 to refer to the chromas they possess (Figure 2.2.1). The 
+terms “above” and “below” also inherit their meaning from pitch space: the phrase 
+“the pitch class a quarter tone above pitch class D” simply refers to the chroma pos-
+sessed by any pitch a quarter tone above any pitch with chroma D. (Of course, since 
+pitch-class space is circular, it is not meaningful to say that one pitch class is abso-
+lutely above or below another; the pitch class E is both two semitones above D and 
+ten semitones below it.) Finally, the distance between two pitch classes can be deﬁ ned 
+as the shortest distance between any two pitches belonging to those pitch classes. 
+Thus, when a musician says “pitch class E is four semitones away from C,” this means 
+that for every pitch with chroma C, the nearest pitch with chroma E is precisely four 
+semitones away.
+Ultimately, pitch classes are important because they provide a language for making 
+generalizations about pitches. The statement “pitch class E is four semitones above C” 
+implies the statements “E4 is four semitones above C4,” “E5 is four semitones above 
+C5,” and so on. Since it would take too long to list these statements individually, musi-
+cians instead use the convenient shorthand that pitch classes provide. Readers may 
+ﬁ nd it useful here to consider the analogy between pitch class and time of day. The 
+question “what’s the distance from C to Cs?” is exactly analogous to “how long is it 
+from 8 am to 9 am?” The answer “there is one hour between 8 am and 9 am,” means 
+that on any given day, 9 am occurs precisely one hour after 8 am. (Similarly, we can 
+say “9 am is one hour after 8 am” or even “9 am is 23 hours before 8 am,” much as 
+we might observe that pitch class A is both one semitone above and eleven semitones 
+below Gs.) Here we use time of day to summarize inﬁ nitely many facts about times: 
+the statement “there is one hour between 8 am and 9 am” implies that there is one

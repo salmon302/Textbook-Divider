@@ -1,0 +1,371 @@
+2025-02-08 18:19:50,746 - INFO - Loaded plugin: ocr_processor
+2025-02-08 18:19:50,756 - INFO - Loaded plugin: omr_processor
+2025-02-08 18:19:50,768 - INFO - Initialized TextbookDivider with plugins: ['ocr_processor', 'omr_processor']
+2025-02-08 18:19:50,781 - INFO - Starting page 42 processing
+2025-02-08 18:19:56,974 - ERROR - OCR Error: No closing quotation
+2025-02-08 18:19:56,975 - ERROR - OCR Error: 'str' object has no attribute 'read'
+2025-02-08 18:19:58,929 - WARNING - Audiveris failed: 
+2025-02-08 18:19:58,929 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:19:58,930 - ERROR - Template matching error: Failed to load image
+2025-02-08 18:19:58,930 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:19:58,930 - ERROR - Enhanced preprocessing failed: Failed to load image
+2025-02-08 18:19:58,930 - INFO - Basic processing complete, analyzing results
+2025-02-08 18:20:06,200 - WARNING - Audiveris failed: 
+2025-02-08 18:20:06,202 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:20:06,433 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:20:15,276 - WARNING - Audiveris failed: 
+2025-02-08 18:20:15,276 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:20:15,662 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:20:26,813 - WARNING - Audiveris failed: 
+2025-02-08 18:20:26,814 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:20:27,236 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:20:38,273 - WARNING - Audiveris failed: 
+2025-02-08 18:20:38,276 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:20:38,687 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:20:49,929 - WARNING - Audiveris failed: 
+2025-02-08 18:20:49,930 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:20:50,319 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:21:00,888 - WARNING - Audiveris failed: 
+2025-02-08 18:21:00,888 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:21:01,313 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:21:11,877 - WARNING - Audiveris failed: 
+2025-02-08 18:21:11,878 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:21:12,303 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:21:23,095 - WARNING - Audiveris failed: 
+2025-02-08 18:21:23,096 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:21:23,541 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:21:34,291 - WARNING - Audiveris failed: 
+2025-02-08 18:21:34,292 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:21:34,712 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:21:44,291 - WARNING - Audiveris failed: 
+2025-02-08 18:21:44,291 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:21:44,510 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:21:53,615 - WARNING - Audiveris failed: 
+2025-02-08 18:21:53,616 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:21:53,826 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:22:01,447 - WARNING - Audiveris failed: 
+2025-02-08 18:22:01,447 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:22:01,853 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:22:16,527 - WARNING - Audiveris failed: 
+2025-02-08 18:22:16,528 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:22:24,273 - WARNING - Audiveris failed: 
+2025-02-08 18:22:24,273 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:22:32,624 - WARNING - Audiveris failed: 
+2025-02-08 18:22:32,628 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:22:33,150 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:22:44,624 - WARNING - Audiveris failed: 
+2025-02-08 18:22:44,626 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:22:51,614 - WARNING - Audiveris failed: 
+2025-02-08 18:22:51,614 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:22:59,812 - WARNING - Audiveris failed: 
+2025-02-08 18:22:59,813 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:23:08,222 - WARNING - Audiveris failed: 
+2025-02-08 18:23:08,223 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:23:08,567 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:23:21,723 - WARNING - Audiveris failed: 
+2025-02-08 18:23:21,724 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:23:22,234 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:23:45,560 - WARNING - Audiveris failed: 
+2025-02-08 18:23:45,560 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:23:45,987 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:23:56,600 - WARNING - Audiveris failed: 
+2025-02-08 18:23:56,602 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:24:05,158 - WARNING - Audiveris failed: 
+2025-02-08 18:24:05,159 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:24:12,918 - WARNING - Audiveris failed: 
+2025-02-08 18:24:12,919 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:24:13,310 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:24:28,587 - WARNING - Audiveris failed: 
+2025-02-08 18:24:28,592 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:24:29,170 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:24:44,316 - WARNING - Audiveris failed: 
+2025-02-08 18:24:44,317 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:24:44,816 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:24:50,509 - INFO - Loaded plugin: ocr_processor
+2025-02-08 18:24:50,517 - INFO - Loaded plugin: omr_processor
+2025-02-08 18:24:50,523 - INFO - Initialized TextbookDivider with plugins: ['ocr_processor', 'omr_processor']
+2025-02-08 18:24:50,527 - INFO - Starting page 42 processing
+2025-02-08 18:24:57,915 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-08 18:24:57,915 - DEBUG - STREAM b'pHYs' 41 9
+2025-02-08 18:24:57,916 - DEBUG - STREAM b'IDAT' 62 8192
+2025-02-08 18:24:57,916 - INFO - Successfully extracted page 42 image
+2025-02-08 18:24:59,790 - WARNING - Audiveris failed: 
+2025-02-08 18:24:59,795 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:25:05,192 - ERROR - OCR Error: No closing quotation
+2025-02-08 18:25:05,193 - ERROR - OCR Error: 'str' object has no attribute 'read'
+2025-02-08 18:25:06,987 - WARNING - Audiveris failed: 
+2025-02-08 18:25:06,988 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:25:06,989 - ERROR - Template matching error: Failed to load image
+2025-02-08 18:25:06,990 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:25:06,990 - ERROR - Enhanced preprocessing failed: Failed to load image
+2025-02-08 18:25:06,991 - INFO - Basic processing complete, analyzing results
+2025-02-08 18:25:09,463 - WARNING - Audiveris failed: 
+2025-02-08 18:25:09,464 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:25:09,464 - ERROR - Template matching error: Failed to load image
+2025-02-08 18:25:09,465 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:25:09,465 - ERROR - Enhanced preprocessing failed: Failed to load image
+2025-02-08 18:25:09,466 - INFO - Debug information saved to /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_page42/page42_debug.json
+2025-02-08 18:25:09,466 - INFO - Processing time: 18.94s
+2025-02-08 18:25:09,466 - INFO - Memory usage: 57.00MB
+2025-02-08 18:25:09,466 - ERROR - Processing failed: False is not true : OMR processing failed
+2025-02-08 18:25:12,402 - WARNING - Audiveris failed: 
+2025-02-08 18:25:12,405 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:25:20,432 - WARNING - Audiveris failed: 
+2025-02-08 18:25:20,433 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:25:30,594 - WARNING - Audiveris failed: 
+2025-02-08 18:25:30,597 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:25:44,048 - WARNING - Audiveris failed: 
+2025-02-08 18:25:44,049 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:25:52,486 - WARNING - Audiveris failed: 
+2025-02-08 18:25:52,487 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:26:02,532 - WARNING - Audiveris failed: 
+2025-02-08 18:26:02,533 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:26:12,558 - WARNING - Audiveris failed: 
+2025-02-08 18:26:12,560 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:26:24,591 - WARNING - Audiveris failed: 
+2025-02-08 18:26:24,592 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:26:31,059 - INFO - Loaded plugin: ocr_processor
+2025-02-08 18:26:31,065 - INFO - Loaded plugin: omr_processor
+2025-02-08 18:26:31,073 - INFO - Initialized TextbookDivider with plugins: ['ocr_processor', 'omr_processor']
+2025-02-08 18:26:31,078 - INFO - Starting page 42 processing
+2025-02-08 18:26:33,108 - WARNING - Audiveris failed: 
+2025-02-08 18:26:33,109 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:26:36,971 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-08 18:26:36,971 - DEBUG - STREAM b'pHYs' 41 9
+2025-02-08 18:26:36,971 - DEBUG - STREAM b'IDAT' 62 8192
+2025-02-08 18:26:36,972 - ERROR - Processing failed: Expected image file not found: /tmp/tmprandycv9/page_42-1.png
+2025-02-08 18:26:41,847 - WARNING - Audiveris failed: 
+2025-02-08 18:26:41,848 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:26:48,354 - WARNING - Audiveris failed: 
+2025-02-08 18:26:48,355 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:26:55,116 - WARNING - Audiveris failed: 
+2025-02-08 18:26:55,117 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:27:02,852 - WARNING - Audiveris failed: 
+2025-02-08 18:27:02,853 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:27:03,203 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:27:15,406 - WARNING - Audiveris failed: 
+2025-02-08 18:27:15,407 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:27:15,826 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:27:24,967 - WARNING - Audiveris failed: 
+2025-02-08 18:27:24,967 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:27:32,313 - WARNING - Audiveris failed: 
+2025-02-08 18:27:32,315 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:27:38,940 - WARNING - Audiveris failed: 
+2025-02-08 18:27:38,945 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:27:45,796 - WARNING - Audiveris failed: 
+2025-02-08 18:27:45,797 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:27:53,018 - WARNING - Audiveris failed: 
+2025-02-08 18:27:53,019 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:28:00,415 - WARNING - Audiveris failed: 
+2025-02-08 18:28:00,416 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:28:07,359 - WARNING - Audiveris failed: 
+2025-02-08 18:28:07,361 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:28:15,675 - WARNING - Audiveris failed: 
+2025-02-08 18:28:15,677 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:28:23,018 - WARNING - Audiveris failed: 
+2025-02-08 18:28:23,019 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:28:31,026 - WARNING - Audiveris failed: 
+2025-02-08 18:28:31,028 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:28:39,205 - WARNING - Audiveris failed: 
+2025-02-08 18:28:39,206 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:28:39,536 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:28:50,023 - WARNING - Audiveris failed: 
+2025-02-08 18:28:50,024 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:28:50,470 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:29:05,854 - WARNING - Audiveris failed: 
+2025-02-08 18:29:05,855 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:29:06,187 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:29:16,204 - WARNING - Audiveris failed: 
+2025-02-08 18:29:16,205 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:29:22,962 - WARNING - Audiveris failed: 
+2025-02-08 18:29:22,963 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:29:31,462 - WARNING - Audiveris failed: 
+2025-02-08 18:29:31,463 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:29:37,616 - WARNING - Audiveris failed: 
+2025-02-08 18:29:37,616 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:29:37,965 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:29:47,659 - WARNING - Audiveris failed: 
+2025-02-08 18:29:47,660 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:30:04,315 - WARNING - Audiveris failed: 
+2025-02-08 18:30:04,315 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:30:04,676 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:30:18,021 - WARNING - Audiveris failed: 
+2025-02-08 18:30:18,022 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:30:18,372 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:30:40,538 - WARNING - Audiveris failed: 
+2025-02-08 18:30:40,539 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:30:40,905 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:30:51,651 - WARNING - Audiveris failed: 
+2025-02-08 18:30:51,654 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:30:59,435 - WARNING - Audiveris failed: 
+2025-02-08 18:30:59,435 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:31:05,986 - WARNING - Audiveris failed: 
+2025-02-08 18:31:05,987 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:31:12,360 - WARNING - Audiveris failed: 
+2025-02-08 18:31:12,361 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:31:19,011 - WARNING - Audiveris failed: 
+2025-02-08 18:31:19,012 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:32:02,826 - WARNING - Audiveris failed: 
+2025-02-08 18:32:02,827 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:32:03,165 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:32:08,317 - INFO - Loaded plugin: ocr_processor
+2025-02-08 18:32:08,322 - INFO - Loaded plugin: omr_processor
+2025-02-08 18:32:08,330 - INFO - Initialized TextbookDivider with plugins: ['ocr_processor', 'omr_processor']
+2025-02-08 18:32:08,332 - INFO - Starting page 42 processing
+2025-02-08 18:32:14,959 - DEBUG - STREAM b'IHDR' 16 13
+2025-02-08 18:32:14,959 - DEBUG - STREAM b'pHYs' 41 9
+2025-02-08 18:32:14,960 - DEBUG - STREAM b'IDAT' 62 8192
+2025-02-08 18:32:14,961 - ERROR - Processing failed: Expected image file not found: /tmp/tmpfkk_aa_k/page_42-1.png
+2025-02-08 18:32:15,650 - WARNING - Audiveris failed: 
+2025-02-08 18:32:15,651 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:32:16,186 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:32:25,813 - WARNING - Audiveris failed: 
+2025-02-08 18:32:25,814 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:32:25,967 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:32:34,635 - WARNING - Audiveris failed: 
+2025-02-08 18:32:34,636 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:32:34,795 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:32:54,576 - WARNING - Audiveris failed: 
+2025-02-08 18:32:54,576 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:32:54,917 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:33:16,662 - WARNING - Audiveris failed: 
+2025-02-08 18:33:16,662 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:33:16,984 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:33:36,116 - WARNING - Audiveris failed: 
+2025-02-08 18:33:36,117 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:33:36,471 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:33:47,384 - WARNING - Audiveris failed: 
+2025-02-08 18:33:47,385 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:33:56,785 - WARNING - Audiveris failed: 
+2025-02-08 18:33:56,787 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:34:04,837 - WARNING - Audiveris failed: 
+2025-02-08 18:34:04,839 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:34:11,611 - WARNING - Audiveris failed: 
+2025-02-08 18:34:11,612 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:34:18,493 - WARNING - Audiveris failed: 
+2025-02-08 18:34:18,494 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:34:24,709 - WARNING - Audiveris failed: 
+2025-02-08 18:34:24,710 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:34:33,245 - WARNING - Audiveris failed: 
+2025-02-08 18:34:33,248 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:34:39,985 - WARNING - Audiveris failed: 
+2025-02-08 18:34:39,986 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:34:58,914 - WARNING - Audiveris failed: 
+2025-02-08 18:34:58,915 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:34:59,248 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:35:09,735 - WARNING - Audiveris failed: 
+2025-02-08 18:35:09,736 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:35:15,595 - WARNING - Audiveris failed: 
+2025-02-08 18:35:15,595 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:35:22,125 - WARNING - Audiveris failed: 
+2025-02-08 18:35:22,127 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:35:29,219 - WARNING - Audiveris failed: 
+2025-02-08 18:35:29,219 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:35:29,534 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:35:40,060 - WARNING - Audiveris failed: 
+2025-02-08 18:35:40,060 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:35:40,401 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:36:03,763 - WARNING - Audiveris failed: 
+2025-02-08 18:36:03,763 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:36:04,070 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:36:16,593 - WARNING - Audiveris failed: 
+2025-02-08 18:36:16,594 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:36:16,990 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:36:29,037 - WARNING - Audiveris failed: 
+2025-02-08 18:36:29,038 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:36:36,575 - WARNING - Audiveris failed: 
+2025-02-08 18:36:36,575 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:36:42,728 - WARNING - Audiveris failed: 
+2025-02-08 18:36:42,728 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:36:48,892 - WARNING - Audiveris failed: 
+2025-02-08 18:36:48,893 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:36:54,678 - WARNING - Audiveris failed: 
+2025-02-08 18:36:54,678 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:37:01,457 - WARNING - Audiveris failed: 
+2025-02-08 18:37:01,458 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:37:01,786 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:37:11,413 - WARNING - Audiveris failed: 
+2025-02-08 18:37:11,413 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:37:11,733 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:37:21,275 - WARNING - Audiveris failed: 
+2025-02-08 18:37:21,276 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:37:21,596 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:37:31,325 - WARNING - Audiveris failed: 
+2025-02-08 18:37:31,325 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:37:37,907 - WARNING - Audiveris failed: 
+2025-02-08 18:37:37,909 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:37:54,000 - WARNING - Audiveris failed: 
+2025-02-08 18:37:54,003 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:37:54,366 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:38:18,467 - WARNING - Audiveris failed: 
+2025-02-08 18:38:18,468 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:38:18,811 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:38:44,631 - WARNING - Audiveris failed: 
+2025-02-08 18:38:44,632 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:38:44,980 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:38:56,989 - WARNING - Audiveris failed: 
+2025-02-08 18:38:56,990 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:38:57,351 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:39:07,119 - WARNING - Audiveris failed: 
+2025-02-08 18:39:07,119 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:39:18,636 - WARNING - Audiveris failed: 
+2025-02-08 18:39:18,637 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:39:18,960 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:39:36,858 - WARNING - Audiveris failed: 
+2025-02-08 18:39:36,859 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:39:37,178 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:39:47,275 - WARNING - Audiveris failed: 
+2025-02-08 18:39:47,275 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:39:47,611 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:40:08,417 - WARNING - Audiveris failed: 
+2025-02-08 18:40:08,417 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:40:08,762 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:40:18,791 - WARNING - Audiveris failed: 
+2025-02-08 18:40:18,793 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:40:19,137 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:40:36,364 - WARNING - Audiveris failed: 
+2025-02-08 18:40:36,364 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:40:36,705 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:40:54,578 - WARNING - Audiveris failed: 
+2025-02-08 18:40:54,579 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:40:54,919 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:41:14,325 - WARNING - Audiveris failed: 
+2025-02-08 18:41:14,325 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:41:14,662 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:41:24,875 - WARNING - Audiveris failed: 
+2025-02-08 18:41:24,877 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:41:25,249 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:41:35,649 - WARNING - Audiveris failed: 
+2025-02-08 18:41:35,649 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:41:35,991 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:41:46,141 - WARNING - Audiveris failed: 
+2025-02-08 18:41:46,145 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:41:46,490 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:41:56,621 - WARNING - Audiveris failed: 
+2025-02-08 18:41:56,622 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:41:56,979 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:42:12,800 - WARNING - Audiveris failed: 
+2025-02-08 18:42:12,802 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:42:13,133 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:42:22,875 - WARNING - Audiveris failed: 
+2025-02-08 18:42:22,875 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:42:23,225 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:42:32,896 - WARNING - Audiveris failed: 
+2025-02-08 18:42:32,898 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:42:33,287 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:42:43,959 - WARNING - Audiveris failed: 
+2025-02-08 18:42:43,960 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:42:44,310 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:42:54,220 - WARNING - Audiveris failed: 
+2025-02-08 18:42:54,222 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:42:54,560 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:43:04,364 - WARNING - Audiveris failed: 
+2025-02-08 18:43:04,364 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:43:04,683 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:43:13,823 - WARNING - Audiveris failed: 
+2025-02-08 18:43:13,826 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:43:14,152 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:43:23,686 - WARNING - Audiveris failed: 
+2025-02-08 18:43:23,688 - INFO - Falling back to template matching after Audiveris failure
+2025-02-08 18:43:23,861 - INFO - Attempting enhanced preprocessing
+2025-02-08 18:43:26,381 - ERROR - Processing failed: Object of type float32 is not JSON serializable

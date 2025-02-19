@@ -1,0 +1,11 @@
+{
+  "title": "Arnold Schoenberg, Gerald Strang, Leonard Stein - Fundamentals of Musical Composition (1982, Faber & Faber) - libgen.li",
+  "chapters": 0,
+  "plugins_used": [
+    "omr_processor"
+  ],
+  "processing_stats": {
+    "ocr_used": true,
+    "musical_content_detected": false
+  }
+}

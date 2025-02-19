@@ -1,0 +1,52 @@
+2025-02-04 10:32:23,972 - test_data - DEBUG - Test Content: 
+		Chapter 1: Typography Test
+		
+		This text has *emphasis* and **strong** formatting.
+		
+		1. First item
+		2. Second item
+		
+		> Important quote
+		> With multiple lines
+		
+2025-02-04 10:32:23,973 - test_data - DEBUG - Processed Content: Chapter 1: Typography Test
+
+This text has *emphasis* and **strong** formatting.
+
+1. First item
+2. Second item
+
+		> Important quote
+		> With multiple lines
+2025-02-04 10:32:23,980 - test_data - DEBUG - Test Content: 
+		• First list item
+		• Second list item
+		
+		Normal paragraph text.
+		
+		> This is a quote
+		> Multiple lines
+		
+		```python
+		def test():
+			pass
+		```
+		
+2025-02-04 10:32:23,980 - test_data - DEBUG - Processed Blocks: [
+  {
+    "type": "list",
+    "content": "\t\t\u2022 First list item\n\t\t\u2022 Second list item"
+  },
+  {
+    "type": "paragraph",
+    "content": "\t\tNormal paragraph text."
+  },
+  {
+    "type": "quote",
+    "content": "\t\t> This is a quote\n\t\t> Multiple lines"
+  },
+  {
+    "type": "paragraph",
+    "content": "\t\t```python\n\t\tdef test():\n\t\t\tpass\n\t\t```"
+  }
+]

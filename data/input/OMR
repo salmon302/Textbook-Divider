@@ -1,0 +1,266 @@
+
+
+WikipediaThe Free Encyclopedia
+Search Wikipedia
+Search
+Donate
+Create account
+Log in
+
+Contents hide
+(Top)
+History
+Relation to other fields
+
+OMR vs. OCR
+Approaches to OMR
+Outputs of OMR systems
+General framework (2001)
+Refined framework (2012)
+Deep learning (since 2016)
+Notable scientific projects
+
+Staff removal challenge
+SIMSSA
+TROMPA
+Datasets
+Software
+
+Academic and open-source software
+Commercial software
+Mobile apps
+See also
+References
+External links
+Optical music recognition
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Appearance hide
+Text
+
+Small
+
+Standard
+
+Large
+Width
+
+Standard
+
+Wide
+Color (beta)
+
+Automatic
+
+Light
+
+Dark
+From Wikipedia, the free encyclopedia
+Optical music recognition (OMR) is a field of research that investigates how to computationally read musical notation in documents.[1] The goal of OMR is to teach the computer to read and interpret sheet music and produce a machine-readable version of the written music score. Once captured digitally, the music can be saved in commonly used file formats, e.g. MIDI (for playback) and MusicXML (for page layout). In the past it has, misleadingly, also been called "music optical character recognition". Due to significant differences, this term should no longer be used.[2]
+
+History
+
+First published digital scan of music scores by David Prerau in 1971
+Optical music recognition of printed sheet music started in the late 1960s at the Massachusetts Institute of Technology when the first image scanners became affordable for research institutes.[3][4][5] Due to the limited memory of early computers, the first attempts were limited to only a few measures of music. In 1984, a Japanese research group from Waseda University developed a specialized robot, called WABOT (WAseda roBOT), which was capable of reading the music sheet in front of it and accompanying a singer on an electric organ.[6][7]
+
+Early research in OMR was conducted by Ichiro Fujinaga, Nicholas Carter, Kia Ng, David Bainbridge, and Tim Bell. These researchers developed many of the techniques that are still being used today.
+
+The first commercial OMR application, MIDISCAN (now SmartScore), was released in 1991 by Musitek Corporation.
+
+The availability of smartphones with good cameras and sufficient computational power, paved the way to mobile solutions where the user takes a picture with the smartphone and the device directly processes the image.
+
+Relation to other fields
+
+Relation of optical music recognition to other fields of research
+Optical music recognition relates to other fields of research, including computer vision, document analysis, and music information retrieval. It is relevant for practicing musicians and composers that could use OMR systems as a means to enter music into the computer and thus ease the process of composing, transcribing, and editing music. In a library, an OMR system could make music scores searchable[8] and for musicologists it would allow to conduct quantitative musicological studies at scale.[9]
+
+OMR vs. OCR
+Optical music recognition has frequently been compared to Optical character recognition.[2][10][11] The biggest difference is that music notation is a featural writing system. This means that while the alphabet consists of well-defined primitives (e.g., stems, noteheads, or flags), it is their configuration – how they are placed and arranged on the staff – that determines the semantics and how it should be interpreted.
+
+The second major distinction is the fact that while an OCR system does not go beyond recognizing letters and words, an OMR system is expected to also recover the semantics of music: The user expects that the vertical position of a note (graphical concept) is being translated into the pitch (musical concept) by applying the rules of music notation. Notice that there is no proper equivalent in text recognition. By analogy, recovering the music from an image of a music sheet can be as challenging as recovering the HTML source code from the screenshot of a website.
+
+The third difference comes from the used character set. Although writing systems like Chinese have extraordinarily complex character sets, the character set of primitives for OMR spans a much greater range of sizes, ranging from tiny elements such as a dot to big elements that potentially span an entire page such as a brace. Some symbols have a nearly unrestricted appearance like slurs, that are only defined as more-or-less smooth curves that may be interrupted anywhere.
+
+Finally, music notation involves ubiquitous two-dimensional spatial relationships, whereas text can be read as a one-dimensional stream of information, once the baseline is established.
+
+Approaches to OMR
+
+Excerpt of Nocturne Op. 15, no. 2, by Frédéric Chopin – challenges encountered in optical music recognition
+The process of recognizing music scores is typically broken down into smaller steps that are handled with specialized pattern recognition algorithms.
+
+Many competing approaches have been proposed with most of them sharing a pipeline architecture, where each step in this pipeline performs a certain operation, such as detecting and removing staff lines before moving on to the next stage. A common problem with that approach is that errors and artifacts that were made in one stage are propagated through the system and can heavily affect the performance. For example, if the staff line detection stage fails to correctly identify the existence of the music staffs, subsequent steps will probably ignore that region of the image, leading to missing information in the output.
+
+Optical music recognition is frequently underestimated due to the seemingly easy nature of the problem: If provided with a perfect scan of typeset music, the visual recognition can be solved with a sequence of fairly simple algorithms, such as projections and template matching. However, the process gets significantly harder for poor scans or handwritten music, which many systems fail to recognize altogether. And even if all symbols would have been detected perfectly, it is still challenging to recover the musical semantics due to ambiguities and frequent violations of the rules of music notation (see the example of Chopin's Nocturne). Donald Byrd and Jakob Simonsen argue that OMR is difficult because modern music notation is extremely complex.[11]
+
+Donald Byrd also collected a number of interesting examples[12] as well as extreme examples[13] of music notation that demonstrate the sheer complexity of music notation.
+
+Outputs of OMR systems
+Typical applications for OMR systems include the creation of an audible version of the music score (referred to as replayability). A common way to create such a version is by generating a MIDI file, which can be synthesised into an audio file. MIDI files, though, are not capable of storing engraving information (how the notes were laid out) or enharmonic spelling.
+
+If the music scores are recognized with the goal of human readability (referred to as reprintability), the structured encoding has to be recovered, which includes precise information on the layout and engraving. Suitable formats to store this information include MEI and MusicXML.
+
+Apart from those two applications, it might also be interesting to just extract metadata from the image or enable searching. In contrast to the first two applications, a lower level of comprehension of the music score might be sufficient to perform these tasks.
+
+General framework (2001)
+
+Optical Music Recognition Architecture by Bainbridge and Bell (2001)
+In 2001, David Bainbridge and Tim Bell published their work on the challenges of OMR, where they reviewed previous research and extracted a general framework for OMR.[10] Their framework has been used by many systems developed after 2001. The framework has four distinct stages with a heavy emphasis on the visual detection of objects. They noticed that the reconstruction of the musical semantics was often omitted from published articles because the used operations were specific to the output format.
+
+Refined framework (2012)
+
+The general framework for optical music recognition proposed by Ana Rebelo et al. in 2012
+In 2012, Ana Rebelo et al. surveyed techniques for optical music recognition.[14] They categorized the published research and refined the OMR pipeline into the four stages: Preprocessing, Music symbols recognition, Musical notation reconstruction and Final representation construction. This framework became the de facto standard for OMR and is still being used today (although sometimes with slightly different terminology). For each block, they give an overview of techniques that are used to tackle that problem. This publication is the most cited paper on OMR research as of 2019.
+
+Deep learning (since 2016)
+With the advent of deep learning, many computer vision problems have shifted from imperative programming with hand-crafted heuristics and feature engineering towards machine learning. In optical music recognition, the staff processing stage,[15][16] the music object detection stage,[17][18][19][20] as well as the music notation reconstruction stage[21] have seen successful attempts to solve them with deep learning.
+
+Even completely new approaches have been proposed, including solving OMR in an end-to-end fashion with sequence-to-sequence models, that take an image of music scores and directly produce the recognized music in a simplified format.[22][23][24][25]
+
+Notable scientific projects
+Staff removal challenge
+For systems that were developed before 2016, staff detection and removal posed a significant obstacle. A scientific competition was organized to improve the state of the art and advance the field.[26] Due to excellent results and modern techniques that made the staff removal stage obsolete, this competition was discontinued.
+
+However, the freely available CVC-MUSCIMA dataset that was developed for this challenge is still highly relevant for OMR research as it contains 1000 high-quality images of handwritten music scores, transcribed by 50 different musicians. It has been further extended into the MUSCIMA++ dataset, which contains detailed annotations for 140 out of 1000 pages.
+
+SIMSSA
+The Single Interface for Music Score Searching and Analysis project (SIMSSA)[27] is probably the largest project that attempts to teach computers to recognize musical scores and make them accessible. Several sub-projects have already been successfully completed, including the Liber Usualis[28] and Cantus Ultimus.[29]
+
+TROMPA
+Towards Richer Online Music Public-domain Archives (TROMPA) is an international research project, sponsored by the European Union that investigates how to make public-domain digital music resources more accessible.[30]
+
+Datasets
+The development of OMR systems benefits from test datasets of sufficient size and diversity to ensure the system being developed works under various conditions. However, for legal reasons and potential copyright violations, it is challenging to compile and publish such a dataset. The most notable datasets for OMR are referenced and summarized by the OMR Datasets project[31] and include the CVC-MUSCIMA,[32] MUSCIMA++,[33] DeepScores,[34] PrIMuS,[35] HOMUS,[36] and SEILS dataset,[37] as well as the Universal Music Symbol Collection.[38]
+
+French company Newzik took a different approach in the development of its OMR technology Maestria,[39] by using random score generation. Using synthetic data helped with avoiding copyright issues and training the artificial intelligence algorithms on musical cases that rarely occur in actual repertoire, ultimately resulting in (according to claims by the company) more accurate music recognition.[40]
+
+Software
+Academic and open-source software
+Open source OMR projects vary significantly, from well developed software such as Audiveris, to many projects that have been realized in academia, but only a few of which reached a mature state and have been successfully deployed to users. These systems include:
+
+Aruspix[41]
+Audiveris[42]
+CANTOR[43]
+MusicStaves toolkit for Gamera[44]
+DMOS[45]
+Oemer[46]
+OpenOMR[47]
+Rodan[48]
+Commercial software
+Most of the commercial desktop applications that were developed in the last 20 years have been shut down again due to the lack of commercial success, leaving only a few vendors that are still developing, maintaining, and selling OMR products. Some of these products claim extremely high recognition rates with up to 100% accuracy [49][50] but fail to disclose how those numbers were obtained, making it nearly impossible to verify them and compare different OMR systems.
+
+capella-scan[51]
+FORTE by Forte Notation[52]
+MIDI-Connections Scan by Composing & Arranging Systems[53]
+NoteScan bundled with Nightingale[54]
+Myriad SARL
+OMeR (Optical Music easy Reader) Add-on for Harmony Assistant and Melody Assistant: Myriad Software[55]
+PDFtoMusic Pro[56]
+PhotoScore by Neuratron[50] The Light version of PhotoScore is used in Sibelius; PhotoScore uses the SharpEye SDK
+Scorscan by npcImaging[57]
+SmartScore by Musitek.[58] Formerly packaged as "MIDISCAN". (SmartScore Lite has been used in previous versions of Finale).
+ScanScore[59] (Also as a bundle with Forte Notation.)[52]
+Soundslice PDF/image importer.[60] AI-based OMR system released in beta in September 2022.[61]
+Maestria by Newzik.[39] Released in May 2021, Maestria is an example of new-generation OMR technology based on deep learning. The company claims it not only brings better results but also means "it becomes more accurate with each conversion".[62]
+Mobile apps
+Better cameras and increases in processing power have enabled a range of mobile applications, both on the Google Play Store and the Apple Store. Frequently the focus is on sight-playing (see sight-reading) – converting the sheet music into sound that is played on the device.
+
+iSeeNotes by Gear Up AB[63]
+NotateMe Now by Neuratron[64]
+Notation Scanner by Song Zhang[65]
+PlayScore 2 by Organum Ltd[66]
+SmartScore NoteReader by Musitek[67]
+Newzik app[68]
+See also
+Music information retrieval (MIR) is the broader problem of retrieving music information from media including music scores and audio.
+Optical character recognition (OCR) is the recognition of text which can be applied to document retrieval, analogously to OMR and MIR. However, a complete OMR system must faithfully represent text that is present in music scores, so OMR is in fact a superset of OCR.[10]
+References
+ Pacha, Alexander (2019). Self-Learning Optical Music Recognition (PhD). TU Wien, Austria. doi:10.13140/RG.2.2.18467.40484.
+ Calvo-Zaragoza, Jorge; Hajič, Jan jr.; Pacha, Alexander (2020). "Understanding Optical Music Recognition". ACM Computing Surveys. 53 (4): 1–35. arXiv:1908.03608. doi:10.1145/3397499. S2CID 199543265.
+ Optical Music Recognition for Dummies - Part 2 - Introduction and History. youtube.com. YouTube. October 3, 2018. Archived from the original on December 21, 2021. Retrieved June 24, 2021.
+ Pruslin, Dennis Howard (1966). Automatic Recognition of Sheet Music (PhD). Massachusetts Institute of Technology, Cambridge, Massachusetts, USA.
+ Prerau, David S. (1971). Computer pattern recognition of printed music. Fall Joint Computer Conference. pp. 153–162.
+ "WABOT – WAseda roBOT". waseda.ac.jp. Waseda University Humanoid. Retrieved July 14, 2019.
+ "Wabot 2". IEEE. IEEE. Retrieved July 14, 2019.
+ Laplante, Audrey; Fujinaga, Ichiro (2016). Digitizing Musical Scores: Challenges and Opportunities for Libraries. 3rd International Workshop on Digital Libraries for Musicology. pp. 45–48.
+ Hajič, Jan jr.; Kolárová, Marta; Pacha, Alexander; Calvo-Zaragoza, Jorge (2018). How Current Optical Music Recognition Systems Are Becoming Useful for Digital Libraries. 5th International Conference on Digital Libraries for Musicology. Paris, France. pp. 57–61.
+ Bainbridge, David; Bell, Tim (2001). "The challenge of optical music recognition". Computers and the Humanities. 35 (2): 95–121. doi:10.1023/A:1002485918032. S2CID 18602074. Retrieved February 23, 2017.
+ Byrd, Donald; Simonsen, Jakob Grue (2015). "Towards a Standard Testbed for Optical Music Recognition: Definitions, Metrics, and Page Images". Journal of New Music Research. 44 (3): 169–195. doi:10.1080/09298215.2015.1045424.
+ Byrd, Donald (November 2017). "Gallery of Interesting Music Notation". indiana.edu. Retrieved July 14, 2019.
+ Byrd, Donald (October 2018). "Extremes of Conventional Music Notation". indiana.edu. Retrieved July 14, 2019.
+ Rebelo, Ana; Fujinaga, Ichiro; Paszkiewicz, Filipe; Marcal, Andre R.S.; Guedes, Carlos; Cardoso, Jamie dos Santos (2012). "Optical music recognition: state-of-the-art and open issues" (PDF). International Journal of Multimedia Information Retrieval. 1 (3): 173–190. doi:10.1007/s13735-012-0004-6. S2CID 12964479. Retrieved July 15, 2019.
+ Gallego, Antonio-Javier; Calvo-Zaragoza, Jorge (2017). "Staff-line removal with selectional auto-encoders". Expert Systems with Applications. 89: 138–148. doi:10.1016/j.eswa.2017.07.002. hdl:10045/68971.
+ Castellanos, Fancisco J.; Calvo-Zaragoza, Jorge; Vigliensoni, Gabriel; Fujinaga, Ichiro (2018). Document Analysis of Music Score Images with Selectional Auto-Encoders (PDF). 19th International Society for Music Information Retrieval Conference. Paris, France. pp. 256–263. Retrieved July 15, 2019.
+ Tuggener, Lukas; Elezi, Ismail; Schmidhuber, Jürgen; Stadelmann, Thilo (2018). Deep Watershed Detector for Music Object Recognition (PDF). 19th International Society for Music Information Retrieval Conference. Paris, France. pp. 271–278. Retrieved July 15, 2019.
+ Hajič, Jan jr.; Dorfer, Matthias; Widmer, Gerhard; Pecina, Pavel (2018). Towards Full-Pipeline Handwritten OMR with Musical Symbol Detection by U-Nets (PDF). 19th International Society for Music Information Retrieval Conference. Paris, France. pp. 225–232. Retrieved July 15, 2019.
+ Pacha, Alexander; Hajič, Jan jr.; Calvo-Zaragoza, Jorge (2018). "A Baseline for General Music Object Detection with Deep Learning". Applied Sciences. 8 (9): 1488–1508. doi:10.3390/app8091488. hdl:20.500.12708/20052.
+ Pacha, Alexander; Choi, Kwon-Young; Coüasnon, Bertrand; Ricquebourg, Yann; Zanibbi, Richard; Eidenberger, Horst (2018). Handwritten Music Object Detection: Open Issues and Baseline Results (PDF). 13th International Workshop on Document Analysis Systems. pp. 163–168. doi:10.1109/DAS.2018.51. Retrieved September 2, 2019.
+ Pacha, Alexander; Calvo-Zaragoza, Jorge; Hajič, Jan jr. (2019). Learning Notation Graph Construction for Full-Pipeline Optical Music Recognition (PDF). 20th International Society for Music Information Retrieval Conference. Retrieved July 2, 2023.
+ van der Wel, Eelco; Ullrich, Karen (2017). Optical Music Recognition with Convolutional Sequence-to-Sequence Models (PDF). 18th International Society for Music Information Retrieval Conference. Suzhou, China.
+ Calvo-Zaragoza, Jorge; Rizo, David (2018). "End-to-End Neural Optical Music Recognition of Monophonic Scores". Applied Sciences. 8 (4): 606. doi:10.3390/app8040606. hdl:10251/143793.
+ Baró, Arnau; Riba, Pau; Calvo-Zaragoza, Jorge; Fornés, Alicia (2017). Optical Music Recognition by Recurrent Neural Networks. 14th International Conference on Document Analysis and Recognition. pp. 25–26. doi:10.1109/ICDAR.2017.260.
+ Baró, Arnau; Riba, Pau; Calvo-Zaragoza, Jorge; Fornés, Alicia (2019). "From Optical Music Recognition to Handwritten Music Recognition: A baseline". Pattern Recognition Letters. 123: 1–8. Bibcode:2019PaReL.123....1B. doi:10.1016/j.patrec.2019.02.029. hdl:10045/89708. S2CID 127170982.
+ Fornés, Alicia; Dutta, Anjan; Gordo, Albert; Lladós, Josep (2013). "The 2012 Music Scores Competitions: Staff Removal and Writer Identification". In Young-Bin Kwon; Jean-Marc Ogier (eds.). Graphics Recognition. New Trends and Challenges. Lecture Notes in Computer Science. Vol. 7423. Springer. pp. 173–186. doi:10.1007/978-3-642-36824-0_17. ISBN 978-3-642-36823-3.
+ "Single Interface for Music Score Searching and Analysis project". simssa.ca. McGill University. Retrieved July 14, 2019.
+ "Search the Liber Usualis". liber.simssa.ca. McGill University. Retrieved July 14, 2019.
+ "Cantus Ultimus". cantus.simssa.ca. McGill University. Retrieved July 14, 2019.
+ "Towards Richer Online Music Public-domain Archives". trompamusic.eu. Retrieved July 14, 2019.
+ Pacha, Alexander. "Optical Music Recognition Datasets". github.io. Retrieved July 14, 2019.
+ Fornés, Alicia; Dutta, Anjan; Gordo, Albert; Lladós, Josep (2012). "CVC-MUSCIMA: A Ground-truth of Handwritten Music Score Images for Writer Identification and Staff Removal". International Journal on Document Analysis and Recognition. 15 (3): 243–251. doi:10.1007/s10032-011-0168-2. S2CID 17946417.
+ Hajič, Jan jr.; Pecina, Pavel (2017). The MUSCIMA++ Dataset for Handwritten Optical Music Recognition. 14th International Conference on Document Analysis and Recognition. Kyoto, Japan. pp. 39–46. doi:10.1109/ICDAR.2017.16.
+ Tuggener, Lukas; Elezi, Ismail; Schmidhuber, Jürgen; Pelillo, Marcello; Stadelmann, Thilo (2018). DeepScores – A Dataset for Segmentation, Detection and Classification of Tiny Objects. 24th International Conference on Pattern Recognition. Beijing, China. doi:10.21256/zhaw-4255.
+ Calvo-Zaragoza, Jorge; Rizo, David (2018). Camera-PrIMuS: Neural End-to-End Optical Music Recognition on Realistic Monophonic Scores (PDF). 19th International Society for Music Information Retrieval Conference. Paris, France. pp. 248–255. Retrieved July 15, 2019.
+ Calvo-Zaragoza, Jorge; Oncina, Jose (2014). Recognition of Pen-Based Music Notation: The HOMUS Dataset. 22nd International Conference on Pattern Recognition. pp. 3038–3043. doi:10.1109/ICPR.2014.524.
+ Parada-Cabaleiro, Emilia; Batliner, Anton; Baird, Alice; Schuller, Björn (2017). The SEILS Dataset: Symbolically Encoded Scores in Modern-Early Notation for Computational Musicology (PDF). 18th International Society for Music Information Retrieval Conference. Suzhou, China. pp. 575–581. Retrieved August 12, 2020.
+ Pacha, Alexander; Eidenberger, Horst (2017). Towards a Universal Music Symbol Classifier. 14th International Conference on Document Analysis and Recognition. Kyoto, Japan. pp. 35–36. doi:10.1109/ICDAR.2017.265.
+ "Maestria". newzik.com. Newzik. Retrieved June 24, 2021.
+ Apprendre le solfège à des algorithmes avec Marie Chupeau, chercheuse en intelligence artificielle. youtube.com (in French). YouTube. June 21, 2021. Archived from the original on December 21, 2021. Retrieved June 24, 2021.
+ "Aruspix". aruspix.net. Retrieved July 15, 2019.
+ "Audiveris". github.com. Retrieved July 15, 2019.
+ "David Bainbridge (Home Page)". waikato.ac.nz. Retrieved July 15, 2019.
+ "Gamera Addon: MusicStaves Toolkit". hsnr.de. Retrieved July 15, 2019.
+ Coüasnon, Bertrand (2001). DMOS: a generic document recognition method, application to an automatic generator of musical scores, mathematical formulae and table structures recognition systems. Sixth International Conference on Document Analysis and Recognition. pp. 215–220. doi:10.1109/ICDAR.2001.953786.
+ "oemer: End-to-end Optical Music Recognition (OMR) system". github.com. Retrieved September 21, 2023.
+ "OpenOMR". sourceforge.net. April 10, 2013. Retrieved January 26, 2017.
+ "Rodan". github.com. Retrieved July 15, 2019.
+ "Eighth rest or smudge". capella-software.com. capella-software AG. Retrieved July 15, 2019.
+ "PhotoScore & NotateMe Ultimate". neuratron.com. Neuratron. Retrieved June 24, 2021.
+ "capella-scan". capella-software.com. capella-software AG. Retrieved June 24, 2021.
+ "FORTE 12 Premium Edition". fortenotation.com. Forte Notation. Retrieved June 24, 2021.
+ "MIDI-Connections SCAN 2.1". midi-connections.com. Composing & Arranging Systems. Retrieved June 24, 2021.
+ "Nightingale". ngale.com. Adept Music Notation Solutions. January 11, 2008. Retrieved March 30, 2021.
+ "OMeR". myriad-online.com. Myriad SARL. Retrieved October 6, 2013.
+ "PDFtoMusic Pro". myriad-online.com. Myriad SARL. Retrieved November 13, 2015.
+ "ScorScan information". npcimaging.com. NPC Imaging. Retrieved October 6, 2013.
+ "SmartScore". musitek.com. Musitek. Retrieved June 24, 2021.
+ "ScanScore". scan-score.com. SCANSCORE. Retrieved November 24, 2019.
+ "Soundslice sheet music scanner". soundslice.com. Soundslice. Retrieved December 17, 2022.
+ "Soundslice PDF and photo scanning (beta)". soundslice.com. Soundslice. Retrieved December 17, 2022.
+ Rothman, Philip (May 26, 2021). "Newzik introduces interactive LiveScores with Maestria, AI-based optical music recognition". scoringnotes.com. Scoring Note. Retrieved June 24, 2021.
+ "iSeeNotes". iseenotes.com. Geer Up AB. Retrieved June 24, 2021.
+ "NotateMe". neuratron.com. Neuratron. Retrieved June 24, 2021.
+ "Notation Scanner". apps.apple.com. Apple Inc. March 23, 2020. Retrieved June 24, 2021.
+ "PlayScore 2". playscore.co. PlayScore. Retrieved June 24, 2021.
+ "SmartScore NoteReader". play.google.com. Retrieved June 24, 2021.
+ "Newzik app". newzik.com. Newzik. Retrieved June 24, 2021.
+External links
+Recording of the ISMIR 2018 tutorial "Optical Music Recognition for Dummies"
+Optical Music Recognition (OMR): Programs and scientific papers
+OMR (Optical Music Recognition) Systems: Comprehensive table of OMR (Last updated: 30 January 2007).
+ Media related to Optical music recognition at Wikimedia Commons
+
+Categories: Music OCR softwareMusical notation
+This page was last edited on 25 October 2024, at 00:41 (UTC).
+Text is available under the Creative Commons Attribution-ShareAlike 4.0 License; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+Privacy policyAbout WikipediaDisclaimersContact WikipediaCode of ConductDevelopersStatisticsCookie statementMobile view
+Wikimedia FoundationPowered by MediaWiki
+
+Optical music recognition
+
+9 languages
+Add topic

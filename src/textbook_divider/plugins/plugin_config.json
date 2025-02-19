@@ -1,0 +1,12 @@
+{
+	"ocr_processor": {
+		"language": "eng",
+		"force_ocr": false,
+		"cache_dir": "~/.cache/textbook-divider/ocr"
+	},
+	"omr_processor": {
+		"cache_dir": "~/.cache/textbook-divider/omr",
+		"audiveris_fallback": true,
+		"parallel_processing": true
+	}
+}

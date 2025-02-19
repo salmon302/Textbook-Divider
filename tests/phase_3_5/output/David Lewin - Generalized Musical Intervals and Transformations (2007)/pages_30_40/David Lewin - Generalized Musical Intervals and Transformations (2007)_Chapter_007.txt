@@ -1,0 +1,14 @@
+1.7 
+DEFINITION: A group is a semigroup with identity in which every element
+has an, inverse.
+The abstract definitions of "semigroup" and "group" (1.4.3; 1.7) are
+consistent with the earlier use of those terms in connection with families of
+transformations (1.3.2; 1.3.4).
+1.8.1 
+DEFINITION: Given a binary composition BIN on a family X, elements x
+and y commute if BIN(y, x) = BIN(x, y), that is, if yx = xy in multiplicative
+notation. The composition BIN is commutative if every pair of elements
+commutes. A semigroup or group is commutative if its binary composition is
+commutative.
+The group of transposition and inversion operations on the twelve pitch-
+classes is non-commutative. To illustrate this, let T2 be the operation of

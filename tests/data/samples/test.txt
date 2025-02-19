@@ -1,0 +1,24 @@
+Chapter 1: Introduction to Programming
+
+Programming is the art of instructing computers to perform specific tasks. This chapter covers the basics of programming concepts and fundamentals.
+
+In this chapter, we'll explore the building blocks of programming languages and how they work together to create functional programs.
+
+Chapter 2: Variables and Data Types
+
+Variables are containers for storing data values. This chapter explores different types of data that can be stored in variables.
+
+We'll cover:
+- Integers
+- Floating-point numbers
+- Characters
+- Strings
+
+Chapter 3: Control Structures
+
+Control structures are the backbone of programming logic. They determine the flow of program execution.
+
+This chapter covers:
+- If statements
+- Loops
+- Switch cases

@@ -1,0 +1,360 @@
+{
+  "page": 235,
+  "node_count": 50,
+  "edge_count": 69,
+  "node_types": {
+    "NodeType.SET_CLASS": 6,
+    "NodeType.GROUP": 10,
+    "NodeType.FUNCTION_SPACE": 21,
+    "NodeType.PITCH_CLASS": 6,
+    "NodeType.INTERVAL": 6,
+    "NodeType.TRANSFORMATION": 1
+  },
+  "relationships": [
+    {
+      "type": "related",
+      "source": "a",
+      "target": "NODEMAP"
+    },
+    {
+      "type": "related",
+      "source": "a",
+      "target": "A"
+    },
+    {
+      "type": "related",
+      "source": "e",
+      "target": "NODEMAP"
+    },
+    {
+      "type": "related",
+      "source": "e",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "e",
+      "target": "NODEMAP"
+    },
+    {
+      "type": "related",
+      "source": "e",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "i",
+      "target": "SGP"
+    },
+    {
+      "type": "related",
+      "source": "i",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "i",
+      "target": "i"
+    },
+    {
+      "type": "related",
+      "source": "i",
+      "target": "2i"
+    },
+    {
+      "type": "related",
+      "source": "j",
+      "target": "SGP"
+    },
+    {
+      "type": "related",
+      "source": "j",
+      "target": "SGP"
+    },
+    {
+      "type": "related",
+      "source": "j",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "j",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "j",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "j",
+      "target": "i"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "SGP"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "B"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "SGP"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "SGP"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "i"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "2i"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "2i"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "SGP"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "i"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "SGP",
+      "target": "i"
+    },
+    {
+      "type": "related",
+      "source": "NODEMAP",
+      "target": "A"
+    },
+    {
+      "type": "related",
+      "source": "SGMAP",
+      "target": "B"
+    },
+    {
+      "type": "related",
+      "source": "TRANSIT",
+      "target": "NODEMAP"
+    },
+    {
+      "type": "related",
+      "source": "TRANSIT",
+      "target": "NODEMAP"
+    },
+    {
+      "type": "related",
+      "source": "TRANSIT",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "TRANSIT",
+      "target": "TRANSIT"
+    },
+    {
+      "type": "related",
+      "source": "NODEMAP",
+      "target": "NODEMAP"
+    },
+    {
+      "type": "related",
+      "source": "NODEMAP",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "NODEMAP",
+      "target": "TRANSIT"
+    },
+    {
+      "type": "related",
+      "source": "NODEMAP",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "NODEMAP",
+      "target": "TRANSIT"
+    },
+    {
+      "type": "related",
+      "source": "SGMAP",
+      "target": "TRANSIT"
+    },
+    {
+      "type": "related",
+      "source": "NODEMAP",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "NODEMAP",
+      "target": "NODEMAP"
+    },
+    {
+      "type": "related",
+      "source": "SGMAP",
+      "target": "NODEMAP"
+    },
+    {
+      "type": "related",
+      "source": "SGMAP",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "NODEMAP",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "TRANSIT",
+      "target": "TRANSIT"
+    },
+    {
+      "type": "related",
+      "source": "SGMAP",
+      "target": "i"
+    },
+    {
+      "type": "related",
+      "source": "SGMAP",
+      "target": "i"
+    },
+    {
+      "type": "related",
+      "source": "SGMAP",
+      "target": "2i"
+    },
+    {
+      "type": "related",
+      "source": "SGMAP",
+      "target": "i"
+    },
+    {
+      "type": "related",
+      "source": "SGMAP",
+      "target": "SGMAP"
+    },
+    {
+      "type": "related",
+      "source": "SGMAP",
+      "target": "i"
+    },
+    {
+      "type": "related",
+      "source": "SGMAP",
+      "target": "i"
+    },
+    {
+      "type": "pitch_relation",
+      "source": "A",
+      "target": "B"
+    },
+    {
+      "type": "related",
+      "source": "i",
+      "target": "2i"
+    },
+    {
+      "type": "related",
+      "source": "i",
+      "target": "2i"
+    },
+    {
+      "type": "related",
+      "source": "i",
+      "target": "i"
+    },
+    {
+      "type": "related",
+      "source": "2i",
+      "target": "i"
+    },
+    {
+      "type": "maps",
+      "source": "C",
+      "target": "s"
+    },
+    {
+      "type": "transforms",
+      "source": "intervallic augmentation",
+      "target": "y"
+    },
+    {
+      "type": "map",
+      "source": "intervallic augmentation",
+      "target": "i"
+    },
+    {
+      "type": "map",
+      "source": "intervallic augmentation",
+      "target": "j"
+    },
+    {
+      "type": "transforms",
+      "source": "intervallic augmentation",
+      "target": "j"
+    }
+  ]
+}

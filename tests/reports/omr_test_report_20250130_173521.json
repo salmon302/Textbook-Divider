@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-01-30T17:35:21.717691",
+  "duration": 24.888854503631592,
+  "total_tests": 10,
+  "failures": 10,
+  "errors": 1,
+  "success": false,
+  "failure_details": [
+    "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_omr_notation.py\", line 30, in test_basic_notation\n    self.assertTrue(result['success'])\nAssertionError: False is not true\n",
+    "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_omr_notation.py\", line 38, in test_complex_notation\n    self.assertTrue(result['success'])\nAssertionError: False is not true\n",
+    "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_omr_notation.py\", line 44, in test_mixed_content\n    self.assertTrue(result['success'])\nAssertionError: False is not true\n",
+    "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_omr_notation.py\", line 69, in test_performance\n    self.assertTrue(result['success'])\nAssertionError: False is not true\n",
+    "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_omr_notation.py\", line 54, in test_staff_detection\n    self.assertTrue(result['success'])\nAssertionError: False is not true\n",
+    "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_omr_notation.py\", line 60, in test_symbol_classification\n    self.assertTrue(result['success'])\nAssertionError: False is not true\n",
+    "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_omr_integration.py\", line 36, in test_chapter_with_music\n    self.assertTrue(omr_result['success'])\nAssertionError: False is not true\n",
+    "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_omr_integration.py\", line 88, in test_error_recovery\n    self.assertIn('text', result)\nAssertionError: 'text' not found in {'success': False, 'error': 'PDF conversion failed', 'has_music': False}\n",
+    "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_omr_integration.py\", line 53, in test_mixed_format_handling\n    self.assertTrue(result['success'])\nAssertionError: False is not true\n",
+    "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_omr_integration.py\", line 70, in test_section_breaks\n    self.assertTrue(result['success'])\nAssertionError: False is not true\n"
+  ],
+  "error_details": [
+    "Traceback (most recent call last):\n  File \"ClassLoader.java\", line 525, in java.lang.ClassLoader.loadClass\njava.lang.java.lang.ClassNotFoundException: java.lang.ClassNotFoundException: org.kohsuke.args4j.CmdLineException\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"org.jpype.pkg.JPypePackage.java\", line 0, in org.jpype.pkg.JPypePackage.getObject\njava.lang.java.lang.NoClassDefFoundError: java.lang.NoClassDefFoundError: org/kohsuke/args4j/CmdLineException\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/omr_processor.py\", line 68, in _init_java\n    from org.audiveris.omr import Main as AudiverisMain\n  File \"/home/seth-n/CLionProjects/Textbook Divider/venv/lib/python3.12/site-packages/jpype/imports.py\", line 89, in _JExceptionHandler\n    raise ImportError(\"Unable to import '%s' due to missing dependency '%s'\" % (\nImportError: Unable to import 'org.audiveris.omr.Main' due to missing dependency 'java.lang.NoClassDefFoundError: org.kohsuke.args4j.CmdLineException'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_omr.py\", line 32, in setUpClass\n    cls.omr = OMRProcessor(cache_dir=cls.temp_dir)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/omr_processor.py\", line 25, in __init__\n    self._init_java()\n  File \"/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/omr_processor.py\", line 83, in _init_java\n    raise RuntimeError(f\"OMR initialization failed: {e}\")\nRuntimeError: OMR initialization failed: Unable to import 'org.audiveris.omr.Main' due to missing dependency 'java.lang.NoClassDefFoundError: org.kohsuke.args4j.CmdLineException'\n"
+  ]
+}

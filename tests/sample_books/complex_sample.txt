@@ -1,0 +1,28 @@
+Chapter 1: Advanced Mathematics
+
+This chapter contains *emphasized* and **bold** text.
+
+1.1 Mathematical Concepts
+Let's explore some mathematical concepts:
+• Function f(x) = x2 + 2x + 1
+• Set theory: A ∈ B, A ∩ B
+• Matrix [1 2; 3 4]
+
+```python
+def example():
+	return "code block"
+```
+
+> Important quote block
+> With multiple lines
+
+Chapter 2: Musical Theory
+
+2.1 Basic Notation
+♩ Quarter note
+♪ Eighth note
+𝄞 Treble clef
+
+| Header 1 | Header 2 |
+|----------|----------|
+| Cell 1   | Cell 2   |

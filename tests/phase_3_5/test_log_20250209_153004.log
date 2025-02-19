@@ -1,0 +1,29 @@
+2025-02-09 15:30:04,363 - __main__ - INFO - Starting test at 2025-02-09 15:30:04.363496
+2025-02-09 15:30:04,363 - __main__ - INFO - Testing musical notation detection
+2025-02-09 15:30:05,741 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/music_detection_20250209_153004.png
+2025-02-09 15:30:05,742 - __main__ - INFO - Detected 8 musical regions
+2025-02-09 15:30:05,743 - __main__ - INFO - Test duration: 1.38 seconds
+2025-02-09 15:30:05,743 - __main__ - INFO - Starting test at 2025-02-09 15:30:05.743759
+2025-02-09 15:30:05,744 - __main__ - INFO - Testing page extraction
+2025-02-09 15:30:05,744 - __main__ - INFO - Extracted page size: 3936401 bytes
+2025-02-09 15:30:06,266 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/extracted_page_20250209_153004.png
+2025-02-09 15:30:06,268 - __main__ - INFO - Test duration: 0.52 seconds
+2025-02-09 15:30:06,268 - __main__ - INFO - Starting test at 2025-02-09 15:30:06.268452
+2025-02-09 15:30:06,268 - __main__ - INFO - Testing text extraction
+2025-02-09 15:30:06,295 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-02-09 15:30:06,296 - PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 41 9
+2025-02-09 15:30:06,297 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 62 3936323
+2025-02-09 15:30:08,395 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/ocr_rgb_20250209_153004.png
+2025-02-09 15:30:25,965 - textbook_divider.ocr_processor - ERROR - OCR Error: No closing quotation
+2025-02-09 15:30:26,655 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/ocr_contrast_20250209_153004.png
+2025-02-09 15:30:44,957 - textbook_divider.ocr_processor - ERROR - OCR Error: No closing quotation
+2025-02-09 15:30:46,178 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/ocr_sharpness_20250209_153004.png
+2025-02-09 15:31:04,397 - textbook_divider.ocr_processor - ERROR - OCR Error: No closing quotation
+2025-02-09 15:31:04,761 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/ocr_grayscale_20250209_153004.png
+2025-02-09 15:31:22,600 - textbook_divider.ocr_processor - ERROR - OCR Error: No closing quotation
+2025-02-09 15:31:23,204 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/ocr_brightness_20250209_153004.png
+2025-02-09 15:31:40,154 - textbook_divider.ocr_processor - ERROR - OCR Error: No closing quotation
+2025-02-09 15:31:40,530 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/ocr_bw_20250209_153004.png
+2025-02-09 15:31:55,354 - textbook_divider.ocr_processor - ERROR - OCR Error: No closing quotation
+2025-02-09 15:31:55,355 - __main__ - ERROR - No text content extracted from any preprocessing stage
+2025-02-09 15:31:55,355 - __main__ - INFO - Test duration: 109.09 seconds

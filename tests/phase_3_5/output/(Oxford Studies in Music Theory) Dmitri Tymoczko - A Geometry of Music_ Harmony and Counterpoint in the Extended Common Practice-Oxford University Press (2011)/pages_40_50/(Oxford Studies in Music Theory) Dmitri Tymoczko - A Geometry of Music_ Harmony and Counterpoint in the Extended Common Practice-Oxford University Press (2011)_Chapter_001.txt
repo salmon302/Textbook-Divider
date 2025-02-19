@@ -1,0 +1,17 @@
+1 Transposition preserves these distances, since f/g = cf/cg. McDermott and Hauser (2005) suggest that 
+this measure of musical distance is innate and that it is common to at least some nonhuman animals. 
+Dowling and Harwood (1986) suggest it is a musical universal.
+Figure 2.1.1 Pitched sounds are periodic. The fundamental frequency is equal to 
+1/t, where t is the duration of the cycle.
+
+
+theory
+30
+can be determined by counting keys on an ordinary piano, so that the Cs above mid-
+dle C is 61, the D above that is 62, and so on. Since the space is continuous, we can 
+use fractional numbers, labeling the pitch 17 hundredths of a semitone (or cents) 
+above middle C as 60.17. In principle, we could eschew letter-names for the remain-
+der of this book, conducting the discussion entirely in numerical terms. For clarity, 
+however, I will use familiar letter names whenever possible. These should be taken as 
+shorthand for numerical pitch labels: “Cs4” and “61,” like “Bob Dylan” and “Robert 
+Zimmerman,” are different ways of referring to the same thing.

@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-01-30T09:20:49.823379",
+  "duration": 0.06857824325561523,
+  "suites": [
+    {
+      "name": "Chapter Detection Tests",
+      "total": 7,
+      "failures": 4,
+      "errors": 0,
+      "success": false
+    },
+    {
+      "name": "Improvement Tests",
+      "total": 7,
+      "failures": 1,
+      "errors": 4,
+      "success": false
+    }
+  ],
+  "overall_success": false
+}

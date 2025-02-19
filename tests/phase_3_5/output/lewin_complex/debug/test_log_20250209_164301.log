@@ -1,0 +1,206 @@
+2025-02-09 16:43:01,661 - __main__ - INFO - Processing page 14
+2025-02-09 16:43:01,975 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p14_20250209_164301.png
+2025-02-09 16:43:02,080 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_wglluleo_input.PNG', '/tmp/tess_wglluleo', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:03,125 - __main__ - INFO - Page 14: Extracted 383 characters
+2025-02-09 16:43:03,429 - __main__ - INFO - Processing page 15
+2025-02-09 16:43:03,768 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p15_20250209_164301.png
+2025-02-09 16:43:03,856 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_reavuhhg_input.PNG', '/tmp/tess_reavuhhg', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:05,260 - __main__ - INFO - Page 15: Extracted 749 characters
+2025-02-09 16:43:05,536 - __main__ - INFO - Processing page 51
+2025-02-09 16:43:05,938 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p51_20250209_164301.png
+2025-02-09 16:43:06,231 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_rhx54x6m_input.PNG', '/tmp/tess_rhx54x6m', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:09,950 - __main__ - INFO - Page 51: Extracted 2586 characters
+2025-02-09 16:43:10,309 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p51_20250209_164301.png
+2025-02-09 16:43:10,309 - __main__ - INFO - Page 51: Detected 1 musical regions
+2025-02-09 16:43:10,311 - __main__ - INFO - Processing page 54
+2025-02-09 16:43:10,650 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p54_20250209_164301.png
+2025-02-09 16:43:10,757 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_vold3uf4_input.PNG', '/tmp/tess_vold3uf4', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:14,042 - __main__ - INFO - Page 54: Extracted 1967 characters
+2025-02-09 16:43:14,327 - __main__ - INFO - Processing page 74
+2025-02-09 16:43:14,656 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p74_20250209_164301.png
+2025-02-09 16:43:14,795 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_39qnyeo2_input.PNG', '/tmp/tess_39qnyeo2', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:18,305 - __main__ - INFO - Page 74: Extracted 2297 characters
+2025-02-09 16:43:18,576 - __main__ - INFO - Processing page 75
+2025-02-09 16:43:18,925 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p75_20250209_164301.png
+2025-02-09 16:43:19,031 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_oh6s0ewh_input.PNG', '/tmp/tess_oh6s0ewh', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:23,097 - __main__ - INFO - Page 75: Extracted 2703 characters
+2025-02-09 16:43:23,455 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p75_20250209_164301.png
+2025-02-09 16:43:23,455 - __main__ - INFO - Page 75: Detected 1 musical regions
+2025-02-09 16:43:23,455 - __main__ - INFO - Processing page 77
+2025-02-09 16:43:23,788 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p77_20250209_164301.png
+2025-02-09 16:43:23,895 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_r2kfvs13_input.PNG', '/tmp/tess_r2kfvs13', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:28,116 - __main__ - INFO - Page 77: Extracted 2742 characters
+2025-02-09 16:43:28,491 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p77_20250209_164301.png
+2025-02-09 16:43:28,491 - __main__ - INFO - Page 77: Detected 1 musical regions
+2025-02-09 16:43:28,491 - __main__ - INFO - Processing page 84
+2025-02-09 16:43:28,797 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p84_20250209_164301.png
+2025-02-09 16:43:28,880 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_m582j8ds_input.PNG', '/tmp/tess_m582j8ds', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:31,180 - __main__ - INFO - Page 84: Extracted 1529 characters
+2025-02-09 16:43:31,496 - __main__ - INFO - Processing page 64
+2025-02-09 16:43:31,812 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p64_20250209_164301.png
+2025-02-09 16:43:31,896 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_bsk9f7d2_input.PNG', '/tmp/tess_bsk9f7d2', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:34,377 - __main__ - INFO - Page 64: Extracted 1541 characters
+2025-02-09 16:43:34,645 - __main__ - INFO - Processing page 101
+2025-02-09 16:43:34,959 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p101_20250209_164301.png
+2025-02-09 16:43:35,039 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_8tl0ebqj_input.PNG', '/tmp/tess_8tl0ebqj', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:37,492 - __main__ - INFO - Page 101: Extracted 1126 characters
+2025-02-09 16:43:37,950 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p101_20250209_164301.png
+2025-02-09 16:43:37,951 - __main__ - INFO - Page 101: Detected 4 musical regions
+2025-02-09 16:43:37,951 - __main__ - INFO - Processing page 116
+2025-02-09 16:43:38,264 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p116_20250209_164301.png
+2025-02-09 16:43:38,368 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_28d53qhq_input.PNG', '/tmp/tess_28d53qhq', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:41,604 - __main__ - INFO - Page 116: Extracted 2183 characters
+2025-02-09 16:43:41,863 - __main__ - INFO - Processing page 119
+2025-02-09 16:43:42,202 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p119_20250209_164301.png
+2025-02-09 16:43:42,307 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_nje4y6qf_input.PNG', '/tmp/tess_nje4y6qf', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:46,198 - __main__ - INFO - Page 119: Extracted 2377 characters
+2025-02-09 16:43:46,596 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p119_20250209_164301.png
+2025-02-09 16:43:46,596 - __main__ - INFO - Page 119: Detected 2 musical regions
+2025-02-09 16:43:46,596 - __main__ - INFO - Processing page 122
+2025-02-09 16:43:46,934 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p122_20250209_164301.png
+2025-02-09 16:43:47,054 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_pyxa4umd_input.PNG', '/tmp/tess_pyxa4umd', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:49,999 - __main__ - INFO - Page 122: Extracted 1930 characters
+2025-02-09 16:43:50,360 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p122_20250209_164301.png
+2025-02-09 16:43:50,360 - __main__ - INFO - Page 122: Detected 2 musical regions
+2025-02-09 16:43:50,360 - __main__ - INFO - Processing page 124
+2025-02-09 16:43:50,675 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p124_20250209_164301.png
+2025-02-09 16:43:50,787 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_8nfo54_2_input.PNG', '/tmp/tess_8nfo54_2', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:51,828 - __main__ - INFO - Page 124: Extracted 93 characters
+2025-02-09 16:43:52,246 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p124_20250209_164301.png
+2025-02-09 16:43:52,246 - __main__ - INFO - Page 124: Detected 6 musical regions
+2025-02-09 16:43:52,246 - __main__ - INFO - Processing page 125
+2025-02-09 16:43:52,529 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p125_20250209_164301.png
+2025-02-09 16:43:52,681 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_8nd3fwu2_input.PNG', '/tmp/tess_8nd3fwu2', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:55,476 - __main__ - INFO - Page 125: Extracted 1374 characters
+2025-02-09 16:43:55,863 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p125_20250209_164301.png
+2025-02-09 16:43:55,863 - __main__ - INFO - Page 125: Detected 4 musical regions
+2025-02-09 16:43:55,863 - __main__ - INFO - Processing page 131
+2025-02-09 16:43:56,143 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p131_20250209_164301.png
+2025-02-09 16:43:56,236 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_tq97m1x2_input.PNG', '/tmp/tess_tq97m1x2', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:43:58,508 - __main__ - INFO - Page 131: Extracted 1400 characters
+2025-02-09 16:43:58,921 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p131_20250209_164301.png
+2025-02-09 16:43:58,921 - __main__ - INFO - Page 131: Detected 3 musical regions
+2025-02-09 16:43:58,921 - __main__ - INFO - Processing page 142
+2025-02-09 16:43:59,216 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p142_20250209_164301.png
+2025-02-09 16:43:59,303 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_9i93uprq_input.PNG', '/tmp/tess_9i93uprq', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:02,517 - __main__ - INFO - Page 142: Extracted 1186 characters
+2025-02-09 16:44:02,792 - __main__ - INFO - Processing page 147
+2025-02-09 16:44:03,167 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p147_20250209_164301.png
+2025-02-09 16:44:03,318 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_5zw3nz___input.PNG', '/tmp/tess_5zw3nz__', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:08,658 - __main__ - INFO - Page 147: Extracted 2612 characters
+2025-02-09 16:44:09,297 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p147_20250209_164301.png
+2025-02-09 16:44:09,297 - __main__ - INFO - Page 147: Detected 1 musical regions
+2025-02-09 16:44:09,297 - __main__ - INFO - Processing page 148
+2025-02-09 16:44:09,620 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p148_20250209_164301.png
+2025-02-09 16:44:09,711 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_8jtzvotf_input.PNG', '/tmp/tess_8jtzvotf', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:12,608 - __main__ - INFO - Page 148: Extracted 1765 characters
+2025-02-09 16:44:12,889 - __main__ - INFO - Processing page 152
+2025-02-09 16:44:13,211 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p152_20250209_164301.png
+2025-02-09 16:44:13,323 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_h1td_oqj_input.PNG', '/tmp/tess_h1td_oqj', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:17,069 - __main__ - INFO - Page 152: Extracted 2133 characters
+2025-02-09 16:44:17,358 - __main__ - INFO - Processing page 158
+2025-02-09 16:44:17,838 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p158_20250209_164301.png
+2025-02-09 16:44:17,921 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_qbneh6em_input.PNG', '/tmp/tess_qbneh6em', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:19,698 - __main__ - INFO - Page 158: Extracted 1139 characters
+2025-02-09 16:44:20,138 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p158_20250209_164301.png
+2025-02-09 16:44:20,138 - __main__ - INFO - Page 158: Detected 1 musical regions
+2025-02-09 16:44:20,139 - __main__ - INFO - Processing page 165
+2025-02-09 16:44:20,517 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p165_20250209_164301.png
+2025-02-09 16:44:20,638 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_ulh8xdcb_input.PNG', '/tmp/tess_ulh8xdcb', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:23,608 - __main__ - INFO - Page 165: Extracted 1957 characters
+2025-02-09 16:44:24,061 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p165_20250209_164301.png
+2025-02-09 16:44:24,061 - __main__ - INFO - Page 165: Detected 2 musical regions
+2025-02-09 16:44:24,062 - __main__ - INFO - Processing page 175
+2025-02-09 16:44:24,431 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p175_20250209_164301.png
+2025-02-09 16:44:24,541 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_8syqne77_input.PNG', '/tmp/tess_8syqne77', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:29,011 - __main__ - INFO - Page 175: Extracted 3042 characters
+2025-02-09 16:44:29,275 - __main__ - INFO - Processing page 199
+2025-02-09 16:44:29,561 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p199_20250209_164301.png
+2025-02-09 16:44:29,641 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_pjj6hh22_input.PNG', '/tmp/tess_pjj6hh22', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:30,233 - __main__ - INFO - Page 199: Extracted 73 characters
+2025-02-09 16:44:30,665 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p199_20250209_164301.png
+2025-02-09 16:44:30,665 - __main__ - INFO - Page 199: Detected 6 musical regions
+2025-02-09 16:44:30,665 - __main__ - INFO - Processing page 205
+2025-02-09 16:44:30,983 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p205_20250209_164301.png
+2025-02-09 16:44:31,075 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_gnxn2j2u_input.PNG', '/tmp/tess_gnxn2j2u', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:33,294 - __main__ - INFO - Page 205: Extracted 1358 characters
+2025-02-09 16:44:33,770 - __main__ - INFO - Processing page 206
+2025-02-09 16:44:34,117 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p206_20250209_164301.png
+2025-02-09 16:44:34,221 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_4enl5ew6_input.PNG', '/tmp/tess_4enl5ew6', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:38,027 - __main__ - INFO - Page 206: Extracted 2532 characters
+2025-02-09 16:44:38,560 - __main__ - INFO - Processing page 214
+2025-02-09 16:44:38,899 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p214_20250209_164301.png
+2025-02-09 16:44:38,995 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_hax0v0_8_input.PNG', '/tmp/tess_hax0v0_8', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:42,397 - __main__ - INFO - Page 214: Extracted 2275 characters
+2025-02-09 16:44:42,655 - __main__ - INFO - Processing page 215
+2025-02-09 16:44:42,955 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p215_20250209_164301.png
+2025-02-09 16:44:43,040 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_wqeilw6i_input.PNG', '/tmp/tess_wqeilw6i', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:45,907 - __main__ - INFO - Page 215: Extracted 1305 characters
+2025-02-09 16:44:46,311 - __main__ - INFO - Processing page 216
+2025-02-09 16:44:46,615 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p216_20250209_164301.png
+2025-02-09 16:44:46,705 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_3880lzws_input.PNG', '/tmp/tess_3880lzws', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:49,303 - __main__ - INFO - Page 216: Extracted 1737 characters
+2025-02-09 16:44:49,624 - __main__ - INFO - Processing page 218
+2025-02-09 16:44:49,983 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p218_20250209_164301.png
+2025-02-09 16:44:50,092 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_z56wn6g9_input.PNG', '/tmp/tess_z56wn6g9', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:52,707 - __main__ - INFO - Page 218: Extracted 2152 characters
+2025-02-09 16:44:52,993 - __main__ - INFO - Processing page 224
+2025-02-09 16:44:53,220 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p224_20250209_164301.png
+2025-02-09 16:44:53,283 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_kg84h4v2_input.PNG', '/tmp/tess_kg84h4v2', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:53,746 - __main__ - INFO - Page 224: Extracted 73 characters
+2025-02-09 16:44:53,995 - __main__ - INFO - Processing page 227
+2025-02-09 16:44:54,283 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p227_20250209_164301.png
+2025-02-09 16:44:54,395 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_cj4sah54_input.PNG', '/tmp/tess_cj4sah54', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:44:56,977 - __main__ - INFO - Page 227: Extracted 1805 characters
+2025-02-09 16:44:57,245 - __main__ - INFO - Processing page 233
+2025-02-09 16:44:57,596 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p233_20250209_164301.png
+2025-02-09 16:44:57,699 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_obr5vaki_input.PNG', '/tmp/tess_obr5vaki', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:45:00,441 - __main__ - INFO - Page 233: Extracted 2063 characters
+2025-02-09 16:45:00,676 - __main__ - INFO - Processing page 235
+2025-02-09 16:45:00,983 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p235_20250209_164301.png
+2025-02-09 16:45:01,077 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_d4quqkxf_input.PNG', '/tmp/tess_d4quqkxf', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:45:04,118 - __main__ - INFO - Page 235: Extracted 2152 characters
+2025-02-09 16:45:04,384 - __main__ - INFO - Processing page 237
+2025-02-09 16:45:04,760 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p237_20250209_164301.png
+2025-02-09 16:45:04,860 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_c8bkzwyt_input.PNG', '/tmp/tess_c8bkzwyt', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:45:07,839 - __main__ - INFO - Page 237: Extracted 1979 characters
+2025-02-09 16:45:08,149 - __main__ - INFO - Processing page 238
+2025-02-09 16:45:08,417 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p238_20250209_164301.png
+2025-02-09 16:45:08,488 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_c2_lc0sg_input.PNG', '/tmp/tess_c2_lc0sg', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:45:09,064 - __main__ - INFO - Page 238: Extracted 130 characters
+2025-02-09 16:45:09,403 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p238_20250209_164301.png
+2025-02-09 16:45:09,403 - __main__ - INFO - Page 238: Detected 1 musical regions
+2025-02-09 16:45:09,403 - __main__ - INFO - Processing page 240
+2025-02-09 16:45:09,709 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p240_20250209_164301.png
+2025-02-09 16:45:09,800 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_jnpgr0m1_input.PNG', '/tmp/tess_jnpgr0m1', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:45:11,634 - __main__ - INFO - Page 240: Extracted 1570 characters
+2025-02-09 16:45:11,881 - __main__ - INFO - Processing page 241
+2025-02-09 16:45:12,246 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p241_20250209_164301.png
+2025-02-09 16:45:12,343 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_ppi0xodf_input.PNG', '/tmp/tess_ppi0xodf', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:45:14,621 - __main__ - INFO - Page 241: Extracted 2041 characters
+2025-02-09 16:45:14,835 - __main__ - INFO - Processing page 246
+2025-02-09 16:45:15,117 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p246_20250209_164301.png
+2025-02-09 16:45:15,196 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_9ebruxdo_input.PNG', '/tmp/tess_9ebruxdo', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:45:16,755 - __main__ - INFO - Page 246: Extracted 1275 characters
+2025-02-09 16:45:16,997 - __main__ - INFO - Processing page 258
+2025-02-09 16:45:17,298 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p258_20250209_164301.png
+2025-02-09 16:45:17,388 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_r656takb_input.PNG', '/tmp/tess_r656takb', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:45:19,923 - __main__ - INFO - Page 258: Extracted 2186 characters
+2025-02-09 16:45:20,289 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p258_20250209_164301.png
+2025-02-09 16:45:20,289 - __main__ - INFO - Page 258: Detected 1 musical regions
+2025-02-09 16:45:20,289 - __main__ - INFO - Processing page 260
+2025-02-09 16:45:20,636 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p260_20250209_164301.png
+2025-02-09 16:45:20,736 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_7f7bfde4_input.PNG', '/tmp/tess_7f7bfde4', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:45:22,968 - __main__ - INFO - Page 260: Extracted 2106 characters
+2025-02-09 16:45:23,198 - __main__ - INFO - Processing page 265
+2025-02-09 16:45:23,466 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p265_20250209_164301.png
+2025-02-09 16:45:23,545 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_hwy0v3y0_input.PNG', '/tmp/tess_hwy0v3y0', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:45:24,121 - __main__ - INFO - Page 265: Extracted 137 characters
+2025-02-09 16:45:24,508 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p265_20250209_164301.png
+2025-02-09 16:45:24,508 - __main__ - INFO - Page 265: Detected 7 musical regions
+2025-02-09 16:45:24,508 - __main__ - INFO - Processing page 266
+2025-02-09 16:45:24,814 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/preprocessed_p266_20250209_164301.png
+2025-02-09 16:45:24,902 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_bh6won3o_input.PNG', '/tmp/tess_bh6won3o', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 16:45:26,997 - __main__ - INFO - Page 266: Extracted 1290 characters
+2025-02-09 16:45:27,398 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/lewin_complex/debug/music_detection_p266_20250209_164301.png
+2025-02-09 16:45:27,398 - __main__ - INFO - Page 266: Detected 1 musical regions

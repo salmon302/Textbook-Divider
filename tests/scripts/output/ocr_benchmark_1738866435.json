@@ -1,0 +1,39 @@
+{
+  "performance": [
+    {
+      "file": "page_020.png",
+      "time": 3.9657840728759766,
+      "text_length": 0
+    },
+    {
+      "file": "page_010.png",
+      "time": 2.0907938480377197,
+      "text_length": 0
+    },
+    {
+      "file": "page_040.png",
+      "time": 5.188414096832275,
+      "text_length": 0
+    },
+    {
+      "file": "page_050.png",
+      "time": 5.6324303150177,
+      "text_length": 0
+    },
+    {
+      "file": "page_030.png",
+      "time": 5.090532541275024,
+      "text_length": 0
+    }
+  ],
+  "cache_stats": {
+    "processed": 0,
+    "failed": 0,
+    "cache_hits": 0,
+    "cache_misses": 5,
+    "cache_hit_rate": "0.00%",
+    "cache_size": 0,
+    "worker_stats": {}
+  },
+  "memory_usage": []
+}

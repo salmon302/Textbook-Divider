@@ -1,0 +1,82 @@
+2
+
+
+Mathematical Preliminaries 
+1.3.1
+For an example, let us take S, S', and S" all to be the family of positive
+integers. Let f^s) = s + 3, f{(s) = 2s, f2(s) = 2s, and f^s) = s + 6. The four
+specified functions satisfy the functional equation f'1f1
+ = f^. That is, given
+any integer s, if we compute fjfi(s), multiplying by two the result of adding 3
+to s, we obtain the same net result as we do when we compute f^Cs), adding 6
+to the result of multiplying s by two.
+For another example, let us take S, S', and S" all to be the family of the
+twelve pitch-classes. Let f(s) = s transposed by 2, f(s) = s inverted with
+respect to the pitch class C, and f"(s) = s inverted with respect to the pitch
+class B. The three specified functions satisfy the functional equation f'f = f".
+That is, given any pitch class s, if we compute f T(s), inverting about C the
+result of transposing s by 2, we obtain the same net result as we do when we
+compute f"(s), inverting the given s about B.
+1.2.6.1 
+DEFINITION: The function f from S into S' is onto S' if every member of
+S' is the value of some argument. (Every member of S' appears at least once in
+the right-hand column of the function table.)
+1.2.6.2 
+DEFINITION: The function f from S into S' is 1-to-l if no two distinct
+arguments share the same value. (No member of S' appears more than once in
+the right-hand column of the function table.)
+1.2.6.3 DEFINITION: Let f be a 1-to-l function from S onto S'. Then f"1, the
+inverse function off, is defined as the family of pairs (s', s) within S' x S such
+that (s, s') is a member of f.
+1.2.6.4 
+THEOREMS: Given the situation as in 1.2.6.3 above, then f ~* is indeed
+a function in the sense of 1.2.1. f-1 is in fact a 1-to-l function from S' onto S.
+The inverse function off"1 is, of course, f.
+The theorems are stated without proof.
+1.2.6.5 
+THEOREM: Let f and f' be functions from S into S' and from S' into S
+respectively. Suppose that the functions satisfy the two conditions (A) and (B)
+following. (A): for every s in S, f'f(s) = s. (B): for every s' in S', ff'(s') = s'.
+Then f and f' are both 1 -to-1; they are respectively onto S' and onto S; and they
+are inverse functions, each of the other.
+The theorem is given without proof.
+1.3.1 
+DEFINITION: A function from a family S into S itself will be called a
+transformation on S. If the function is 1-to-l and onto, it will be called an
+operation on S. 
+3
+
+
+1.3.2 
+Mathematical Preliminaries
+1.3.2 
+DEFINITION: Given a family S, a collection F of transformations on S is
+called closed if, given any members f and g of F, the composition fg is a
+member of F. A closed collection of transformations on S will also be called a
+semigroup of transformations on S.
+1.3.3.1 
+DEFINITION: The identity operation on a family S is that operation 1
+on S which assigns the value 1 (s) = s to any argument s.
+1.3.3.2 
+THEOREM: For any transformation f on S, the functional equations
+If = f and fl = fare true (in the sense of 1.2.5 above).
+1.3.3.3 
+THEOREM: A transformation f on S is an operation (i.e., 1-to-l and
+onto) if and only if there exists a transformation f on S satisfying the
+functional equations f T = 1; ff' = 1. If this be the case then f' is the inverse
+operation of f.
+The theorem follows from the various matters studied over section 1.2.6.
+1.3.4 
+DEFINITION: By a group of operations on S we shall mean a family (i.e.
+collection) G of transformations on S which satisfies conditions (A) and (B)
+following. (A): G is a closed family, a semigroup of transformations in the
+sense of 1.3.2. (B): Given any member f of G, there exists a member f of G
+satisfying f'f = ff = 1.
+Condition (B) guarantees that the members of G are indeed operations,
+via 1.3.3.3. (B) also guarantees that G contains the inverse operation for each
+of its member operations. (A) and (B) together imply that G contains the
+identity operation 1, provided that G contains any members. Whether we call
+G a "collection" or a "family" is immaterial; for us the terms are synonymous
+with each other as they also are with the terms "ensemble" and "set-in-the-
+mathematical-sense."
+1.3.5 The work of section 1.3 so far has explored certain algebraic behavior

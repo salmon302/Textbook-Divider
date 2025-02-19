@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-01-30T09:25:35.619852",
+  "duration": 0.029468297958374023,
+  "suites": [
+    {
+      "name": "Chapter Detection Tests",
+      "total": 7,
+      "failures": 4,
+      "errors": 0,
+      "success": false,
+      "failure_details": [
+        "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_chapter_detection.py\", line 60, in test_chapter_boundaries\n    self.assertEqual(len(chapters), 2)\nAssertionError: 0 != 2\n",
+        "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_chapter_detection.py\", line 41, in test_mixed_formats\n    self.assertEqual(len(chapters), 2)\nAssertionError: 0 != 2\n",
+        "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_chapter_detection.py\", line 28, in test_roman_numerals\n    self.assertEqual(len(chapters), 2)\nAssertionError: 0 != 2\n",
+        "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_chapter_detection.py\", line 21, in test_standard_chapters\n    self.assertEqual(len(chapters), 2)\nAssertionError: 0 != 2\n"
+      ],
+      "error_details": []
+    },
+    {
+      "name": "Improvement Tests",
+      "total": 7,
+      "failures": 3,
+      "errors": 1,
+      "success": false,
+      "failure_details": [
+        "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py\", line 123, in test_complex_formatting\n    self.assertEqual(len(output_files), 2)  # Two main chapters\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 7 != 2\n",
+        "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py\", line 33, in test_enhanced_chapter_detection\n    self.assertEqual(len(chapters), 3)\nAssertionError: 0 != 3\n",
+        "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py\", line 58, in test_text_block_processing\n    self.assertTrue(any(b.block_type == 'list' for b in blocks))\nAssertionError: False is not true\n"
+      ],
+      "error_details": [
+        "Traceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py\", line 62, in process_book\n    handler = self._get_validated_handler(input_path)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py\", line 91, in _get_validated_handler\n    raise ValueError(f\"Unsupported file format: {input_path.suffix}\")\nValueError: Unsupported file format: .xyz\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py\", line 85, in test_error_handling\n    self.divider.process_book(\"nonexistent.xyz\", str(self.output_dir))\n  File \"/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py\", line 85, in process_book\n    raise ProcessingError(f\"Failed to process book: {str(e)}\")\ntextbook_divider.main.ProcessingError: Failed to process book: Unsupported file format: .xyz\n"
+      ]
+    }
+  ],
+  "overall_success": false
+}

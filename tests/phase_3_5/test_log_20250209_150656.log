@@ -1,0 +1,33 @@
+2025-02-09 15:06:56,314 - __main__ - INFO - Starting test at 2025-02-09 15:06:56.314519
+2025-02-09 15:06:56,314 - __main__ - INFO - Testing mixed content handling
+2025-02-09 15:07:56,572 - textbook_divider.omr_processor - ERROR - Audiveris processing error: Command '['/home/seth-n/CLionProjects/Textbook Divider/external/audiveris/build/distributions/Audiveris-5.3.1/bin/Audiveris', '-batch', '-output', '/tmp/tmpx400hfsj', '-export', 'json', '-option', 'org.audiveris.omr.score.ScoreParameters.minDurationDivisor=32', '-option', 'org.audiveris.omr.sheet.SheetParameters.binarizationFilter=adaptive', '/home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/page42.png']' timed out after 60 seconds
+2025-02-09 15:07:56,572 - textbook_divider.omr_processor - INFO - Falling back to template matching after Audiveris failure
+2025-02-09 15:08:01,668 - __main__ - INFO - Test duration: 65.35 seconds
+2025-02-09 15:08:01,668 - __main__ - INFO - Starting test at 2025-02-09 15:08:01.668389
+2025-02-09 15:08:01,668 - __main__ - INFO - Testing musical notation detection
+2025-02-09 15:08:03,133 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/music_detection_20250209_150656.png
+2025-02-09 15:08:03,133 - __main__ - INFO - Detected 8 musical regions
+2025-02-09 15:08:03,142 - __main__ - INFO - Test duration: 1.47 seconds
+2025-02-09 15:08:03,143 - __main__ - INFO - Starting test at 2025-02-09 15:08:03.143031
+2025-02-09 15:08:03,143 - __main__ - INFO - Testing output validation
+2025-02-09 15:09:03,191 - textbook_divider.omr_processor - ERROR - Audiveris processing error: Command '['/home/seth-n/CLionProjects/Textbook Divider/external/audiveris/build/distributions/Audiveris-5.3.1/bin/Audiveris', '-batch', '-output', '/tmp/tmpjpw808_s', '-export', 'json', '-option', 'org.audiveris.omr.score.ScoreParameters.minDurationDivisor=32', '-option', 'org.audiveris.omr.sheet.SheetParameters.binarizationFilter=adaptive', '/home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/page42.png']' timed out after 60 seconds
+2025-02-09 15:09:03,191 - textbook_divider.omr_processor - INFO - Falling back to template matching after Audiveris failure
+2025-02-09 15:09:07,275 - __main__ - INFO - Test duration: 64.13 seconds
+2025-02-09 15:09:07,275 - __main__ - INFO - Starting test at 2025-02-09 15:09:07.275387
+2025-02-09 15:09:07,275 - __main__ - INFO - Testing page extraction
+2025-02-09 15:09:07,275 - __main__ - INFO - Extracted page size: 3936401 bytes
+2025-02-09 15:09:07,842 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/extracted_page_20250209_150656.png
+2025-02-09 15:09:07,850 - __main__ - INFO - Test duration: 0.58 seconds
+2025-02-09 15:09:07,850 - __main__ - INFO - Starting test at 2025-02-09 15:09:07.850789
+2025-02-09 15:09:07,850 - __main__ - INFO - Testing text extraction
+2025-02-09 15:09:07,885 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-02-09 15:09:07,885 - PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 41 9
+2025-02-09 15:09:07,886 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 62 3936323
+2025-02-09 15:09:09,139 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/original_20250209_150656.png
+2025-02-09 15:09:10,638 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/ocr_rgb_20250209_150656.png
+2025-02-09 15:09:11,428 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/ocr_contrast_20250209_150656.png
+2025-02-09 15:09:12,464 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/ocr_sharpness_20250209_150656.png
+2025-02-09 15:09:12,901 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_p42/debug/ocr_grayscale_20250209_150656.png
+2025-02-09 15:09:20,200 - textbook_divider.ocr_processor - ERROR - OCR Error: No closing quotation
+2025-02-09 15:09:20,200 - __main__ - ERROR - No text content extracted
+2025-02-09 15:09:20,201 - __main__ - INFO - Test duration: 12.35 seconds

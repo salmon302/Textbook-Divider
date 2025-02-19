@@ -1,0 +1,348 @@
+import cv2
+import numpy as np
+from dataclasses import dataclass
+from typing import List, Tuple, Optional, Dict
+from enum import Enum
+from .graph_types import MusicTheoryGraph, Node, Edge, NodeType
+
+class LayoutType(Enum):
+	CIRCULAR = "circular"
+	LINEAR = "linear"
+	COMPLEX = "complex"
+
+class TransformationNetwork:
+class TransformationNetwork:
+    def __init__(self):
+        self.nodes: Dict[str, Node] = {}
+        self.edges: List[Edge] = []
+        self.layout_type: LayoutType = LayoutType.COMPLEX
+        self.confidence: float = 0.0
+
+    def add_node(self, node: Node) -> None:
+        self.nodes[node.id] = node
+
+    def add_edge(self, edge: Edge) -> None:
+        self.edges.append(edge)
+
+    def __len__(self):
+        return len(self.nodes)
+		self.edges.append(edge)
+
+class PatternDetector:
+	def __init__(self):
+		self.mathematical_symbols = {
+			"∘", "⊗", "⊕", "→", "⟶", "↦", "⊆", "⊇", "≅", "≃", "∼",
+			"∈", "∉", "⊂", "⊃", "∪", "∩", "×", "⋈", "≤", "≥"
+		}
+		self.transformation_labels = {
+			"RICH", "TCH", "TRAN", "INT", "GIS", "STAB", "FLIP", "ROT"
+		}
+		self.gis_patterns = {
+			"s", "t", "i", "int", "IVLS", "IVLS1", "IVLS2"
+		}
+	
+	def detect_layout(self, image: np.ndarray) -> LayoutType:
+		# Preprocess the image
+		processed = self._preprocess_image(image)
+		
+		# Find contours
+		contours, _ = cv2.findContours(
+			processed, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE
+		)
+		
+		if not contours:
+			return LayoutType.COMPLEX
+		
+		# Get bounding boxes for all contours
+		boxes = [cv2.boundingRect(c) for c in contours]
+		centers = [(x + w//2, y + h//2) for x, y, w, h in boxes]
+		
+		if len(centers) < 3:
+			return LayoutType.LINEAR
+		
+		# Check if centers form a roughly circular pattern
+		center_x = sum(x for x, _ in centers) / len(centers)
+		center_y = sum(y for _, y in centers) / len(centers)
+		
+		# Calculate distances from center
+		distances = [
+			np.sqrt((x - center_x)**2 + (y - center_y)**2) 
+			for x, y in centers
+		]
+		
+		# If standard deviation of distances is low, it's likely circular
+		std_dev = np.std(distances)
+		mean_dist = np.mean(distances)
+		
+		if std_dev / mean_dist < 0.2:  # Threshold for circularity
+			return LayoutType.CIRCULAR
+		
+		# Check if centers are roughly aligned
+		y_coords = [y for _, y in centers]
+		y_std = np.std(y_coords)
+		
+		if y_std < 20:  # Threshold for linearity
+			return LayoutType.LINEAR
+			
+		return LayoutType.COMPLEX
+
+	def detect_nodes(self, image: np.ndarray) -> List[Node]:
+		gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+		circles = cv2.HoughCircles(
+			gray, cv2.HOUGH_GRADIENT, dp=1, minDist=50,
+			param1=50, param2=30, minRadius=15, maxRadius=25
+		)
+		
+		nodes = []
+		if circles is not None:
+			circles = np.uint16(np.around(circles))
+			for i, (x, y, r) in enumerate(circles[0, :]):
+				node = Node(
+					id=f"node_{i}",
+					type=NodeType.NETWORK_NODE,
+					label=f"Node_{i}",
+					properties={"confidence": 0.9, "radius": int(r)},
+					position=(int(x), int(y))
+				)
+				nodes.append(node)
+		
+		return nodes
+
+	def detect_edges(self, image: np.ndarray, nodes: List[Node]) -> List[Edge]:
+		gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+		edges = []
+		min_line_length = 30  # Minimum length for a valid edge
+		
+		for i, source in enumerate(nodes):
+			for j, target in enumerate(nodes[i+1:], i+1):
+				x1, y1 = source.position
+				x2, y2 = target.position
+				
+				# Calculate line length
+				line_length = np.sqrt((x2-x1)**2 + (y2-y1)**2)
+				if line_length < min_line_length:
+					continue
+				
+				# Create a mask for the line region
+				mask = np.zeros_like(gray)
+				cv2.line(mask, (x1, y1), (x2, y2), 255, 3)  # Thinner line for more precise detection
+				
+				# Check if there are dark pixels along the line
+				line_region = cv2.bitwise_and(gray, mask)
+				dark_pixels = np.sum(line_region < 127)
+				line_pixels = np.sum(mask > 0)
+				if dark_pixels / line_pixels > 0.3:  # At least 30% dark pixels
+					# Extract region around middle of line for symbol detection
+					mid_x = (x1 + x2) // 2
+					mid_y = (y1 + y2) // 2
+					roi = image[max(0, mid_y-15):min(image.shape[0], mid_y+15),
+							  max(0, mid_x-15):min(image.shape[1], mid_x+15)]
+					
+					transform_type, confidence = self.detect_transformation_type(roi)
+					is_isomorphism = self.detect_isomorphism(roi)
+					
+					edge = Edge(
+						source=source.id,
+						target=target.id,
+						label=transform_type or "",
+						weight=confidence,
+						properties={"confidence": confidence},
+						transformation_type=transform_type,
+						is_isomorphism=is_isomorphism
+					)
+					edges.append(edge)
+		
+		return edges
+
+
+	def detect_transformation_type(self, roi: np.ndarray) -> Tuple[Optional[str], float]:
+		if roi.size == 0:
+			return None, 0.0
+			
+		# Convert to grayscale if needed
+		if len(roi.shape) == 3:
+			gray = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
+		else:
+			gray = roi.copy()
+		
+		# Enhance image for symbol detection
+		enhanced = cv2.adaptiveThreshold(
+			gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
+			cv2.THRESH_BINARY, 11, 2
+		)
+		
+		# Increase template size and adjust matching parameters
+		best_match = None
+		best_confidence = 0.0
+		
+		# Check for mathematical symbols with larger templates
+		for symbol in self.mathematical_symbols:
+			template = np.zeros((60, 60), dtype=np.uint8)
+			cv2.putText(template, symbol, (15, 45), cv2.FONT_HERSHEY_SIMPLEX, 
+					   1.5, 255, 2)
+			
+			# Multi-scale template matching
+			for scale in [0.8, 1.0, 1.2]:
+				scaled_template = cv2.resize(template, None, fx=scale, fy=scale)
+				result = cv2.matchTemplate(enhanced, scaled_template, 
+										 cv2.TM_CCOEFF_NORMED)
+				_, confidence, _, _ = cv2.minMaxLoc(result)
+				if confidence > best_confidence:
+					best_confidence = confidence
+					best_match = symbol
+		
+		# Check for transformation labels with improved detection
+		for label in self.transformation_labels:
+			template = np.zeros((60, 150), dtype=np.uint8)
+			cv2.putText(template, label, (10, 45), cv2.FONT_HERSHEY_SIMPLEX, 
+					   1.0, 255, 2)
+			
+			# Multi-scale template matching for labels
+			for scale in [0.8, 1.0, 1.2]:
+				scaled_template = cv2.resize(template, None, fx=scale, fy=scale)
+				result = cv2.matchTemplate(enhanced, scaled_template, 
+										 cv2.TM_CCOEFF_NORMED)
+				_, confidence, _, _ = cv2.minMaxLoc(result)
+				if confidence > best_confidence:
+					best_confidence = confidence
+					best_match = label
+		
+		# Adjust confidence score based on match quality
+		if best_confidence > 0.8:
+			best_confidence = 1.0
+		elif best_confidence > 0.6:
+			best_confidence = 0.9
+		elif best_confidence > 0.4:
+			best_confidence = 0.8
+		else:
+			best_confidence = best_confidence * 1.25  # Boost low confidences
+		
+		return best_match, min(best_confidence, 1.0)
+
+	def detect_isomorphism(self, edge_roi: np.ndarray) -> bool:
+		# Convert to grayscale if needed
+		if len(edge_roi.shape) == 3:
+			gray = cv2.cvtColor(edge_roi, cv2.COLOR_BGR2GRAY)
+		else:
+			gray = edge_roi.copy()
+		
+		# Enhance image for symbol detection
+		enhanced = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
+									   cv2.THRESH_BINARY, 11, 2)
+		
+		# Check for isomorphism symbols (≅, ≃, ∼)
+		isomorphism_symbols = ["≅", "≃", "∼"]
+		max_confidence = 0.0
+		
+		for symbol in isomorphism_symbols:
+			template = np.zeros((40, 40), dtype=np.uint8)
+			cv2.putText(template, symbol, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 
+					   1.0, 255, 2)
+			
+			result = cv2.matchTemplate(enhanced, template, cv2.TM_CCOEFF_NORMED)
+			_, confidence, _, _ = cv2.minMaxLoc(result)
+			max_confidence = max(max_confidence, confidence)
+		
+		return max_confidence > 0.7  # Threshold for isomorphism detection
+
+	def detect_patterns(self, text: str) -> MusicTheoryGraph:
+		"""Detect mathematical patterns in text and return a graph representation"""
+		graph = MusicTheoryGraph()
+		
+		# Extract mathematical symbols and relationships
+		lines = text.split('\n')
+		for i, line in enumerate(lines):
+			# Look for mathematical symbols
+			for symbol in self.mathematical_symbols:
+				if symbol in line:
+					node_id = f"symbol_{i}_{len(graph.nodes)}"
+					node = Node(
+						id=node_id,
+						type=NodeType.TRANSFORMATION,
+						label=symbol,
+						properties={},
+						position=(0, 0)  # Position will be set by layout
+					)
+					graph.add_node(node)
+			
+			# Look for transformation labels
+			for label in self.transformation_labels:
+				if label in line:
+					node_id = f"transform_{i}_{len(graph.nodes)}"
+					node = Node(
+						id=node_id,
+						type=NodeType.TRANSFORMATION,
+						label=label,
+						properties={},
+						position=(0, 0)  # Position will be set by layout
+					)
+					graph.add_node(node)
+		
+		# Create edges between adjacent nodes
+		nodes = list(graph.nodes.values())
+		for i in range(len(nodes)-1):
+			edge = Edge(
+				source=nodes[i].id,
+				target=nodes[i+1].id,
+				label="",
+				weight=1.0,
+				properties={},
+				transformation_type=None,
+				is_isomorphism=False
+			)
+			graph.add_edge(edge)
+		
+		return graph
+
+	def detect_network(self, image: np.ndarray) -> TransformationNetwork:
+		network = TransformationNetwork()
+		network.layout_type = self.detect_layout(image)
+		
+		# Detect nodes
+		detected_nodes = self.detect_nodes(image)
+		for node in detected_nodes:
+			network.add_node(node)
+		
+		# Detect edges between nodes
+		if detected_nodes:
+			edges = self.detect_edges(image, detected_nodes)
+			for edge in edges:
+				network.add_edge(edge)
+		
+		# Calculate overall confidence
+		node_confidences = [n.properties.get("confidence", 0.0) for n in network.nodes]
+		edge_confidences = [e.properties.get("confidence", 0.0) for e in network.edges]
+		
+		if node_confidences and edge_confidences:
+			network.confidence = (sum(node_confidences) / len(node_confidences) + 
+								sum(edge_confidences) / len(edge_confidences)) / 2
+		elif node_confidences:
+			network.confidence = sum(node_confidences) / len(node_confidences)
+		else:
+			network.confidence = 0.0
+		
+		return network
+
+
+	def _preprocess_image(self, image: np.ndarray) -> np.ndarray:
+		# Convert to grayscale if not already
+		if len(image.shape) == 3:
+			gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+		else:
+			gray = image.copy()
+		
+		# Apply adaptive thresholding
+		thresh = cv2.adaptiveThreshold(
+			gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
+			cv2.THRESH_BINARY_INV, 11, 2
+		)
+		
+		# Remove noise
+		kernel = np.ones((3,3), np.uint8)
+		denoised = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, kernel)
+		
+		# Fill small holes
+		kernel = np.ones((2,2), np.uint8)
+		cleaned = cv2.morphologyEx(denoised, cv2.MORPH_CLOSE, kernel)
+		
+		return cleaned

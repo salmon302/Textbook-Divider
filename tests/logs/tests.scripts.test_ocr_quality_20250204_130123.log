@@ -1,0 +1,4 @@
+2025-02-04 13:01:23,319 - tests.scripts.test_ocr_quality - INFO - Starting test: test_single_page_ocr
+2025-02-04 13:01:23,320 - tests.scripts.test_ocr_quality - DEBUG - Test function signature: (self)
+2025-02-04 13:01:52,178 - tests.scripts.test_ocr_quality - INFO - OCR output saved to: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output/ocr_quality/page_15_ocr.txt
+2025-02-04 13:01:52,178 - tests.scripts.test_ocr_quality - INFO - Test completed successfully: test_single_page_ocr

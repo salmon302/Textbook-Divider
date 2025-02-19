@@ -1,0 +1,64 @@
+2025-02-04 10:55:22,438 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:55:22,438 - tests.scripts.test_improvements - INFO - Starting test: test_complex_formatting
+2025-02-04 10:55:22,439 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:55:22,439 - tests.scripts.test_improvements - INFO - Processing complex file: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt
+2025-02-04 10:55:22,441 - tests.scripts.test_improvements - ERROR - Test failed: test_complex_formatting
+2025-02-04 10:55:22,441 - tests.scripts.test_improvements - ERROR - '| Header 1 |' not found in 'Chapter 1: Advanced Mathematics\n==================================================\nConfidence: 1.00\n==================================================\n\nChapter 1: Advanced Mathematics\n\nChapter 1: Advanced Mathematics\n\nThis chapter contains *emphasized* and **bold** text.\n\nSection 1: Mathematical Concepts\n----------------------------------------\n\n1.1 Mathematical Concepts\nLet\'s explore some mathematical concepts:\n• Function f(x) = x2 + 2x + 1\n• Set theory: A ∈ B, A ∩ B\n• Matrix [1 2; 3 4]\n\n```python\ndef example():\n\treturn "code block"\n```\n\n> Important quote block\n> With multiple lines'
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_improvements.py", line 167, in test_complex_formatting
+    self.assertIn('| Header 1 |', content)
+  File "/usr/lib/python3.12/unittest/case.py", line 1152, in assertIn
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/usr/lib/python3.12/unittest/case.py", line 715, in fail
+    raise self.failureException(msg)
+AssertionError: '| Header 1 |' not found in 'Chapter 1: Advanced Mathematics\n==================================================\nConfidence: 1.00\n==================================================\n\nChapter 1: Advanced Mathematics\n\nChapter 1: Advanced Mathematics\n\nThis chapter contains *emphasized* and **bold** text.\n\nSection 1: Mathematical Concepts\n----------------------------------------\n\n1.1 Mathematical Concepts\nLet\'s explore some mathematical concepts:\n• Function f(x) = x2 + 2x + 1\n• Set theory: A ∈ B, A ∩ B\n• Matrix [1 2; 3 4]\n\n```python\ndef example():\n\treturn "code block"\n```\n\n> Important quote block\n> With multiple lines'
+2025-02-04 10:55:22,444 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:55:22,444 - tests.scripts.test_improvements - INFO - Starting test: test_enhanced_chapter_detection
+2025-02-04 10:55:22,444 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:55:22,445 - tests.scripts.test_improvements - INFO - Test completed successfully: test_enhanced_chapter_detection
+2025-02-04 10:55:22,445 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:55:22,445 - tests.scripts.test_improvements - INFO - Starting test: test_error_handling
+2025-02-04 10:55:22,445 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:55:22,445 - tests.scripts.test_improvements - INFO - Testing invalid file format
+2025-02-04 10:55:22,446 - tests.scripts.test_improvements - ERROR - Test failed: test_error_handling
+2025-02-04 10:55:22,446 - tests.scripts.test_improvements - ERROR - Failed to process book: Unsupported file format: .xyz
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 62, in process_book
+    handler = self._get_validated_handler(input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 91, in _get_validated_handler
+    raise ValueError(f"Unsupported file format: {input_path.suffix}")
+ValueError: Unsupported file format: .xyz
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_improvements.py", line 111, in test_error_handling
+    self.divider.process_book("nonexistent.xyz", str(self.output_dir))
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 85, in process_book
+    raise ProcessingError(f"Failed to process book: {str(e)}")
+textbook_divider.main.ProcessingError: Failed to process book: Unsupported file format: .xyz
+2025-02-04 10:55:22,448 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:55:22,448 - tests.scripts.test_improvements - INFO - Starting test: test_formatting_preservation
+2025-02-04 10:55:22,448 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:55:22,449 - tests.scripts.test_improvements - INFO - Test completed successfully: test_formatting_preservation
+2025-02-04 10:55:22,450 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:55:22,450 - tests.scripts.test_improvements - INFO - Starting test: test_metadata_generation
+2025-02-04 10:55:22,450 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:55:22,450 - tests.scripts.test_improvements - INFO - Processing test file: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/sample.txt
+2025-02-04 10:55:22,452 - tests.scripts.test_improvements - INFO - Test completed successfully: test_metadata_generation
+2025-02-04 10:55:22,452 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:55:22,452 - tests.scripts.test_improvements - INFO - Starting test: test_nested_chapter_structure
+2025-02-04 10:55:22,453 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:55:22,453 - tests.scripts.test_improvements - INFO - Processing file for nested structure: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt
+2025-02-04 10:55:22,454 - tests.scripts.test_improvements - INFO - Test completed successfully: test_nested_chapter_structure
+2025-02-04 10:55:22,455 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:55:22,455 - tests.scripts.test_improvements - INFO - Starting test: test_text_block_processing
+2025-02-04 10:55:22,455 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:55:22,456 - tests.scripts.test_improvements - INFO - Test completed successfully: test_text_block_processing

@@ -1,0 +1,39 @@
+2025-02-04 15:45:17,766 - scripts.test_omr_notation - INFO - Starting test: test_mixed_content
+2025-02-04 15:45:17,766 - scripts.test_omr_notation - DEBUG - Test function signature: (self)
+2025-02-04 15:45:17,767 - scripts.test_omr_notation - ERROR - Test failed: test_mixed_content
+2025-02-04 15:45:17,767 - scripts.test_omr_notation - ERROR - False is not true
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_omr_notation.py", line 64, in test_mixed_content
+    self.assertTrue(result['success'])
+  File "/usr/lib/python3.12/unittest/case.py", line 727, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+2025-02-04 15:45:17,782 - scripts.test_omr_notation - INFO - Starting test: test_notation_accuracy
+2025-02-04 15:45:17,782 - scripts.test_omr_notation - DEBUG - Test function signature: (self)
+2025-02-04 15:45:17,782 - scripts.test_omr_notation - ERROR - Test failed: test_notation_accuracy
+2025-02-04 15:45:17,783 - scripts.test_omr_notation - ERROR - False is not true
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_omr_notation.py", line 29, in test_notation_accuracy
+    self.assertTrue(result['success'])
+  File "/usr/lib/python3.12/unittest/case.py", line 727, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+2025-02-04 15:45:17,788 - scripts.test_omr_notation - INFO - Starting test: test_performance_metrics
+2025-02-04 15:45:17,789 - scripts.test_omr_notation - DEBUG - Test function signature: (self)
+2025-02-04 15:45:17,789 - scripts.test_omr_notation - ERROR - Test failed: test_performance_metrics
+2025-02-04 15:45:17,789 - scripts.test_omr_notation - ERROR - False is not true
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_omr_notation.py", line 86, in test_performance_metrics
+    self.assertTrue(result['success'])
+  File "/usr/lib/python3.12/unittest/case.py", line 727, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true

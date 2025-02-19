@@ -1,0 +1,19 @@
+Chapter 2: Core Concepts
+==================================================
+Confidence: 1.00
+==================================================
+
+Chapter 2: Core Concepts
+Main concepts are explained here.
+
+Section 1: Basic Theory
+----------------------------------------
+
+2.1 Basic Theory
+Fundamental theoretical concepts.
+
+Section 2: Applications
+----------------------------------------
+
+2.2 Applications
+Practical applications and examples.

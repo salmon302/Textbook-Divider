@@ -1,0 +1,87 @@
+import re
+from typing import List, Dict, Optional
+from .graph_types import MusicTheoryGraph, Node, Edge, NodeType
+
+class PatternDetector:
+    def __init__(self):
+        self.patterns = {
+            'pitch_class': r'\b([A-G])([♭b]|#)?\b',
+            'interval': r'\b((?:P|M|m|A|d)(?:\d+)|(?:\d*i))\b',
+            'transformation': r'\b(T\d+(?:∘T\d+)?|[PLR]|intervallic\s+augmentation)\b',
+            'variable': r'\b([a-z])\b(?!\s*:)',
+            'set_class': r'\[(\d+(?:,\s*\d+)*)\]',
+            'mathematical_function': r'\b([a-z])\s*:\s*([a-z])\s*→\s*([a-z])\b',
+            'set_membership': r'\b([a-z])\s*∈\s*([A-Z]+)\b',
+            'mapping_function': r'\b(NODEMAP|SGMAP|TRANSIT(?:\')?)\b',
+            'action': r'\b(maps|transforms)\b',
+            'homomorphism': r'\b(\w+)\s+is\s+a\s+(?:homo|iso)morphism\b',
+            'semigroup': r'\b(SGP(?:\')?)\b',
+            'graph_reference': r'\bgraph\s*\(([a-z])\)',
+            'transit_function': r'\bTRANSIT(?:\')?\([^)]+\)'
+        }
+
+    def detect_patterns(self, text: str) -> MusicTheoryGraph:
+        graph = MusicTheoryGraph()
+        nodes_by_type = {}
+        
+        for pattern_type, regex in self.patterns.items():
+            for match in re.finditer(regex, text):
+                node_id = f"{pattern_type}_{match.group(1)}_{match.start()}"
+                node_type = self._get_node_type(pattern_type)
+                node = Node(
+                    id=node_id,
+                    type=node_type,
+                    label=match.group(1),
+                    properties={'position': match.span()},
+                    position=None
+                )
+                graph.add_node(node)
+                nodes_by_type.setdefault(pattern_type, []).append(node)
+        
+        self._create_transformation_edges(graph, nodes_by_type)
+        self._create_mapping_edges(graph, nodes_by_type)
+        
+        return graph
+
+    def _get_node_type(self, pattern_type: str) -> NodeType:
+        type_map = {
+            'pitch_class': NodeType.PITCH_CLASS,
+            'interval': NodeType.INTERVAL,
+            'transformation': NodeType.TRANSFORMATION,
+            'variable': NodeType.VARIABLE,
+            'set_class': NodeType.SET_CLASS,
+            'mathematical_function': NodeType.FUNCTION_SPACE,
+            'mapping_function': NodeType.FUNCTION_SPACE,
+            'semigroup': NodeType.GROUP,
+            'graph_reference': NodeType.GEOMETRIC_POINT
+        }
+        return type_map.get(pattern_type, NodeType.VARIABLE)
+
+    def _create_transformation_edges(self, graph: MusicTheoryGraph, nodes_by_type: Dict[str, List[Node]]) -> None:
+        for trans_node in nodes_by_type.get('transformation', []):
+            trans_pos = trans_node.properties.get('position')
+            if trans_pos:
+                for pc_node in nodes_by_type.get('pitch_class', []):
+                    pc_pos = pc_node.properties.get('position')
+                    if pc_pos and abs(pc_pos[0] - trans_pos[1]) < 20:
+                        edge = Edge(
+                            source=trans_node.id,
+                            target=pc_node.id,
+                            label='transforms',
+                            properties={}
+                        )
+                        graph.add_edge(edge)
+
+    def _create_mapping_edges(self, graph: MusicTheoryGraph, nodes_by_type: Dict[str, List[Node]]) -> None:
+        for map_node in nodes_by_type.get('mapping_function', []):
+            map_pos = map_node.properties.get('position')
+            if map_pos:
+                for var_node in nodes_by_type.get('variable', []):
+                    var_pos = var_node.properties.get('position')
+                    if var_pos and abs(var_pos[0] - map_pos[1]) < 30:
+                        edge = Edge(
+                            source=map_node.id,
+                            target=var_node.id,
+                            label='maps',
+                            properties={}
+                        )

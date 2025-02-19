@@ -1,0 +1,26 @@
+Starting music theory book tests at Sat Feb  8 06:02:49 PM EST 2025
+Running tests for: schoenberg
+test_schoenberg_fundamentals (unittest.loader._FailedTest.test_schoenberg_fundamentals) ... ERROR
+
+======================================================================
+ERROR: test_schoenberg_fundamentals (unittest.loader._FailedTest.test_schoenberg_fundamentals)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_schoenberg_fundamentals
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'test_schoenberg_fundamentals'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+FAILED (errors=1)
+
+Test report saved to: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/test_report_20250208_180249.json
+Success rate: 0.00%
+
+Test execution completed at Sat Feb  8 06:02:50 PM EST 2025
+Log file: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/test_run_20250208_180246.log
+Test reports directory: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output

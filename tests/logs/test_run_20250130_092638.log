@@ -1,0 +1,124 @@
+2025-01-30 09:26:38,920 - __main__ - INFO - Starting test run
+2025-01-30 09:26:39,141 - __main__ - INFO - 
+Running Chapter Detection Tests...
+2025-01-30 09:26:39,141 - __main__ - INFO - Running test suite: Chapter Detection Tests
+2025-01-30 09:26:39,143 - __main__ - INFO - Test passed: test_chapter_boundaries (test_chapter_detection.TestChapterDetection.test_chapter_boundaries)
+2025-01-30 09:26:39,143 - __main__ - INFO - Test passed: test_complex_titles (test_chapter_detection.TestChapterDetection.test_complex_titles)
+2025-01-30 09:26:39,144 - __main__ - INFO - Test passed: test_false_positives (test_chapter_detection.TestChapterDetection.test_false_positives)
+2025-01-30 09:26:39,144 - __main__ - ERROR - Failure in test_mixed_formats (test_chapter_detection.TestChapterDetection.test_mixed_formats)
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_chapter_detection.py", line 41, in test_mixed_formats
+    self.assertEqual(len(chapters), 2)
+AssertionError: 1 != 2
+
+2025-01-30 09:26:39,145 - __main__ - INFO - Test passed: test_nested_chapters (test_chapter_detection.TestChapterDetection.test_nested_chapters)
+2025-01-30 09:26:39,145 - __main__ - INFO - Test passed: test_roman_numerals (test_chapter_detection.TestChapterDetection.test_roman_numerals)
+2025-01-30 09:26:39,146 - __main__ - INFO - Test passed: test_standard_chapters (test_chapter_detection.TestChapterDetection.test_standard_chapters)
+2025-01-30 09:26:39,146 - __main__ - ERROR - 
+Detailed test failures:
+2025-01-30 09:26:39,146 - __main__ - ERROR - 
+FAILURE: Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_chapter_detection.py", line 41, in test_mixed_formats
+    self.assertEqual(len(chapters), 2)
+AssertionError: 1 != 2
+
+2025-01-30 09:26:39,146 - __main__ - INFO - 
+Running Improvement Tests...
+2025-01-30 09:26:39,146 - __main__ - INFO - Running test suite: Improvement Tests
+2025-01-30 09:26:39,147 - textbook_divider.main - INFO - Processing book: /home/seth-n/CLionProjects/Textbook Divider/tests/sample_books/complex_sample.txt
+2025-01-30 09:26:39,147 - textbook_divider.main - INFO - Reading and processing content...
+2025-01-30 09:26:39,148 - textbook_divider.main - INFO - Detecting chapters...
+2025-01-30 09:26:39,150 - textbook_divider.main - INFO - Successfully processed 8 chapters
+2025-01-30 09:26:39,151 - __main__ - ERROR - Failure in test_complex_formatting (test_improvements.TestImprovements.test_complex_formatting)
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py", line 123, in test_complex_formatting
+    self.assertEqual(len(output_files), 2)  # Two main chapters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 8 != 2
+
+2025-01-30 09:26:39,153 - __main__ - ERROR - Failure in test_enhanced_chapter_detection (test_improvements.TestImprovements.test_enhanced_chapter_detection)
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py", line 33, in test_enhanced_chapter_detection
+    self.assertEqual(len(chapters), 3)
+AssertionError: 0 != 3
+
+2025-01-30 09:26:39,153 - textbook_divider.main - INFO - Processing book: nonexistent.xyz
+2025-01-30 09:26:39,153 - textbook_divider.main - ERROR - Error processing book: Unsupported file format: .xyz
+2025-01-30 09:26:39,155 - __main__ - ERROR - Error in test_error_handling (test_improvements.TestImprovements.test_error_handling)
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 62, in process_book
+    handler = self._get_validated_handler(input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 91, in _get_validated_handler
+    raise ValueError(f"Unsupported file format: {input_path.suffix}")
+ValueError: Unsupported file format: .xyz
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py", line 85, in test_error_handling
+    self.divider.process_book("nonexistent.xyz", str(self.output_dir))
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 85, in process_book
+    raise ProcessingError(f"Failed to process book: {str(e)}")
+textbook_divider.main.ProcessingError: Failed to process book: Unsupported file format: .xyz
+
+2025-01-30 09:26:39,156 - __main__ - INFO - Test passed: test_formatting_preservation (test_improvements.TestImprovements.test_formatting_preservation)
+2025-01-30 09:26:39,156 - textbook_divider.main - INFO - Processing book: /home/seth-n/CLionProjects/Textbook Divider/tests/sample_books/sample.txt
+2025-01-30 09:26:39,156 - textbook_divider.main - INFO - Reading and processing content...
+2025-01-30 09:26:39,157 - textbook_divider.main - INFO - Detecting chapters...
+2025-01-30 09:26:39,158 - textbook_divider.main - INFO - Successfully processed 3 chapters
+2025-01-30 09:26:39,158 - __main__ - INFO - Test passed: test_metadata_generation (test_improvements.TestImprovements.test_metadata_generation)
+2025-01-30 09:26:39,159 - textbook_divider.main - INFO - Processing book: /home/seth-n/CLionProjects/Textbook Divider/tests/sample_books/complex_sample.txt
+2025-01-30 09:26:39,159 - textbook_divider.main - INFO - Reading and processing content...
+2025-01-30 09:26:39,159 - textbook_divider.main - INFO - Detecting chapters...
+2025-01-30 09:26:39,162 - textbook_divider.main - INFO - Successfully processed 8 chapters
+2025-01-30 09:26:39,162 - __main__ - INFO - Test passed: test_nested_chapter_structure (test_improvements.TestImprovements.test_nested_chapter_structure)
+2025-01-30 09:26:39,162 - __main__ - INFO - Test passed: test_text_block_processing (test_improvements.TestImprovements.test_text_block_processing)
+2025-01-30 09:26:39,163 - __main__ - ERROR - 
+Detailed test failures:
+2025-01-30 09:26:39,163 - __main__ - ERROR - 
+FAILURE: Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py", line 123, in test_complex_formatting
+    self.assertEqual(len(output_files), 2)  # Two main chapters
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 8 != 2
+
+2025-01-30 09:26:39,163 - __main__ - ERROR - 
+FAILURE: Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py", line 33, in test_enhanced_chapter_detection
+    self.assertEqual(len(chapters), 3)
+AssertionError: 0 != 3
+
+2025-01-30 09:26:39,163 - __main__ - ERROR - 
+ERROR: Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 62, in process_book
+    handler = self._get_validated_handler(input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 91, in _get_validated_handler
+    raise ValueError(f"Unsupported file format: {input_path.suffix}")
+ValueError: Unsupported file format: .xyz
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/test_improvements.py", line 85, in test_error_handling
+    self.divider.process_book("nonexistent.xyz", str(self.output_dir))
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 85, in process_book
+    raise ProcessingError(f"Failed to process book: {str(e)}")
+textbook_divider.main.ProcessingError: Failed to process book: Unsupported file format: .xyz
+
+2025-01-30 09:26:39,163 - __main__ - INFO - 
+Test Summary:
+2025-01-30 09:26:39,163 - __main__ - INFO - Total time: 0.02 seconds
+2025-01-30 09:26:39,164 - __main__ - INFO - 
+Chapter Detection Tests:
+2025-01-30 09:26:39,164 - __main__ - INFO -   Tests run: 7
+2025-01-30 09:26:39,164 - __main__ - INFO -   Failures: 1
+2025-01-30 09:26:39,164 - __main__ - INFO -   Errors: 0
+2025-01-30 09:26:39,164 - __main__ - INFO -   Success: False
+2025-01-30 09:26:39,164 - __main__ - INFO - 
+Improvement Tests:
+2025-01-30 09:26:39,164 - __main__ - INFO -   Tests run: 7
+2025-01-30 09:26:39,164 - __main__ - INFO -   Failures: 2
+2025-01-30 09:26:39,164 - __main__ - INFO -   Errors: 1
+2025-01-30 09:26:39,164 - __main__ - INFO -   Success: False

@@ -1,0 +1,27 @@
+1.9 In this section we shall develop the conceptual structure and terminology
+for equivalence relations on a family S (not necessarily a semigroup). We
+shall see in particular how the notion of an equivalence relation is inti-
+mately connected with the idea of mapping S onto another family S' by some
+function f.
+1.9.1 
+DEFINITION: Given a family S, an equivalence relation on S is a sub-
+family EQUIV of S x S that satisfies conditions (A), (B), and (C) following.
+(A): For every s in S, (s, s) is in EQUIV. (B): If (s, t) is in EQUIV, then so is
+(t, s). (C): If (r, s) and (s, t) are in EQUIV, then so is (r, t).
+The three conditions are called the "reflexive," "symmetric," and "tran-
+sitive" properties of the relation. The conditions express formally some of our
+intuitions about things that are "equivalent." (A) matches our intuition that
+any object s should be equivalent to itself. (B) matches our intuition that if s is
+equivalent to t, then t should be equivalent to s. (C) matches our intuition that
+if r is equivalent to s and s is equivalent to t, then r should be equivalent to t.
+1.9.2 
+THEOREM: Let f be a function from S onto S'. Define a relation EQUIV
+on S by putting the pair (s, t) in the relation if and only if f (s) = f (t). Then
+EQUIV is an equivalence relation.
+Proof: (A) f (s) = f (s), so (s, s) is in the defined relation. (B) If (s, t) is in the
+defined relation, f (s) = f (t). Then f (t) = f (s), so that (t, s) is in the defined
+relation. (C) If f(r) = f(s) and f(s) = f(t) then f(r) = f(t).
+We shall see soon that every equivalence relation on S can be regarded as
+being generated in precisely the above fashion, for some suitable choice of S'
+andf.
+7

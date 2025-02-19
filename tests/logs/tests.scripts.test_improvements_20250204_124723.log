@@ -1,0 +1,52 @@
+2025-02-04 12:47:23,467 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 12:47:23,468 - tests.scripts.test_improvements - INFO - Starting test: test_complex_formatting
+2025-02-04 12:47:23,469 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 12:47:23,469 - tests.scripts.test_improvements - INFO - Processing complex file: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt
+2025-02-04 12:47:23,473 - tests.scripts.test_improvements - INFO - Test completed successfully: test_complex_formatting
+2025-02-04 12:47:23,474 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 12:47:23,474 - tests.scripts.test_improvements - INFO - Starting test: test_enhanced_chapter_detection
+2025-02-04 12:47:23,475 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 12:47:23,476 - tests.scripts.test_improvements - INFO - Test completed successfully: test_enhanced_chapter_detection
+2025-02-04 12:47:23,476 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 12:47:23,476 - tests.scripts.test_improvements - INFO - Starting test: test_error_handling
+2025-02-04 12:47:23,476 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 12:47:23,476 - tests.scripts.test_improvements - INFO - Testing invalid file format
+2025-02-04 12:47:23,477 - tests.scripts.test_improvements - ERROR - Test failed: test_error_handling
+2025-02-04 12:47:23,477 - tests.scripts.test_improvements - ERROR - Failed to process book: Unsupported file format: .xyz
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 62, in process_book
+    handler = self._get_validated_handler(input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 91, in _get_validated_handler
+    raise ValueError(f"Unsupported file format: {input_path.suffix}")
+ValueError: Unsupported file format: .xyz
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_improvements.py", line 112, in test_error_handling
+    self.divider.process_book("nonexistent.xyz", str(self.output_dir))
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 85, in process_book
+    raise ProcessingError(f"Failed to process book: {str(e)}")
+textbook_divider.main.ProcessingError: Failed to process book: Unsupported file format: .xyz
+2025-02-04 12:47:23,479 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 12:47:23,479 - tests.scripts.test_improvements - INFO - Starting test: test_formatting_preservation
+2025-02-04 12:47:23,480 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 12:47:23,481 - tests.scripts.test_improvements - INFO - Test completed successfully: test_formatting_preservation
+2025-02-04 12:47:23,481 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 12:47:23,482 - tests.scripts.test_improvements - INFO - Starting test: test_metadata_generation
+2025-02-04 12:47:23,482 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 12:47:23,482 - tests.scripts.test_improvements - INFO - Processing test file: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/sample.txt
+2025-02-04 12:47:23,485 - tests.scripts.test_improvements - INFO - Test completed successfully: test_metadata_generation
+2025-02-04 12:47:23,485 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 12:47:23,485 - tests.scripts.test_improvements - INFO - Starting test: test_nested_chapter_structure
+2025-02-04 12:47:23,486 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 12:47:23,486 - tests.scripts.test_improvements - INFO - Processing file for nested structure: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt
+2025-02-04 12:47:23,487 - tests.scripts.test_improvements - INFO - Test completed successfully: test_nested_chapter_structure
+2025-02-04 12:47:23,488 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 12:47:23,488 - tests.scripts.test_improvements - INFO - Starting test: test_pdf_processing
+2025-02-04 12:47:23,488 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 12:47:23,488 - tests.scripts.test_improvements - INFO - Processing PDF file: /home/seth-n/CLionProjects/Textbook Divider/data/input/Arnold Schoenberg, Gerald Strang, Leonard Stein - Fundamentals of Musical Composition (1982, Faber & Faber) - libgen.li.pdf

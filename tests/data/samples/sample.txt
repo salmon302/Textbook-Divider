@@ -1,0 +1,11 @@
+Chapter 1: Introduction to Programming
+
+Programming is the art of instructing computers to perform specific tasks. This chapter covers the fundamental concepts that every programmer should know.
+
+Chapter 2: Variables and Data Types
+
+In programming, variables are used to store data. This chapter explores different types of data and how to work with them effectively.
+
+Chapter 3: Control Structures
+
+Control structures allow us to control the flow of program execution. We'll learn about if statements, loops, and other essential control mechanisms.

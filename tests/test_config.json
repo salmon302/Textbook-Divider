@@ -1,0 +1,29 @@
+{
+	"test_sections": {
+		"introduction": {
+			"pages": "1-20",
+			"description": "Introduction and basic concepts",
+			"expected_chapters": 2
+		},
+		"middle": {
+			"pages": "50-70",
+			"description": "Core chapters with musical notation",
+			"expected_chapters": 3
+		},
+		"end": {
+			"pages": "100-120",
+			"description": "Advanced concepts and exercises",
+			"expected_chapters": 2
+		}
+	},
+	"performance_thresholds": {
+		"page_processing_time": 30.0,
+		"chapter_detection_accuracy": 0.8,
+		"ocr_accuracy": 0.95
+	},
+	"debug_options": {
+		"show_page_metrics": true,
+		"show_chapter_details": true,
+		"show_processing_steps": true
+	}
+}

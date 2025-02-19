@@ -1,0 +1,19 @@
+Chapter 1: Getting Started
+==================================================
+Confidence: 1.00
+==================================================
+
+Chapter 1: Getting Started
+This is the first chapter content.
+
+Section 1: Introduction
+----------------------------------------
+
+1.1 Introduction
+Basic introduction to the topic.
+
+Section 2: Prerequisites
+----------------------------------------
+
+1.2 Prerequisites
+What you need to know.

@@ -1,0 +1,45 @@
+26 Of course, musical signals are in some respects more complex than spoken sentences: listening to a 
+Bach fugue is like listening to four people speak at the same time. But this should make us wonder why we 
+tolerate higher information content in music.
+
+
+theory
+24
+simply does not matter whether you follow all the details of a piece’s syntax; what mat-
+ters is that you follow the piece well enough to enjoy what you hear. For in the end, 
+the composer’s well-being depends on your willingness to listen, not on whether you 
+interpret music in the same way that he or she does. Or to revert to our earlier anal-
+ogy: what is important is not that you understand the magic trick, but simply that 
+you feel the force of the illusion.
+I should pause here to mention that I have a personal perspective on these 
+issues, since I sometimes create music with the aid of algorithms and computers. 
+In these cases I can be fairly removed from the underlying syntactical structure 
+of the music I create, whether that be some complex melodic process, a gradually 
+shifting probability distribution over the twelve chromatic notes, or a harmonic 
+structure derived from a mathematical analysis of Mozart’s music. Here my com-
+positional role is that of a gatekeeper or judge, selecting the computer-generated 
+passages that strike me as intuitively compelling, and arranging them, in a collage-
+like fashion, so as to produce the best musical effect. (Typically, I augment these 
+algorithmic passages with music composed intuitively, producing a ﬁ nal prod-
+uct that blends the human and the inhuman.) The fact that some people seem to 
+like this music only serves to highlight the oddness of the linguistic approach. For 
+here the composer is only vaguely aware of the structures that, on the linguistic 
+model, the listener is supposed to be recovering. Given that I am not at all sure 
+that I am hearing these structures accurately, it seems presumptuous for me to 
+demand much more from my listeners. Instead, I am hoping that listeners will 
+be directly affected by the music in the same way I am—that is, tickled, amused, 
+impressed, or awed.
+Faced with this situation, I draw several morals.
+First, there is a potential for real divergence between what we might call “com-
+poser’s grammar” and “listener’s grammar.” Listeners may potentially grasp only a 
+fraction of the underlying syntax of a Bach fugue, a Beethoven symphony, or a John 
+Coltrane solo. (Some authors have claimed that this is particularly true when we con-
+sider the artiﬁ cial syntaxes of twentieth-century atonality, and this may be true; but 
+the more important point is that there will be signiﬁ cant gaps whenever we consider 
+music of any complexity.27) In this sense, listening is like trying to catch up to a train 
+that is forever just beyond your reach; indeed, the very fact that we miss so much 
+structure is no doubt part of what leads us to study scores, or listen repeatedly to 
+the same pieces. This means that there are at least two separate projects that music 
+theorists can engage in: modeling what composers actually do, and modeling what 
+listeners actually experience. We should be careful not to conﬂ ate these by acting as if 
+listening is “composing in reverse.”

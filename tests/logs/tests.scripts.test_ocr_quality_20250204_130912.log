@@ -1,0 +1,2 @@
+2025-02-04 13:09:12,167 - tests.scripts.test_ocr_quality - INFO - Starting test: test_single_page_ocr
+2025-02-04 13:09:12,167 - tests.scripts.test_ocr_quality - DEBUG - Test function signature: (self)

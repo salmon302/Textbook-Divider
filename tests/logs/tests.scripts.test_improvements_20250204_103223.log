@@ -1,0 +1,134 @@
+2025-02-04 10:32:23,963 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:32:23,963 - tests.scripts.test_improvements - INFO - Starting test: test_complex_formatting
+2025-02-04 10:32:23,963 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:32:23,963 - tests.scripts.test_improvements - INFO - Processing complex file: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt
+2025-02-04 10:32:23,964 - tests.scripts.test_improvements - ERROR - Test failed: test_complex_formatting
+2025-02-04 10:32:23,964 - tests.scripts.test_improvements - ERROR - Failed to process book: [Errno 2] No such file or directory: '/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt'
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 65, in process_book
+    content = self._process_content(handler, input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 101, in _process_content
+    content = handler.read_content(input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/file_handler.py", line 32, in read_content
+    with open(file_path, 'r', encoding='utf-8') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_improvements.py", line 152, in test_complex_formatting
+    output_files = self.divider.process_book(str(complex_file), str(output_dir))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 85, in process_book
+    raise ProcessingError(f"Failed to process book: {str(e)}")
+textbook_divider.main.ProcessingError: Failed to process book: [Errno 2] No such file or directory: '/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt'
+2025-02-04 10:32:23,966 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:32:23,966 - tests.scripts.test_improvements - INFO - Starting test: test_enhanced_chapter_detection
+2025-02-04 10:32:23,966 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:32:23,966 - tests.scripts.test_improvements - ERROR - Test failed: test_enhanced_chapter_detection
+2025-02-04 10:32:23,967 - tests.scripts.test_improvements - ERROR - cannot access local variable 'test_content' where it is not associated with a value
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_improvements.py", line 25, in test_enhanced_chapter_detection
+    log_test_data(test_content, "Test Content")
+                  ^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'test_content' where it is not associated with a value
+2025-02-04 10:32:23,968 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:32:23,968 - tests.scripts.test_improvements - INFO - Starting test: test_error_handling
+2025-02-04 10:32:23,968 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:32:23,968 - tests.scripts.test_improvements - INFO - Testing invalid file format
+2025-02-04 10:32:23,969 - tests.scripts.test_improvements - ERROR - Test failed: test_error_handling
+2025-02-04 10:32:23,969 - tests.scripts.test_improvements - ERROR - Failed to process book: Unsupported file format: .xyz
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 62, in process_book
+    handler = self._get_validated_handler(input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 91, in _get_validated_handler
+    raise ValueError(f"Unsupported file format: {input_path.suffix}")
+ValueError: Unsupported file format: .xyz
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_improvements.py", line 111, in test_error_handling
+    self.divider.process_book("nonexistent.xyz", str(self.output_dir))
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 85, in process_book
+    raise ProcessingError(f"Failed to process book: {str(e)}")
+textbook_divider.main.ProcessingError: Failed to process book: Unsupported file format: .xyz
+2025-02-04 10:32:23,971 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:32:23,971 - tests.scripts.test_improvements - INFO - Starting test: test_formatting_preservation
+2025-02-04 10:32:23,971 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:32:23,973 - tests.scripts.test_improvements - INFO - Test completed successfully: test_formatting_preservation
+2025-02-04 10:32:23,973 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:32:23,974 - tests.scripts.test_improvements - INFO - Starting test: test_metadata_generation
+2025-02-04 10:32:23,974 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:32:23,974 - tests.scripts.test_improvements - INFO - Processing test file: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/sample.txt
+2025-02-04 10:32:23,975 - tests.scripts.test_improvements - ERROR - Test failed: test_metadata_generation
+2025-02-04 10:32:23,975 - tests.scripts.test_improvements - ERROR - Failed to process book: [Errno 2] No such file or directory: '/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/sample.txt'
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 65, in process_book
+    content = self._process_content(handler, input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 101, in _process_content
+    content = handler.read_content(input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/file_handler.py", line 32, in read_content
+    with open(file_path, 'r', encoding='utf-8') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/sample.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_improvements.py", line 90, in test_metadata_generation
+    self.divider.process_book(str(test_file), str(output_dir))
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 85, in process_book
+    raise ProcessingError(f"Failed to process book: {str(e)}")
+textbook_divider.main.ProcessingError: Failed to process book: [Errno 2] No such file or directory: '/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/sample.txt'
+2025-02-04 10:32:23,977 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:32:23,977 - tests.scripts.test_improvements - INFO - Starting test: test_nested_chapter_structure
+2025-02-04 10:32:23,977 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:32:23,978 - tests.scripts.test_improvements - INFO - Processing file for nested structure: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt
+2025-02-04 10:32:23,978 - tests.scripts.test_improvements - ERROR - Test failed: test_nested_chapter_structure
+2025-02-04 10:32:23,978 - tests.scripts.test_improvements - ERROR - Failed to process book: [Errno 2] No such file or directory: '/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt'
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 65, in process_book
+    content = self._process_content(handler, input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 101, in _process_content
+    content = handler.read_content(input_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/file_handler.py", line 32, in read_content
+    with open(file_path, 'r', encoding='utf-8') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_utils.py", line 50, in wrapper
+    result = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/test_improvements.py", line 178, in test_nested_chapter_structure
+    self.divider.process_book(str(complex_file), str(output_dir))
+  File "/home/seth-n/CLionProjects/Textbook Divider/src/textbook_divider/main.py", line 85, in process_book
+    raise ProcessingError(f"Failed to process book: {str(e)}")
+textbook_divider.main.ProcessingError: Failed to process book: [Errno 2] No such file or directory: '/home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books/complex_sample.txt'
+2025-02-04 10:32:23,980 - tests.scripts.test_improvements - INFO - Test directories setup - sample_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/sample_books, output_dir: /home/seth-n/CLionProjects/Textbook Divider/tests/scripts/output
+2025-02-04 10:32:23,980 - tests.scripts.test_improvements - INFO - Starting test: test_text_block_processing
+2025-02-04 10:32:23,980 - tests.scripts.test_improvements - DEBUG - Test function signature: (self)
+2025-02-04 10:32:23,981 - tests.scripts.test_improvements - INFO - Test completed successfully: test_text_block_processing

@@ -1,0 +1,7 @@
+3 Here I am using scientiﬁ c pitch notation, in which numbers refer to octaves, with octave 4 ranging 
+from middle C to the B above and with octave 5 starting at the next C. (Thus B4 is a semitone below C5.) 
+Note that there is a subtle difference between the languages of psychology and music theory: psycholo-
+gists say that the pitches D3 and D4 possess the same chroma (“D-ishness”), while music theorists say that 
+the pitches belong to the same category (“the pitch class D”). The difference is analogous to the contrast 
+between whiteness (a property) and the collection of all white things (a group). Points in pitch-class space 
+can be taken to represent either of these.

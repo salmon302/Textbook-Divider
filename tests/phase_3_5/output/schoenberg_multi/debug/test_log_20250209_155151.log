@@ -1,0 +1,28 @@
+2025-02-09 15:51:51,378 - __main__ - INFO - Processing page 30
+2025-02-09 15:51:52,658 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_multi/debug/preprocessed_p30_20250209_155151.png
+2025-02-09 15:51:52,833 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_qwn875fm_input.PNG', '/tmp/tess_qwn875fm', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:51:54,403 - __main__ - INFO - Page 30: Extracted 387 characters
+2025-02-09 15:51:55,468 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_multi/debug/music_detection_p30_20250209_155151.png
+2025-02-09 15:51:55,468 - __main__ - INFO - Page 30: Detected 10 musical regions
+2025-02-09 15:51:55,469 - __main__ - INFO - Processing page 42
+2025-02-09 15:51:56,594 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_multi/debug/preprocessed_p42_20250209_155151.png
+2025-02-09 15:51:56,757 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_vey0qsin_input.PNG', '/tmp/tess_vey0qsin', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:51:59,361 - __main__ - INFO - Page 42: Extracted 2044 characters
+2025-02-09 15:52:00,176 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_multi/debug/music_detection_p42_20250209_155151.png
+2025-02-09 15:52:00,176 - __main__ - INFO - Page 42: Detected 8 musical regions
+2025-02-09 15:52:00,178 - __main__ - INFO - Processing page 57
+2025-02-09 15:52:01,299 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_multi/debug/preprocessed_p57_20250209_155151.png
+2025-02-09 15:52:01,470 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_k_ds2b2f_input.PNG', '/tmp/tess_k_ds2b2f', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:52:04,425 - __main__ - INFO - Page 57: Extracted 2421 characters
+2025-02-09 15:52:05,250 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_multi/debug/music_detection_p57_20250209_155151.png
+2025-02-09 15:52:05,251 - __main__ - INFO - Page 57: Detected 4 musical regions
+2025-02-09 15:52:05,253 - __main__ - INFO - Processing page 71
+2025-02-09 15:52:05,777 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_multi/debug/preprocessed_p71_20250209_155151.png
+2025-02-09 15:52:05,873 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_xvv4p0sw_input.PNG', '/tmp/tess_xvv4p0sw', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:52:07,889 - __main__ - INFO - Page 71: Extracted 1618 characters
+2025-02-09 15:52:08,163 - __main__ - WARNING - Page 71: No musical regions detected
+2025-02-09 15:52:08,169 - __main__ - INFO - Processing page 96
+2025-02-09 15:52:09,856 - __main__ - DEBUG - Saved debug image: /home/seth-n/CLionProjects/Textbook Divider/tests/phase_3_5/output/schoenberg_multi/debug/preprocessed_p96_20250209_155151.png
+2025-02-09 15:52:10,208 - pytesseract - DEBUG - ['/usr/bin/tesseract', '/tmp/tess_h5o6imnm_input.PNG', '/tmp/tess_h5o6imnm', '--psm', '3', '--oem', '1', 'txt']
+2025-02-09 15:52:20,423 - __main__ - INFO - Page 96: Extracted 5756 characters
+2025-02-09 15:52:21,380 - __main__ - WARNING - Page 96: No musical regions detected
