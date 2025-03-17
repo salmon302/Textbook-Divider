@@ -21,6 +21,12 @@ private:
 	void cleanup();
 	void renderUI();
 	
+	// UI Components
+	void renderSidebar();
+	void renderMainContent();
+	void renderChapterPreview();
+	void renderSettings();
+	
 	// Application state
 	std::string inputPath;
 	std::string outputPath;
@@ -32,6 +38,19 @@ private:
 	std::string selectedLanguage;
 	bool enableGPU;
 	
+	// New state variables
+	int currentChapter;
+	std::string previewContent;
+	bool showSettings;
+	
+	// Chapter detection settings
+	struct {
+		float minChapterLength;
+		int minTitleLength;
+		bool detectSubchapters;
+		float confidenceThreshold;
+	} detectionSettings;
+	
 	// Core components
 	FileHandler fileHandler;
 	ChapterDetector chapterDetector;
@@ -39,4 +58,5 @@ private:
 	std::unique_ptr<OCRWrapper> ocrProcessor;
 	
 	void processWithOCR();
+	void updateChapterPreview();
 };

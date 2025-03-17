@@ -30,6 +30,9 @@ public:
 	bool isPDFFile(const std::string& filePath) const;
 	std::vector<std::string> extractPDFImages(const std::string& pdfPath);
 
+	// File reading method
+	std::string readFile(const std::string& filePath);
+
 private:
 	FileType detectFileType(const std::string& filePath);
 	std::string readPDF();

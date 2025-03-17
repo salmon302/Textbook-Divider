@@ -6,7 +6,15 @@
 #include <stdexcept>
 
 GuiApp::GuiApp() : window(nullptr), processing(false), progress(0.0f),
-	enableOCR(false), selectedLanguage("eng"), enableGPU(false) {
+	enableOCR(false), selectedLanguage("eng"), enableGPU(false),
+	currentChapter(-1), showSettings(false) {
+	// Initialize detection settings
+	detectionSettings = {
+		1000.0f,  // minChapterLength
+		10,       // minTitleLength
+		true,     // detectSubchapters
+		0.75f     // confidenceThreshold
+	};
 	if (!setupGLFW()) {
 		throw std::runtime_error("Failed to initialize GLFW");
 	}
@@ -65,12 +73,34 @@ void GuiApp::cleanup() {
 }
 
 void GuiApp::renderUI() {
+	// Main window using the entire viewport
 	ImGui::SetNextWindowPos(ImVec2(0, 0));
 	ImGui::SetNextWindowSize(ImGui::GetIO().DisplaySize);
 	ImGui::Begin("Textbook Divider", nullptr, 
-		ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove);
+		ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse);
 
+	// Left panel (controls)
+	ImGui::BeginChild("LeftPanel", ImVec2(250, -1), true);
+	renderSidebar();
+	ImGui::EndChild();
+
+	ImGui::SameLine();
+
+	// Right panel (chapters and preview)
+	ImGui::BeginChild("RightPanel", ImVec2(0, -1), true);
+	renderMainContent();
+	ImGui::EndChild();
+
+	// Settings window (floating)
+	if (showSettings)
+		renderSettings();
+
+	ImGui::End();
+}
+
+void GuiApp::renderSidebar() {
 	if (ImGui::Button("Select Input File")) {
+
 		NFD::UniquePath outPath;
 		nfdfilteritem_t filterItem[3] = {
 			{ "PDF", "pdf" },
@@ -170,16 +200,81 @@ void GuiApp::renderUI() {
 
 	ImGui::ProgressBar(progress);
 	ImGui::Text("%s", statusMessage.c_str());
+}
 
-	if (!chapterList.empty()) {
-		ImGui::BeginChild("Chapters", ImVec2(0, 200), true);
-		for (const auto& chapter : chapterList) {
-			ImGui::Text("%s", chapter.c_str());
+
+void GuiApp::renderMainContent() {
+	// Chapter list on the left side of the right panel
+	ImGui::BeginChild("ChapterList", ImVec2(200, 0), true);
+
+	for (size_t i = 0; i < chapterList.size(); i++) {
+		if (ImGui::Selectable(chapterList[i].c_str(), currentChapter == i)) {
+			currentChapter = i;
+			updateChapterPreview();
 		}
-		ImGui::EndChild();
 	}
+	ImGui::EndChild();
+	
+	ImGui::SameLine();
+	
+	// Chapter preview on the right
+	ImGui::BeginChild("Preview", ImVec2(0, 0), true);
+	if (currentChapter >= 0 && currentChapter < chapterList.size()) {
+		ImGui::TextWrapped("%s", previewContent.c_str());
+	} else {
+		ImGui::TextWrapped("Select a chapter to preview its content");
+	}
+	ImGui::EndChild();
+}
 
+
+void GuiApp::renderSettings() {
+	ImGui::SetNextWindowSize(ImVec2(400, 400), ImGuiCond_FirstUseEver);
+	ImGui::Begin("Settings", &showSettings, ImGuiWindowFlags_NoCollapse);
+	
+	if (ImGui::CollapsingHeader("OCR Settings")) {
+		ImGui::Checkbox("Enable OCR", &enableOCR);
+		if (enableOCR) {
+			const char* languages[] = { "eng", "fra", "deu", "spa", "ita" };
+			const char* langNames[] = { "English", "French", "German", "Spanish", "Italian" };
+			
+			if (ImGui::BeginCombo("Language", selectedLanguage.c_str())) {
+				for (int i = 0; i < IM_ARRAYSIZE(languages); i++) {
+					bool isSelected = (selectedLanguage == languages[i]);
+					if (ImGui::Selectable(langNames[i], isSelected)) {
+						selectedLanguage = languages[i];
+						ocrProcessor->initialize(selectedLanguage, enableGPU);
+					}
+					if (isSelected) {
+						ImGui::SetItemDefaultFocus();
+					}
+				}
+				ImGui::EndCombo();
+			}
+			
+			if (ImGui::Checkbox("Enable GPU", &enableGPU)) {
+				ocrProcessor->initialize(selectedLanguage, enableGPU);
+			}
+		}
+	}
+	
+	if (ImGui::CollapsingHeader("Chapter Detection")) {
+		ImGui::SliderFloat("Min Chapter Length", &detectionSettings.minChapterLength, 100.0f, 5000.0f);
+		ImGui::SliderInt("Min Title Length", &detectionSettings.minTitleLength, 5, 50);
+		ImGui::Checkbox("Detect Subchapters", &detectionSettings.detectSubchapters);
+		ImGui::SliderFloat("Confidence Threshold", &detectionSettings.confidenceThreshold, 0.0f, 1.0f);
+	}
+	
 	ImGui::End();
+}
+
+void GuiApp::updateChapterPreview() {
+	if (currentChapter >= 0 && currentChapter < chapterList.size()) {
+		// Load chapter content from file
+		std::string chapterPath = outputPath + "/chapter_" + std::to_string(currentChapter + 1) + ".txt";
+		previewContent = fileHandler.readFile(chapterPath);
+	}
+}
 }
 
 void GuiApp::run() {

@@ -1,5 +1,5 @@
 {
-  "processing_time": 0.9715249538421631,
+  "processing_time": 1.7766296863555908,
   "omr_detections": 0,
   "text_blocks": 0,
   "mixed_blocks": 0,
@@ -7,9 +7,16 @@
   "note_accuracy": 0.0,
   "complex_notation_count": 0,
   "mixed_content_quality": 0.0,
-  "memory_usage": 0.0,
-  "processing_errors": [
-    "'OMRProcessor' object has no attribute 'analyze_results'"
-  ],
-  "debug_info": {}
+  "memory_usage": 119.22265625,
+  "processing_errors": [],
+  "debug_info": {
+    "omr_engine": "unknown",
+    "detected_staves": 0,
+    "raw_confidence": {},
+    "recovery_attempts": []
+  },
+  "engine": "unknown",
+  "staff_positions": [],
+  "raw_confidence": {},
+  "recoveries": []
 }

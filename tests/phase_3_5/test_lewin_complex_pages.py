@@ -89,40 +89,40 @@ class TestLewinComplexPages(unittest.TestCase):
 
 	def analyze_mathematical_content(self, text: str, page_num: int) -> dict:
 		"""Analyze mathematical structures in the text"""
-		graph = self.pattern_detector.detect_patterns(text)
 		img = cv2.imread(str(self.extract_page(page_num)))
 		network = self.pattern_detector.detect_network(img)
 		
 		analysis = {
 			"page": page_num,
-			"node_count": len(graph.nodes),
-			"edge_count": len(graph.edges),
+			"node_count": len(network.nodes),
+			"edge_count": len(network.edges),
 			"node_types": {},
 			"relationships": [],
 			"network_analysis": {
-				"nodes": len(network.nodes) if network else 0,
-				"edges": len(network.edges) if network else 0,
+				"nodes": len(network.nodes),
+				"edges": len(network.edges),
 				"layout_type": str(network.layout_type) if network else None,
-				"confidence": network.confidence if network else 0.0,
-				"isomorphisms": sum(1 for e in network.edges if e.is_isomorphism) if network else 0
+				"confidence": network.confidence,
+				"isomorphisms": sum(1 for e in network.edges if getattr(e, 'is_isomorphism', False))
 			}
 		}
 		
 		# Analyze node types and relationships
-		for node in graph.nodes.values():
-			node_type = str(node.type)
+		for node in network.nodes.values():
+			node_type = str(node.type) if hasattr(node, 'type') else 'unknown'
 			analysis["node_types"][node_type] = analysis["node_types"].get(node_type, 0) + 1
 		
-		for edge in graph.edges:
-			source = graph.nodes[edge.source]
-			target = graph.nodes[edge.target]
-			analysis["relationships"].append({
-				"type": edge.label,
-				"source": source.label,
-				"target": target.label,
-				"confidence": edge.confidence if hasattr(edge, 'confidence') else 1.0,
-				"is_isomorphism": edge.is_isomorphism if hasattr(edge, 'is_isomorphism') else False
-			})
+		for edge in network.edges:
+			source = network.nodes[edge.source] if hasattr(edge, 'source') else None
+			target = network.nodes[edge.target] if hasattr(edge, 'target') else None
+			if source and target:
+				analysis["relationships"].append({
+					"type": edge.label if hasattr(edge, 'label') else 'unknown',
+					"source": source.label if hasattr(source, 'label') else str(source),
+					"target": target.label if hasattr(target, 'label') else str(target),
+					"confidence": edge.properties.get('confidence', 1.0) if hasattr(edge, 'properties') else 1.0,
+					"is_isomorphism": edge.properties.get('is_isomorphism', False) if hasattr(edge, 'properties') else False
+				})
 		
 		return analysis
 

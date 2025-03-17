@@ -199,3 +199,14 @@ bool FileHandler::saveChapter(const std::string& content, const std::string& out
 	out << content;
 	return true;
 }
+
+std::string FileHandler::readFile(const std::string& filePath) {
+    std::ifstream file(filePath, std::ios::binary);
+    if (!file.is_open()) {
+        return "Failed to load chapter content";
+    }
+    
+    std::stringstream buffer;
+    buffer << file.rdbuf();
+    return buffer.str();
+}
