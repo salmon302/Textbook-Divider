@@ -19,15 +19,27 @@ find_package(JNI REQUIRED)
 set(AUDIVERIS_DIR ${CMAKE_SOURCE_DIR}/external/audiveris)
 set(AUDIVERIS_JAR ${AUDIVERIS_DIR}/build/jar/audiveris.jar)
 
-# Set Python executable to use virtual environment
-set(Python3_EXECUTABLE "${CMAKE_SOURCE_DIR}/venv/bin/python3")
-set(Python3_FIND_VIRTUALENV FIRST)
+# Prefer project venv's Python if available, with platform-aware paths
+if (WIN32)
+    set(_VENV_PY "${CMAKE_SOURCE_DIR}/venv/Scripts/python.exe")
+else()
+    set(_VENV_PY "${CMAKE_SOURCE_DIR}/venv/bin/python3")
+endif()
 
-# Find Python with virtual environment
+if (EXISTS "${_VENV_PY}")
+    set(Python3_EXECUTABLE "${_VENV_PY}")
+    set(Python3_FIND_VIRTUALENV FIRST)
+endif()
+
+# Find Python (interpreter + dev for embedding)
 find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
 
-# Add site-packages to runtime environment
-set(PYTHON_SITE_PACKAGES "${CMAKE_SOURCE_DIR}/venv/lib/python3.12/site-packages")
+# Discover site-packages and NumPy include path via the selected Python
+execute_process(
+    COMMAND "${Python3_EXECUTABLE}" -c "import site; print([p for p in site.getsitepackages() if 'site-packages' in p][0])"
+    OUTPUT_VARIABLE PYTHON_SITE_PACKAGES
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
 execute_process(
     COMMAND "${Python3_EXECUTABLE}" -c "import numpy; print(numpy.get_include())"
     OUTPUT_VARIABLE NumPy_INCLUDE_DIR

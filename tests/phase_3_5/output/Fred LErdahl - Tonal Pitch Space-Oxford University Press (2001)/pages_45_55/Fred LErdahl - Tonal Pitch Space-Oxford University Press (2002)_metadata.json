@@ -1,0 +1,12 @@
+{
+  "title": "Fred LErdahl - Tonal Pitch Space-Oxford University Press (2001)",
+  "chapters": 0,
+  "plugins_used": [
+    "ocr_processor",
+    "omr_processor"
+  ],
+  "processing_stats": {
+    "ocr_used": true,
+    "musical_content_detected": false
+  }
+}

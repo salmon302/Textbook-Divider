@@ -20,6 +20,7 @@ private:
 	void setupImGui();
 	void cleanup();
 	void renderUI();
+	void renderErrorModal();
 	
 	// UI Components
 	void renderSidebar();
@@ -37,6 +38,10 @@ private:
 	bool enableOCR;
 	std::string selectedLanguage;
 	bool enableGPU;
+	bool showError{false};
+	std::string errorMessage;
+	bool depsChecked{false};
+	bool depsOK{true};
 	
 	// New state variables
 	int currentChapter;
@@ -59,4 +64,5 @@ private:
 	
 	void processWithOCR();
 	void updateChapterPreview();
+	bool checkDependencies();
 };

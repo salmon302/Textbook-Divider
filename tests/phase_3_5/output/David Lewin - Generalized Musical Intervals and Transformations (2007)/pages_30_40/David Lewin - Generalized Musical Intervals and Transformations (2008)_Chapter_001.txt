@@ -1,0 +1,61 @@
+1.1 
+DEFINITION: Let S and S' be families of objects. The Cartesian product
+S x S' is the family of all ordered pairs (s, s') such that s is a member of S and s'
+is a member of S'.
+1.2.1 DEFINITION: A function or mapping from S into S' is a subfamily f of
+S x S' which has this property:
+Given any s in S, there is exactly one pair (s, s') within the family f which
+has the given s as the first entry of the pair.
+We say that s', in this situation, is the value of the function f for the
+argument s; we shall write f (s) = s'.
+If we think of fas a table, listing members of S (arguments) in a column on
+the left and corresponding members of S' (values) in a column on the right,
+then the defining property for functionhood stipulates that each member of S
+appear once and only once in the left-hand column. (Some members of S' may
+appear more than once in the right-hand column. Some members of S' may
+not appear at all in the right-hand column.) 
+1
+
+
+1.2.2 
+Mathematical Preliminaries
+1.2.2 DEFINITION: Given families S and S', we shall say that the functions f
+and g from S into S' are the same, writing f = g, if f and g are the same subsets
+of S x S', that is if they produce the same table.
+This special definition of functional equality is worth stressing. We shall
+soon see why.
+1.2.3 
+DEFINITION: Let f be a function from S into S', and let f' be a function
+from S' into S". Then the composition function f'f is defined from S into S" as
+follows: Given an argument s in S, the value (f'f)(s) is f'(f(s)).
+1.2.4 Let me draw special attention to the orthographic convention whereby
+f' appears to the left of fin the notation for the composition function f'f. That
+convention follows logically from another orthographic convention, the con-
+vention of writing the function name to the left of the argument in the
+expression "f (s)." The reader is no doubt used to this convention. One can
+read "f (s)" as "the resulting value, when function f is applied to argument s."
+Then "f'f(s)" is "the result when f is applied to the result of applying f to s."
+These conventions will be called left (functional) orthography.
+Right functional orthography is preferred by some mathematicians for
+all contexts and by most mathematicians for some contexts. In right or-
+thography, one writes "sf" or "(s)f" for "the operand s, transformed by the
+function f." This value is what was written "f(s)" in left orthography. The
+composition function which we called "f'f" in left orthography is called "ff "
+in right orthography, so as to be consistent: "(s)ff'" in right orthography is
+"s-transformed-by-f, all transformed by f'." This is what was notated "f f (s)"
+in left orthography.
+In the following work we shall use left orthography almost exclusively.
+We shall use right orthography only once, when its intuitive pertinence seems
+overwhelming. At that point in the text, the reader will be reminded of this
+discussion. Right orthography would abstractly be more suitable for our
+eventual purposes, but the reader's presumed familiarity with left or-
+thography seemed decisive to me in making my choice.
+1.2.5 Suppose that ft and f2 are functions from S to S'; suppose that f{ and f'2
+are functions from S' to S"; suppose that f" is a function from S to S". We can
+consider the truth or falsity of functional equations like f^ = f", fift = f2f2,
+and so on. Our discussion of "functional equality" in 1.2.2 tells us how to
+understand these equations, in evaluating their truth or falsity. The first
+equation above asserts, "for any sample s, the result of applying f[ to ^(s) is
+the same as the result of applying f" to the given s." The second equation
+above asserts, "for any sample s, applying f{ to f^ (s) yields the same result as
+applying f2 to f2(s)."

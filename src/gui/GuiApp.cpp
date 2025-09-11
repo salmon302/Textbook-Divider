@@ -4,6 +4,7 @@
 #include "imgui_impl_opengl3.h"
 #include <nfd.hpp>
 #include <stdexcept>
+#include <cstdlib>
 
 GuiApp::GuiApp() : window(nullptr), processing(false), progress(0.0f),
 	enableOCR(false), selectedLanguage("eng"), enableGPU(false),
@@ -23,10 +24,15 @@ GuiApp::GuiApp() : window(nullptr), processing(false), progress(0.0f),
 	if (NFD::Init() != NFD_OKAY) {
 		throw std::runtime_error("Failed to initialize NFD");
 	}
+
+	// Check external dependencies (once)
+	depsChecked = true;
+	depsOK = checkDependencies();
 	
 	ocrProcessor = std::make_unique<OCRWrapper>();
 	if (!ocrProcessor->initialize(selectedLanguage, enableGPU)) {
-		throw std::runtime_error("Failed to initialize OCR");
+		showError = true;
+		errorMessage = "Failed to initialize OCR. Ensure Python, pytesseract, and dependencies are available.";
 	}
 	
 	statusMessage = "Ready";
@@ -95,6 +101,9 @@ void GuiApp::renderUI() {
 	if (showSettings)
 		renderSettings();
 
+	// Error modal overlay
+	renderErrorModal();
+
 	ImGui::End();
 }
 
@@ -102,12 +111,11 @@ void GuiApp::renderSidebar() {
 	if (ImGui::Button("Select Input File")) {
 
 		NFD::UniquePath outPath;
-		nfdfilteritem_t filterItem[3] = {
+		nfdfilteritem_t filterItem[2] = {
 			{ "PDF", "pdf" },
-			{ "EPUB", "epub" },
 			{ "Text", "txt" }
 		};
-		nfdresult_t result = NFD::OpenDialog(outPath, filterItem, 3);
+		nfdresult_t result = NFD::OpenDialog(outPath, filterItem, 2);
 		if (result == NFD_OKAY) {
 			inputPath = outPath.get();
 		}
@@ -155,6 +163,11 @@ void GuiApp::renderSidebar() {
 
 	if (!inputPath.empty() && !outputPath.empty()) {
 		if (!processing && ImGui::Button("Process Textbook")) {
+			if (!depsOK) {
+				showError = true;
+				errorMessage = "Missing dependencies. Please install Poppler (pdftoppm) and ensure it is in PATH.";
+				return;
+			}
 			processing = true;
 			progress = 0.0f;
 			chapterList.clear();
@@ -192,6 +205,8 @@ void GuiApp::renderSidebar() {
 			} catch (const std::exception& e) {
 				statusMessage = "Error: ";
 				statusMessage += e.what();
+				showError = true;
+				errorMessage = statusMessage;
 			}
 			
 			processing = false;
@@ -275,7 +290,6 @@ void GuiApp::updateChapterPreview() {
 		previewContent = fileHandler.readFile(chapterPath);
 	}
 }
-}
 
 void GuiApp::run() {
 	while (!glfwWindowShouldClose(window)) {
@@ -329,4 +343,30 @@ void GuiApp::processWithOCR() {
 	
 	progress = 1.0f;
 	statusMessage = "Processing complete!";
+}
+
+bool GuiApp::checkDependencies() {
+	// Check for Poppler's pdftoppm (used by FileHandler::extractPDFImages)
+#ifdef _WIN32
+	const char* cmd = "where pdftoppm >nul 2>nul";
+#else
+	const char* cmd = "which pdftoppm >/dev/null 2>&1";
+#endif
+	int code = system(cmd);
+	return code == 0;
+}
+
+void GuiApp::renderErrorModal() {
+	if (showError) {
+		ImGui::OpenPopup("Error");
+	}
+	if (ImGui::BeginPopupModal("Error", nullptr, ImGuiWindowFlags_AlwaysAutoResize)) {
+		ImGui::TextWrapped("%s", errorMessage.c_str());
+		ImGui::Separator();
+		if (ImGui::Button("OK", ImVec2(120, 0))) {
+			showError = false;
+			ImGui::CloseCurrentPopup();
+		}
+		ImGui::EndPopup();
+	}
 }

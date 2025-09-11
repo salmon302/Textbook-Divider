@@ -1,0 +1,64 @@
+1.4 Now we begin the abstract study. We fix a family (i.e. collection) X of
+abstract objects x, y, z,..., and develop abstract algebraic systems that model
+the behavior of transformational algebra. First we must specify how the
+objects of X are to "compose" one with another.
+1.4.1 
+DEFINITION: A binary composition on X is a function BIN that maps
+X x X into X. We write BIN(x, y) for the value of BIN on the pair (x, y).
+1.4.2 DEFINITION: A binary composition on X is associative if BIN(x,
+BIN(y, z)) = BIN(BIN(x, y), z) for all x, y, and z.
+A familiar non-associative binary composition on the natural numbers
+is exponentiation: BIN(x, y) = x-to-the-y-power. For example BIN(3,
+BIN (2,3)) = 3-to-the-(2-cubed)-power, or 3-to-the-eighth-power, while
+BIN(BIN(3,2), 3) = (3-squared)-to-the-third-power, or 9-cubed. Nine-cubed
+is 3-to-the-sixth, not 3-to-the-eighth.
+1.4.3 
+DEFINITION: A semigroup is an ordered pair (X, BIN) comprising a
+family X and an associative binary composition BIN on X.
+It is traditional to write the binary composition for a semigroup using
+multiplicative notation when there is no reason to use some specific other
+notation. Thus we shall generally write "xy" to signify BIN(x, y) in a semi-
+group, failing some reason to write "x + y" or "x * y" and the like. The
+Associative Law for BIN then reads "x(yz) = (xy)z." This notational conven-
+tion simplifies the look of the page. It is important, though, not to carry over
+into our general study intuitions about numerical multiplication which may
+not be valid within a specific semigroup at hand.
+It is also important to remember that in order to define a particular
+semigroup, we must specify not only the family X of elements but also the
+composition BIN under which the elements combine. Despite this, it is cus-
+tomary to refer (improperly) to "the semigroup X" when the binary compo-
+sition is clearly understood in a given context.
+1.5.1 
+DEFINITION: A left identity for a semigroup is an element 1 such that for
+every x, Ix = x. A right identity is defined dually: For every x, xr = x. An
+identity is an element e which is both a left identity and a right identity. 
+5
+
+
+7.5.2 
+Mathematical Preliminaries
+1.5.2 
+THEOREM: If a semigroup has both a left identity 1 and a right identity r,
+then 1 and r must be equal. Hence there can be at most one identity for a
+semigroup. If a semigroup has one, we can therefore speak of "the" identity
+element.
+Proof: lr must equal r since 1 is a left identity. Ir must also equal 1 since r is
+a right identity.
+There are, incidentally, semigroups that have an infinite number of left
+identities. (By the theorem above, a semigroup that has more than one left
+identity cannot have any right identities.) There are, in fact, both finite and
+infinite semigroups in which every element is a left identity. To illustrate this,
+take any family X and define on X the composition BIN(x, y) = y for all x and
+all y; (X, BIN) is such a semigroup.
+1.6.1 
+DEFINITION: Given a semigroup with identity e; given an element x, a
+left inverse for x is an element 1 satisfying Ix = e. A right inverse for x is an
+element r satisfying xr = e. An inverse for x is an x' which is both a left inverse
+and a right inverse.
+1.6.2 
+THEOREM: If an element x of a semigroup with identity has both a left
+inverse 1 and a right inverse r, then 1 = r. Hence x can have at most one inverse.
+If x has one, we can therefore call it "the" inverse of x.
+Proof: 1 = le = l(xr) = (lx)r = er = r.
+1.6.3 In multiplicative notation for a semigroup with identity, the inverse of
+an element x that has one is denoted x"1.

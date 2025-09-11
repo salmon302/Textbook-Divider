@@ -1,0 +1,18 @@
+Chapter 3 concerns itself with further formal properties of the GIS
+model. In that model, the points of the space may be labeled by their intervals
+from one referential point; this has advantages and disadvantages. New GIS
+structures may be constructed from old in various ways. A passage from
+Webern is examined in connection with a combined pitch-and-rhythm GIS
+constructed in one such way. Generalized analogs of transposition and inver-
+sion operations are explored. So are "interval-preserving operations"; these
+coincide with transpositions in some GIS models but not in others, specifically
+not in GISs that are "non-commutative."
+The bulk of chapter 4 explores one non-commutative GIS of musical
+interest. The elements of the system are formal time-spans. Extended dis-
+cussion of a passage from Carter's First Quartet demonstrates the pertinence
+of this GIS to exploring music in which there are functional measured rela-
+tions among time spans, but no one overriding time span that acts as a unit to
+measure all others. After that, chapter 4 presents two examples of timbral
+GISs, and ends with a methodological note on the relations of music theory,
+perception, and the intuitions of a listener. Some motivic work by Chopin is
+considered in this connection.

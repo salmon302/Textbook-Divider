@@ -23,6 +23,8 @@ wheels/
 # Virtual Environment
 venv/
 ENV/
+.env/
+tests/.env/
 
 # IDE
 .idea/
@@ -30,10 +32,35 @@ ENV/
 *.swp
 *.swo
 
+# Backup and temporary files
+*.bak
+*.bak[0-9]*
+*~
+*.tmp
+*.temp
+*.log
+*_backup
+*_backup.*
+*.backup
+**(2)*
+**(3)*
+**(4)*
+**(5)*
+*Copy*
+cleanup_candidates.txt
+imgui.ini
+.coverage
+test_output.log
+
 # Project specific
 tests/output/*
 !tests/output/.gitkeep
 cmake-build-debug/
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
 
 # Misc
 .DS_Store

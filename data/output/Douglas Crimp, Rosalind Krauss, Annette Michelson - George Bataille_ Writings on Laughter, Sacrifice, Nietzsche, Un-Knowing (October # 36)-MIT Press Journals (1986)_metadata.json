@@ -1,0 +1,12 @@
+{
+  "title": "Douglas Crimp, Rosalind Krauss, Annette Michelson - George Bataille_ Writings on Laughter, Sacrifice, Nietzsche, Un-Knowing (October # 36)-MIT Press Journals (1986)",
+  "chapters": 0,
+  "plugins_used": [
+    "ocr_processor",
+    "omr_processor"
+  ],
+  "processing_stats": {
+    "ocr_used": true,
+    "musical_content_detected": false
+  }
+}

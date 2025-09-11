@@ -1,0 +1,9 @@
+characteristic of transformations on S. The transformations compose one
+with another, f with g to form the transformation fg. There is an identity
+transformation 1, which composes left or right with any f to yield f itself:
+If = fl = f. Certain transformations, the operations, have inverses; if f is such
+then f"1 is characterized by the algebraic relations f-1f = ff"1 = 1.
+These algebraic features of the situation are abstracted and generalized
+by the study of "abstract" semigroups and groups, a study we shall shortly
+commence. Before we do so, we should note one more aspect of transforma-
+tion algebra which the abstract study will generalize. This is the associativity

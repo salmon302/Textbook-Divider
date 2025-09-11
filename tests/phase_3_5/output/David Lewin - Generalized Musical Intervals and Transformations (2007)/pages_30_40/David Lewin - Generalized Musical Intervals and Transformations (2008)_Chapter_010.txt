@@ -1,0 +1,15 @@
+Chapter 10 applies the network concept in a variety of ways to passages
+from Mozart, Bartok, Prokofieff, and Debussy.
+Note on Musical Terminology
+All references to specific pitches in this book will be made according to the
+notation suggested by the Acoustical Society of America: The pitch class is
+symbolized by an upper-case letter and its specific octave placement by a
+number following the letter. An octave number refers to pitches from a given
+C through the B a major seventh above it. Cello C is C2, viola C is C3, middle
+C is C4, and so on. Any B# gets the same octave number as the B just below it;
+thus B#3 is enharmonically C4. Likewise, any Cb gets the same octave number
+as the C just above it; thus Q?4 is enharmonically B3. 
+xxxi
+
+
+This page intentionally left blank

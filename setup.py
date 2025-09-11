@@ -3,7 +3,14 @@ from setuptools import setup, find_packages
 setup(
 	name="textbook_divider",
 	version="0.1",
-	packages=find_packages(),
+	packages=find_packages('src'),
+	package_dir={'': 'src'},
+	entry_points={
+		'console_scripts': [
+			'textbook-divider-cli=textbook_divider.main:main',
+			'textbook-divider-gui=textbook_divider.gui:main',
+		]
+	},
 	install_requires=[
 		"PyPDF2>=3.0.0",
 		"ebooklib>=0.17.1",

@@ -1,0 +1,12 @@
+{
+  "title": "David Lewin - Generalized Musical Intervals and Transformations (2007)",
+  "chapters": 18,
+  "plugins_used": [
+    "ocr_processor",
+    "omr_processor"
+  ],
+  "processing_stats": {
+    "ocr_used": false,
+    "musical_content_detected": false
+  }
+}

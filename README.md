@@ -123,27 +123,36 @@ This will:
 ├── src/                    # Source code files
 │   ├── gui/               # GUI-related code
 │   └── textbook_divider/  # Core Python package
+├── graph_extractor/       # Graph analysis and pattern detection
 ├── tests/                 # All test-related files
+│   ├── core/             # Core functionality tests
+│   ├── ocr/              # OCR-related tests
+│   ├── omr/              # OMR-related tests
+│   ├── performance/      # Performance testing
 │   ├── data/             # Test data directory
-│   │   ├── input/        # Test input files
-│   │   ├── expected/     # Expected test outputs
-│   │   └── samples/      # Sample books for testing
-│   ├── reports/          # Test execution reports
+│   │   ├── samples/      # Sample books for testing
+│   │   └── test_images/  # Test images for OCR
+│   ├── logs/             # Test execution logs
 │   ├── metrics/          # Test metrics and analysis
 │   └── scripts/          # Test utility scripts
 ├── data/                 # Application data
 │   ├── input/           # Input files for processing
 │   └── output/          # Generated output files
-├── docs/                # Documentation
-├── external/            # External dependencies
-└── scripts/            # Utility scripts
+├── docs/                # Comprehensive documentation
+│   ├── testing/         # Testing documentation
+│   └── development/     # Development guides
+├── scripts/             # Utility and build scripts
+├── cmake/               # CMake configuration files
+├── archive/             # Archived cleanup files
+└── build/               # Build artifacts directory
 ```
 
-This structure organizes:
-- All test-related content under tests/
-- Clear separation of input/output data
-- Consolidated sample files location
-- Better organized test artifacts
+This structure provides:
+- Clear separation of concerns across modules
+- Comprehensive test organization by category
+- Centralized documentation with sub-categories
+- Clean separation of build artifacts
+- Dedicated graph analysis module
 
 ## Testing
 

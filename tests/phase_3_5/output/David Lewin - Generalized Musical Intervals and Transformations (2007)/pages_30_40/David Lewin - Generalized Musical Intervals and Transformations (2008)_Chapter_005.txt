@@ -1,0 +1,32 @@
+chapter 5 even farther. The basic construction is now the Injection Function:
+Given a space S, finite subsets X and Y of S, and a transformation f mapping S
+into itself, INJ(X, Y) (f) counts how many members of X are mapped by f into
+members of Y. This number is meaningful even when S does not have a GIS
+structure, and even when the transformation f js not so well behaved as are
+xxx
+
+
+Introduction
+transpositions, inversions, and the like. Passages from Schoenberg and from
+Babbitt are studied by way of illustration.
+Instead of starting with a GIS and deriving certain characteristic trans-
+formations therefrom, it is possible to start with a family of characteristic
+transformations on a musical space and derive a GIS structure therefrom.
+That is, instead of regarding the i-arrow on figure 0.1 as a measurement of
+extension between points s and t observed passively "out there" in a Cartesian
+res extensa, one can regard the situation actively, like a singer, player, or
+composer, thinking: "I am at s; what characteristic transformation do I
+perform in order to arrive at t?" Chapter 7 explores this conceptual inter-
+relation between interval-as-extension and transposition-as-characteristic-
+motion-through-space. After developing the mathematics that shows a logical
+equivalence between GIS structures and certain structures of transformations
+on spaces, the work proceeds by example. Passages from Schoenberg, Wag-
+ner, Brahms, and Beethoven indicate how suggestive it can be to consider
+networks of "intervals" and networks of "transpositions" (modulations, and
+so forth) as various aspects of the same basic phenomenon.
+The morphology of such networks can be carried over to that of networks
+involving other sorts of transformations. Chapter 8 studies networks involv-
+ing transformations of Klangs in the sense of Riemann, networks involving
+serial transformations of various sorts, and networks involving inversional
+transformations. The Beethoven example from chapter 7 is reconsidered, and
+there are further examples from Wagner, Webern, and Bach.
