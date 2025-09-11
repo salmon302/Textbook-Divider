@@ -52,3 +52,6 @@ data/research/
 # Large Files
 # Block any file >= 100MB
 **/[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]*
+
+# Archives
+archive/*.zip
