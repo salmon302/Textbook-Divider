@@ -21,6 +21,8 @@ class TextProcessor:
 		self.logger = logging.getLogger(__name__)
 		self._compile_patterns()
 		self.graph_extractor = GraphExtractor()
+		# Default wrap width for paragraphs
+		self.max_line_length = 120
 
 	
 	def _compile_patterns(self):
@@ -41,10 +43,40 @@ class TextProcessor:
 		
 		# Handle split words and lines
 		text = self._handle_split_content(text)
+
+		# Ensure likely titles are isolated on their own with surrounding blank lines
+		text = self._separate_titles(text)
 		
 		blocks = self._split_into_blocks(text)
 		processed_blocks = [self._process_block(block) for block in blocks]
 		return '\n\n'.join(block.content for block in processed_blocks)
+
+	def _separate_titles(self, text: str) -> str:
+		"""Insert blank lines around standalone TitleCase or ALL-CAPS lines so they are preserved.
+
+		This helps downstream chapter detection that relies on line boundaries.
+		"""
+		lines = text.split('\n')
+		out: List[str] = []
+		# Title-like patterns: Title Case up to ~9 words or ALL CAPS up to ~9 words
+		pat_tc = re.compile(r'^(?:[A-Z][a-z]{2,}(?:\s+[A-Z][a-z]{2,}){0,8})$')
+		pat_caps = re.compile(r'^(?:[A-Z]{3,}(?:\s+[A-Z]{3,}){0,8})$')
+		for i, raw in enumerate(lines):
+			ln = raw.strip()
+			is_title = False
+			if 3 <= len(ln) <= 80:
+				if pat_tc.match(ln) or pat_caps.match(ln):
+					is_title = True
+			# Insert a blank line before title if previous non-empty
+			if is_title:
+				if out and out[-1].strip() != '':
+					out.append('')
+				out.append(ln)
+				# Insert a placeholder blank; next loop iteration will treat it as separator
+				out.append('')
+			else:
+				out.append(raw)
+		return '\n'.join(out)
 
 	def _remove_header_footer(self, text: str) -> str:
 		"""Remove common header/footer artifacts"""
@@ -199,7 +231,7 @@ class TextProcessor:
 		
 		return text
 	
-	def _wrap_text(self, text: str, width: int = None) -> str:
+	def _wrap_text(self, text: str, width: int | None = None) -> str:
 		"""Wrap text to specified width while preserving structure"""
 		if width is None:
 			width = self.max_line_length
@@ -353,7 +385,7 @@ class TextProcessor:
 			self.logger.error(f"Error extracting graph structure: {e}")
 			return {}
 
-	def _find_closest_node(self, point: Tuple[int, int], nodes: List[Dict[str, int]]) -> Dict[str, int]:
+	def _find_closest_node(self, point: Tuple[int, int], nodes: List[Dict[str, int]]) -> Dict[str, int] | None:
 		"""Find the closest node to a given point"""
 		if not nodes:
 			return None

@@ -1,0 +1,22 @@
+{
+  "input_file": "c:/Users/salmo/Documents/GitHub/Textbook-Divider/data/input/Douglas Crimp, Rosalind Krauss, Annette Michelson - George Bataille_ Writings on Laughter, Sacrifice, Nietzsche, Un-Knowing (October # 36)-MIT Press Journals (1986).pdf",
+  "output_dir": "c:/Users/salmo/Documents/GitHub/Textbook-Divider/data/output/ocr_dev_speed_fast",
+  "page_range": "1-20",
+  "max_pages": 50,
+  "force_ocr": true,
+  "ocr_psm": 11,
+  "fast_preprocess": true,
+  "parallel_workers": 4,
+  "raster_scale": 1.5,
+  "reprocess_below_conf": 45.0,
+  "min_chars_reprocess": 80,
+  "ocr_word_conf_threshold": 28,
+  "process_pool": true,
+  "auto_tune": false,
+  "reprocess_logic": "and",
+  "enable_omr": false,
+  "min_confidence": 0.5,
+  "disable_title_line": false,
+  "header_months": "",
+  "header_keywords": ""
+}

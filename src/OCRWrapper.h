@@ -13,9 +13,26 @@ public:
 	OCRWrapper();
 	~OCRWrapper();
 	
-	bool initialize(const std::string& lang = "eng", bool enable_gpu = false);
+	// Initialize OCR processor with language, GPU toggle, and key params
+	bool initialize(const std::string& lang = "eng", bool enable_gpu = false, int psm = 3, int conf_threshold = 30);
 	std::string processImage(const std::string& imagePath);
 	std::string processImages(const std::vector<std::string>& imagePaths);
+
+	// Process a single image and return metrics (text, avg confidence, char count, elapsed ms)
+	struct OCRResultWithMetrics {
+		std::string text;
+		double avg_conf{0.0};
+		int char_count{0};
+		double elapsed_ms{0.0};
+		bool success{false};
+	};
+	OCRResultWithMetrics processImageWithMetrics(const std::string& imagePath, bool fullMode);
+
+	// Retrieve processor stats (cache, memory, workers, etc.)
+	std::map<std::string, std::string> getStats();
+
+	// Apply a JSON config file directly to the Python OCRProcessor (returns applied keys/values as strings)
+	std::map<std::string, std::string> applyConfigFile(const std::string& jsonPath);
 	
 	// Enhanced text extraction and feature detection
 	std::string extractTextWithFallback(const std::string& pdfPath, int pageNum);

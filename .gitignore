@@ -75,6 +75,11 @@ research_materials/
 input_files/
 data/textbooks/
 data/research/
+# Input / Output directories (generated OCR/processing data)
+data/input/
+data/output/
+input/
+output/
 
 # Large Files
 # Block any file >= 100MB

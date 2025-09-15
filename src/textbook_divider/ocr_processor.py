@@ -7,8 +7,9 @@ import psutil
 import logging
 import hashlib
 import multiprocessing
+import tempfile
 from pathlib import Path
-from typing import Union, List, Dict, Optional, Any
+from typing import Union, List, Dict, Optional, Any, Tuple
 
 import cv2
 import numpy as np
@@ -44,13 +45,36 @@ class OCRProcessor:
 		'ita': 'Italian'
 	}
 	
-	def __init__(self, lang: str = 'eng', enable_gpu: bool = False, cache_size: int = 1000):
+	def __init__(self, lang: str = 'eng', enable_gpu: bool = False, cache_size: int = 1000, psm: int = 3, conf_threshold: int = 30):
 		if lang not in self.SUPPORTED_LANGUAGES:
 			raise ValueError(f"Unsupported language: {lang}")
 		self.lang = lang
 		self.enable_gpu = enable_gpu
 		self.logger = logging.getLogger(__name__)
-		pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
+		# Configure tesseract path in a cross-platform way
+		# Priority: env TESSERACT_CMD > default PATH > common Windows installs
+		try:
+			tcmd = os.environ.get('TESSERACT_CMD') or os.environ.get('TESSERACT_PATH')
+			if tcmd and os.path.exists(tcmd):
+				pytesseract.pytesseract.tesseract_cmd = tcmd
+			else:
+				# Check common Windows install locations if on Windows
+				if os.name == 'nt':
+					common_paths = [
+						r"C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+						r"C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe"
+					]
+					for p in common_paths:
+						if os.path.exists(p):
+							pytesseract.pytesseract.tesseract_cmd = p
+							break
+				# Else rely on PATH; don't set hard-coded Linux path
+		except Exception:
+			# Fall back to default behavior; pytesseract will use PATH
+			pass
+		self.psm = psm if isinstance(psm, int) and 0 <= psm <= 13 else 3
+		self.conf_threshold = int(conf_threshold) if isinstance(conf_threshold, int) else 30
+		self.fast_preprocess = False
 		self.config = self._build_tesseract_config()
 		self.preprocessing_params = {
 			'dpi': 400,
@@ -71,7 +95,8 @@ class OCRProcessor:
 		self._cache_size = cache_size
 		self._cache_hits = 0
 		self._cache_misses = 0
-		self._cache_dir = Path('/tmp/textbook_divider_cache')
+		# Use cross-platform temp directory for cache
+		self._cache_dir = Path(tempfile.gettempdir()) / 'textbook_divider_cache'
 		self._cache_dir.mkdir(parents=True, exist_ok=True)
 		self._load_cache()
 		self.stats = {'processed': 0, 'failed': 0}
@@ -81,11 +106,76 @@ class OCRProcessor:
 			'warnings': 0
 		}
 
+	# --- Configuration application helpers ---
+	def apply_config(self, cfg: Dict[str, Any]) -> Dict[str, Any]:
+		"""Apply config values dynamically. Returns applied subset."""
+		applied: Dict[str, Any] = {}
+		try:
+			if 'ocr_psm' in cfg and isinstance(cfg['ocr_psm'], int):
+				self.psm = max(0, min(13, int(cfg['ocr_psm'])))
+				applied['ocr_psm'] = self.psm
+			if 'ocr_word_conf_threshold' in cfg and isinstance(cfg['ocr_word_conf_threshold'], (int, float)):
+				self.conf_threshold = int(cfg['ocr_word_conf_threshold'])
+				applied['ocr_word_conf_threshold'] = self.conf_threshold
+			if 'fast_preprocess' in cfg and isinstance(cfg['fast_preprocess'], bool):
+				self.fast_preprocess = bool(cfg['fast_preprocess'])
+				applied['fast_preprocess'] = self.fast_preprocess
+			if 'parallel_workers' in cfg and isinstance(cfg['parallel_workers'], int):
+				workers = max(1, min(multiprocessing.cpu_count(), int(cfg['parallel_workers'])))
+				self.parallel_processor = ParallelProcessor(max_workers=workers, memory_limit_mb=self.parallel_processor.memory_limit_mb if hasattr(self.parallel_processor,'memory_limit_mb') else 500)
+				applied['parallel_workers'] = workers
+			if 'process_pool' in cfg and isinstance(cfg['process_pool'], bool):
+				# not directly used by ParallelProcessor; store for reference
+				self.process_pool = bool(cfg['process_pool'])
+				applied['process_pool'] = self.process_pool
+			if 'raster_scale' in cfg:
+				# stored for potential upstream PDF rasterization usage
+				try:
+					self.raster_scale = float(cfg['raster_scale'])
+					applied['raster_scale'] = self.raster_scale
+				except Exception:
+					pass
+			if 'reprocess_below_conf' in cfg:
+				try:
+					self.reprocess_below_conf = float(cfg['reprocess_below_conf'])
+					applied['reprocess_below_conf'] = self.reprocess_below_conf
+				except Exception:
+					pass
+			if 'min_chars_reprocess' in cfg:
+				try:
+					self.min_chars_reprocess = int(cfg['min_chars_reprocess'])
+					applied['min_chars_reprocess'] = self.min_chars_reprocess
+				except Exception:
+					pass
+			if 'reprocess_logic' in cfg and isinstance(cfg['reprocess_logic'], str):
+				self.reprocess_logic = cfg['reprocess_logic']
+				applied['reprocess_logic'] = self.reprocess_logic
+			if 'auto_tune' in cfg and isinstance(cfg['auto_tune'], bool):
+				self.auto_tune = bool(cfg['auto_tune'])
+				applied['auto_tune'] = self.auto_tune
+			if 'enable_omr' in cfg and isinstance(cfg['enable_omr'], bool):
+				self.enable_omr = bool(cfg['enable_omr'])
+				applied['enable_omr'] = self.enable_omr
+			# Rebuild tesseract config if needed
+			self.config = self._build_tesseract_config()
+		except Exception as e:
+			self.logger.warning(f"apply_config encountered an error: {e}")
+		return applied
+
+	def apply_config_file(self, path: Union[str, Path]) -> Dict[str, Any]:
+		try:
+			with open(path, 'r', encoding='utf-8') as f:
+				cfg = json.load(f)
+			return self.apply_config(cfg)
+		except Exception as e:
+			self.logger.error(f"Failed to apply config file {path}: {e}")
+			return {}
+
 
 	def _build_tesseract_config(self) -> str:
 		config = [
 			'--oem 1',  # LSTM only
-			'--psm 1',  # Auto-detect page segmentation
+			f'--psm {self.psm}',  # Page segmentation mode
 			'-c lstm_choice_mode=2',
 			'-c lstm_rating_coefficient=2.5',
 			'-c textord_heavy_nr=1',
@@ -102,7 +192,8 @@ class OCRProcessor:
 			'-c load_system_dawg=1',
 			'-c language_model_penalty_non_dict_word=0.5',  # Reduced penalty
 			'-c language_model_penalty_non_freq_dict_word=0.1',
-			'-c tessedit_write_images=0'  # Disable debug image output
+			'-c tessedit_write_images=0',  # Disable debug image output
+			'-c preserve_interword_spaces=1'
 		]
 		if self.enable_gpu:
 			config.append('--opencl')
@@ -159,7 +250,7 @@ class OCRProcessor:
 		}
 		self._save_cache()
 
-	def process_image(self, image_path: Union[str, Image.Image]) -> str:
+	def process_image(self, image_path: Union[str, Image.Image], preprocess: bool = True) -> str:
 		try:
 			if isinstance(image_path, str):
 				cache_key = self._get_cache_key(image_path)
@@ -176,37 +267,57 @@ class OCRProcessor:
 			if image.mode not in ('L', 'RGB'):
 				image = image.convert('RGB')
 
-			enhanced_image = self.preprocess_image(image)
+			# Optionally preprocess image (skip if already preprocessed upstream)
+			if preprocess:
+				enhanced_image = self.preprocess_image(image)
+				if isinstance(enhanced_image, np.ndarray):
+					enhanced_image = Image.fromarray(enhanced_image)
+			else:
+				enhanced_image = image
 			
 			try:
-				# Direct OCR with optimized config for quotation marks
-				text = pytesseract.image_to_string(
+				# Prefer word-level data to better preserve spacing and line breaks
+				ocr_data = pytesseract.image_to_data(
 					enhanced_image,
 					lang=self.lang,
-					config='--psm 3 --oem 1 -c preserve_interword_spaces=1'
+					config=self.config,
+					output_type=pytesseract.Output.DICT
 				)
-				
+
+				lines: List[str] = []
+				current_line_index = None
+				current_words: List[str] = []
+
+				for word, conf, line_num in zip(ocr_data.get('text', []), ocr_data.get('conf', []), ocr_data.get('line_num', [])):
+					try:
+						c = int(conf)
+					except Exception:
+						c = -1
+					if isinstance(line_num, str):
+						try:
+							ln = int(line_num)
+						except Exception:
+							ln = None
+					else:
+						ln = line_num
+
+					if ln != current_line_index:
+						if current_words:
+							lines.append(' '.join(current_words))
+							current_words = []
+						current_line_index = ln
+
+					if c >= self.conf_threshold and word and word.strip():
+						current_words.append(word.strip())
+
+				if current_words:
+					lines.append(' '.join(current_words))
+
+				text = '\n'.join([ln for ln in lines if ln.strip()])
+
 				if text and len(text.strip()) > 0:
-					# Enhanced text cleanup with quote handling
-					text = text.replace('\n\n', '\n').strip()
-					
-					# Normalize quotation marks
-					text = text.replace('"', '"').replace('"', '"')
-					text = text.replace(''', "'").replace(''', "'")
-					text = text.replace('``', '"').replace("''", '"')
-					
-					# Balance quotes
-					quote_count = text.count('"')
-					if quote_count % 2 == 1:
-						text += '"'  # Close unclosed quote
-					
-					# Handle apostrophes vs single quotes
-					text = re.sub(r"(?<=\w)'(?=\w)", "'", text)  # Keep apostrophes
-					text = re.sub(r"(?<!\w)'|'(?!\w)", '"', text)  # Convert lonely quotes to double quotes
-					
 					if cache_key:
 						self._update_cache(cache_key, text)
-					
 					return text
 				return ""
 
@@ -218,132 +329,98 @@ class OCRProcessor:
 			self.logger.error(f"OCR Error: {str(e)}")
 			return ""
 
-
-
-
-
-	def preprocess_image(self, image: Image.Image) -> Image.Image:
-		img_array = np.array(image)
-		if len(img_array.shape) == 3:
-			gray = cv2.cvtColor(img_array, cv2.COLOR_RGB2GRAY)
-		else:
-			gray = img_array
-		
-		angle = self._get_skew_angle(gray)
-		if abs(angle) > 0.5:
-			gray = self._rotate_image(gray, angle)
-		
-		clahe = cv2.createCLAHE(
-			clipLimit=self.preprocessing_params['contrast_limit'],
-			tileGridSize=(8,8)
-		)
-		gray = clahe.apply(gray)
-		
-		gray = cv2.fastNlMeansDenoising(
-			gray,
-			None,
-			self.preprocessing_params['denoise_strength'],
-			7,
-			21
-		)
-		
-		binary = cv2.adaptiveThreshold(
-			gray,
-			255,
-			cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
-			cv2.THRESH_BINARY,
-			11,
-			2
-		)
-		
-		kernel = np.ones((2,2), np.uint8)
-		binary = cv2.morphologyEx(binary, cv2.MORPH_OPEN, kernel)
-		
-		enhanced = Image.fromarray(binary)
-		enhancer = ImageEnhance.Sharpness(enhanced)
-		return enhancer.enhance(self.preprocessing_params['sharpness'])
-
-	def clean_text(self, text: str) -> str:
-		if not text:
+	def process_image_fast(self, image: Image.Image) -> str:
+		"""Fast path: minimal filtering using image_to_string for speed."""
+		try:
+			if image.mode not in ('L', 'RGB'):
+				image = image.convert('RGB')
+			text = pytesseract.image_to_string(
+				image,
+				lang=self.lang,
+				config=self.config
+			)
+			return text if text else ""
+		except Exception as e:
+			self.logger.error(f"Fast OCR Error: {str(e)}")
 			return ""
-		# Remove musical notation and symbols
-		text = re.sub(r'[♩♪♫♬𝄞𝄢]', '', text)
-		text = re.sub(r'[\u2600-\u26FF]', '', text)  # Remove misc symbols
-		
-		# Keep only printable chars and newlines
-		text = ''.join(char for char in text if char.isprintable() or char in '\n\t')
-		
-		# Fix common OCR errors
-		text = self._fix_common_errors(text)
-		text = self._fix_word_breaks(text)
-		text = self._normalize_spacing(text)
-		text = self._fix_paragraph_breaks(text)
-		
-		# Clean up chapter headings
-		text = re.sub(r'(?i)ch[a-z]*\s*(\d+)', r'Chapter \1', text)
-		text = re.sub(r'(?i)part\s*(\d+)', r'Part \1', text)
-		text = re.sub(r'(?i)section\s*(\d+)', r'Section \1', text)
-		
-		return text
 
-	def _fix_common_errors(self, text: str) -> str:
-		replacements = {
-			r'l(?=[A-Z])': 'I',
-			r'(?<=\d)O|o(?=\d)': '0',
-			r'(?<=\d)l(?=\d)': '1',
-			r'\bI\b': '1',
-			r'rn\b': 'm',
-			r'\bm\b': 'in',
-			r'["]': '"',
-			r"[']": "'",
-			r'[-]': '-',
-			r'\s+[-]\s+': ' - ',
-			r'(?<=\d),(?=\d)': '.',  # Fix decimal points
-			r'(?<=[a-z])\.(?=[a-z])': ' ',  # Fix merged sentences
-			r'(?<=\d)o(?=\d)': '0',  # Fix zero recognition
-			r'(?<=[A-Za-z])1(?=[A-Za-z])': 'l'  # Fix 'l' recognition
-		}
-		for pattern, replacement in replacements.items():
-			text = re.sub(pattern, replacement, text)
-		return text
+	def recognize(self, image: Image.Image, mode: str = 'fast') -> Tuple[str, float, int]:
+		"""Run OCR and return (text, avg_confidence, char_count).
 
-	def _fix_word_breaks(self, text: str) -> str:
-		text = text.replace('\u00AD', '')
-		lines = text.split('\n')
-		result = []
-		skip_next = False
-		
-		for i, line in enumerate(lines):
-			if skip_next:
-				skip_next = False
-				continue
-			if i < len(lines) - 1 and line.endswith('-'):
-				next_line = lines[i + 1].lstrip()
-				if next_line and next_line[0].islower():
-					result.append(line[:-1] + next_line)
-					skip_next = True
-					continue
-			result.append(line)
-		
-		return '\n'.join(result)
+		mode:
+		- 'fast': minimal preprocessing (convert to L if needed)
+		- 'full': use preprocess_image for enhancement
+		"""
+		try:
+			# If the caller didn't set a valid mode, fall back to configured behavior
+			if mode not in ('fast', 'full'):
+				mode = 'fast' if self.fast_preprocess else 'full'
+			img = image
+			if mode == 'full':
+				if isinstance(img, Image.Image):
+					processed = self.preprocess_image(img)
+					img = Image.fromarray(processed)
+			elif mode == 'fast':
+				if img.mode not in ('L', 'RGB'):
+					img = img.convert('RGB')
+			else:
+				# default to fast
+				if img.mode not in ('L', 'RGB'):
+					img = img.convert('RGB')
 
-	def _normalize_spacing(self, text: str) -> str:
-		text = ' '.join(text.split())
-		text = re.sub(r'\s+([.,!?:;])', r'\1', text)
-		text = re.sub(r'([.,!?:;])\s*([A-Z])', r'\1 \2', text)
-		text = re.sub(r'\s*\(\s*', ' (', text)
-		text = re.sub(r'\s*\)\s*', ') ', text)
-		return text
+			data = pytesseract.image_to_data(
+				img,
+				lang=self.lang,
+				config=self.config,
+				output_type=pytesseract.Output.DICT
+			)
+			# Build lines while tracking confidences
+			lines: List[str] = []
+			current_line_index = None
+			current_words: List[str] = []
+			confs: List[float] = []
+			for word, conf, line_num in zip(data.get('text', []), data.get('conf', []), data.get('line_num', [])):
+				try:
+					c = int(conf)
+				except Exception:
+					c = -1
+				if isinstance(line_num, str):
+					try:
+						ln = int(line_num)
+					except Exception:
+						ln = None
+				else:
+					ln = line_num
 
-	def _fix_paragraph_breaks(self, text: str) -> str:
-		paragraphs = text.split('\n\n')
-		cleaned = []
-		for para in paragraphs:
-			para = ' '.join(line.strip() for line in para.split('\n'))
-			para = ' '.join(para.split())
-			if para:
-				cleaned.append(para)
-		return '\n\n'.join(cleaned)
+				if ln != current_line_index:
+					if current_words:
+						lines.append(' '.join(current_words))
+						current_words = []
+					current_line_index = ln
+
+				if word and word.strip():
+					# Accumulate confidences regardless of threshold for avg calc
+					if c >= 0:
+						confs.append(float(c))
+					# Only include words above threshold in assembled text
+					if c >= self.conf_threshold:
+						current_words.append(word.strip())
+
+			if current_words:
+				lines.append(' '.join(current_words))
+
+			text = '\n'.join([ln for ln in lines if ln.strip()])
+			avg_conf = float(sum(confs) / len(confs)) if confs else 0.0
+			return text, avg_conf, len(text)
+		except Exception as e:
+			self.logger.error(f"Recognize failed: {e}")
+			return "", 0.0, 0
+
+
+
+
+
+	# Removed older preprocess_image/clean_text duplicate implementations to avoid conflicts
 
 	def _get_skew_angle(self, image: np.ndarray) -> float:
 		edges = cv2.Canny(image, 50, 150, apertureSize=3)
@@ -355,7 +432,7 @@ class OCRProcessor:
 				if abs(angle) < 45:
 					angles.append(angle)
 			if angles:
-				return np.median(angles)
+				return float(np.median(angles))
 		return 0.0
 
 	def _rotate_image(self, image: np.ndarray, angle: float) -> np.ndarray:
@@ -400,22 +477,18 @@ class OCRProcessor:
 
 	def process_images(self, image_paths: List[str]) -> str:
 		"""Memory-efficient batch processing"""
-		batch_size = self.preprocessing_params['batch_size']
-		total_memory = self.preprocessing_params['max_batch_memory']
-		results = []
-		
-		# Process in smaller batches based on memory
-		current_batch = []
-		current_memory = 0
+		results: List[str] = []
+		current_batch: List[str] = []
+		current_memory = 0.0
+		total_memory = float(self.preprocessing_params['max_batch_memory'])
 		
 		for path in image_paths:
 			img_size = os.path.getsize(path) / (1024 * 1024)  # MB
-			if current_memory + img_size > total_memory:
-				# Process current batch
+			if current_memory + img_size > total_memory and current_batch:
 				batch_results = self._process_batch(current_batch)
 				results.extend(batch_results)
 				current_batch = []
-				current_memory = 0
+				current_memory = 0.0
 				gc.collect()
 			
 			current_batch.append(path)
@@ -454,26 +527,15 @@ class OCRProcessor:
 			self.logger.error(f"Batch processing failed: {str(e)}")
 			return []
 
-	def _preprocess_single_image(self, image_path: str) -> np.ndarray:
+	def _preprocess_single_image(self, image_path: str) -> Optional[np.ndarray]:
 		"""Preprocess a single image"""
 		try:
-			# Check cache first
-			if image_path in self._cache:
-				self.stats['cache_hits'] += 1
-				return self._cache[image_path]
-
 			image = Image.open(image_path)
 			if image.mode not in ('L', 'RGB'):
 				image = image.convert('RGB')
 
 			# Process image
 			processed = self.preprocess_image(image)
-			
-			# Update cache with LRU policy
-			if len(self._cache) >= self._cache_size:
-				self._cache.pop(next(iter(self._cache)))
-			self._cache[image_path] = processed
-
 			return processed
 
 		except Exception as e:
@@ -491,16 +553,23 @@ class OCRProcessor:
 			image = Image.fromarray(preprocessed_image)
 			
 			# Run OCR
-			data = pytesseract.image_to_data(
+			ocr_data = pytesseract.image_to_data(
 				image,
 				lang=self.lang,
 				config=self.config,
 				output_type=pytesseract.Output.DICT
 			)
 			
-			# Filter words by confidence
-			text = ' '.join(word for word, conf in zip(data['text'], data['conf']) 
-						  if conf > 60)
+			# Filter words by confidence (cast conf to int; -1 means no confidence)
+			text_parts = []
+			for word, conf in zip(ocr_data['text'], ocr_data['conf']):
+				try:
+					c = int(conf)
+				except Exception:
+					c = -1
+				if c > 60 and word.strip():
+					text_parts.append(word)
+			text = ' '.join(text_parts)
 			
 			return self.clean_text(text)
 
@@ -566,30 +635,7 @@ class OCRProcessor:
 		draw.text((10, 10), text, font=font, fill=0)
 		return image
 
-	def extract_text_with_fallback(self, pdf_path: str, page_num: int) -> str:
-		"""Extract text using multiple fallback methods"""
-		try:
-			# Try PyPDF2 first
-			with open(pdf_path, 'rb') as file:
-				reader = PyPDF2.PdfReader(file)
-				if 0 <= page_num < len(reader.pages):
-					text = reader.pages[page_num].extract_text()
-					if text.strip():
-						return text
-
-			# Try PDFMiner if PyPDF2 fails
-			text = extract_text(pdf_path, page_numbers=[page_num])
-			if text.strip():
-				return text
-
-			# OCR fallback
-			images = convert_from_path(pdf_path, first_page=page_num+1, last_page=page_num+1)
-			if images:
-				return self.process_image(images[0])
-
-		except Exception as e:
-			self.logger.error(f"Text extraction failed for page {page_num}: {e}")
-			return ""
+    # Removed duplicate extract_text_with_fallback definition (kept the later one below)
 
 	def detect_features(self, text: str) -> Dict[str, bool]:
 		"""Detect mathematical and musical features in text"""
@@ -741,7 +787,10 @@ class OCRProcessor:
 
 	def _normalize_spacing(self, text: str) -> str:
 		"""Normalize spacing and punctuation"""
-		text = ' '.join(text.split())
+		# Collapse spaces and tabs but preserve newlines
+		text = re.sub(r'[ \t]+', ' ', text)
+		# Normalize excessive blank lines to at most one blank line
+		text = re.sub(r'\n{3,}', '\n\n', text)
 		text = re.sub(r'\s+([.,!?:;])', r'\1', text)
 		text = re.sub(r'([.,!?:;])\s*([A-Z])', r'\1 \2', text)
 		text = re.sub(r'\s*\(\s*', ' (', text)
@@ -759,26 +808,7 @@ class OCRProcessor:
 				cleaned.append(para)
 		return '\n\n'.join(cleaned)
 
-	def _get_skew_angle(self, image: np.ndarray) -> float:
-		"""Detect skew angle of the image"""
-		edges = cv2.Canny(image, 50, 150, apertureSize=3)
-		lines = cv2.HoughLines(edges, 1, np.pi/180, 100)
-		if lines is not None:
-			angles = []
-			for rho, theta in lines[:, 0]:
-				angle = np.degrees(theta) - 90
-				if abs(angle) < 45:
-					angles.append(angle)
-			if angles:
-				return np.median(angles)
-		return 0.0
-
-	def _rotate_image(self, image: np.ndarray, angle: float) -> np.ndarray:
-		"""Rotate image by given angle"""
-		(h, w) = image.shape[:2]
-		center = (w // 2, h // 2)
-		M = cv2.getRotationMatrix2D(center, angle, 1.0)
-		return cv2.warpAffine(image, M, (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
+    # Removed earlier duplicate of _get_skew_angle/_rotate_image (kept single definitions below)
 
 	def extract_text_with_fallback(self, pdf_path: str, page_num: int) -> str:
 		"""Extract text using multiple fallback methods"""
@@ -804,3 +834,6 @@ class OCRProcessor:
 		except Exception as e:
 			self.logger.error(f"Text extraction failed for page {page_num}: {e}")
 			return ""
+
+		# If no method returned text, return empty string
+		return ""

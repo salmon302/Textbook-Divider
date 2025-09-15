@@ -8,7 +8,7 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 # Find required packages
 find_package(OpenGL REQUIRED)
-find_package(glfw3 REQUIRED)
+find_package(glfw3 QUIET)
 find_package(PoDoFo REQUIRED)
 
 # Find Java and JNI
@@ -66,6 +66,19 @@ FetchContent_Declare(
     GIT_TAG v1.1.1
 )
 
+# Fetch GLFW if not found via package
+if (NOT glfw3_FOUND)
+    message(STATUS "glfw3 not found; fetching via FetchContent")
+    FetchContent_Declare(
+        glfw
+        GIT_REPOSITORY https://github.com/glfw/glfw.git
+        GIT_TAG 3.3.8
+    )
+    set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
+    set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+    set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+endif()
+
 # Add GoogleTest
 FetchContent_Declare(
     googletest
@@ -73,7 +86,7 @@ FetchContent_Declare(
     GIT_TAG v1.14.0
 )
 
-FetchContent_MakeAvailable(nfd googletest)
+FetchContent_MakeAvailable(nfd googletest glfw)
 
 # Common source files
 set(COMMON_SOURCES

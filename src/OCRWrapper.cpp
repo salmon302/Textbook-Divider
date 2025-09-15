@@ -2,6 +2,7 @@
 #include <Python.h>
 #include <stdexcept>
 #include <iostream>
+#include <map>
 
 OCRWrapper::OCRWrapper() : pModule(nullptr), pOCRClass(nullptr), pOCRInstance(nullptr),
 						  pOMRClass(nullptr), pOMRInstance(nullptr) {
@@ -45,7 +46,7 @@ void OCRWrapper::cleanup() {
 	}
 }
 
-bool OCRWrapper::initialize(const std::string& lang, bool enable_gpu) {
+bool OCRWrapper::initialize(const std::string& lang, bool enable_gpu, int psm, int conf_threshold) {
 	// Add source and build directories to Python path
 	std::string pythonPath = 
 		std::string("import sys\n") +
@@ -78,6 +79,16 @@ bool OCRWrapper::initialize(const std::string& lang, bool enable_gpu) {
 	PyTuple_SetItem(pArgs, 0, PyUnicode_FromString(lang.c_str()));
 	PyTuple_SetItem(pArgs, 1, PyBool_FromLong(enable_gpu));
 	
+	// Constructor signature: OCRProcessor(lang, enable_gpu, cache_size=1000, psm=psm, conf_threshold=threshold)
+	// Build args: lang, enable_gpu, cache_size, psm, conf_threshold
+	Py_DECREF(pArgs);
+	pArgs = PyTuple_New(5);
+	PyTuple_SetItem(pArgs, 0, PyUnicode_FromString(lang.c_str()));
+	PyTuple_SetItem(pArgs, 1, PyBool_FromLong(enable_gpu));
+	PyTuple_SetItem(pArgs, 2, PyLong_FromLong(1000));
+	PyTuple_SetItem(pArgs, 3, PyLong_FromLong(psm));
+	PyTuple_SetItem(pArgs, 4, PyLong_FromLong(conf_threshold));
+
 	pOCRInstance = PyObject_CallObject(pOCRClass, pArgs);
 	Py_DECREF(pArgs);
 	
@@ -318,4 +329,104 @@ OCRWrapper::OMRResult OCRWrapper::parseOMRResult(PyObject* result) {
 	}
 	
 	return omrResult;
+}
+
+OCRWrapper::OCRResultWithMetrics OCRWrapper::processImageWithMetrics(const std::string& imagePath, bool fullMode) {
+	OCRResultWithMetrics out;
+	if (!pOCRInstance) {
+		return out;
+	}
+	// Call Python method recognize(Image.open(path), mode)
+	PyObject* pPIL = PyImport_ImportModule("PIL.Image");
+	if (!pPIL) {
+		PyErr_Print();
+		return out;
+	}
+	PyObject* openFunc = PyObject_GetAttrString(pPIL, "open");
+	if (!openFunc) {
+		PyErr_Print();
+		Py_DECREF(pPIL);
+		return out;
+	}
+	PyObject* pImg = PyObject_CallFunction(openFunc, "s", imagePath.c_str());
+	Py_DECREF(openFunc);
+	Py_DECREF(pPIL);
+	if (!pImg) {
+		PyErr_Print();
+		return out;
+	}
+	const char* mode = fullMode ? "full" : "fast";
+	PyObject* pMode = PyUnicode_FromString(mode);
+	PyObject* pResult = PyObject_CallMethodObjArgs(pOCRInstance,
+		PyUnicode_FromString("recognize"),
+		pImg,
+		pMode,
+		NULL);
+	Py_DECREF(pImg);
+	Py_DECREF(pMode);
+	if (!pResult) {
+		PyErr_Print();
+		return out;
+	}
+	// Expect tuple (text, avg_conf, char_count)
+	if (PyTuple_Check(pResult) && PyTuple_Size(pResult) >= 3) {
+		PyObject* pText = PyTuple_GetItem(pResult, 0);
+		PyObject* pConf = PyTuple_GetItem(pResult, 1);
+		PyObject* pCount = PyTuple_GetItem(pResult, 2);
+		const char* ctext = pText ? PyUnicode_AsUTF8(pText) : "";
+		out.text = ctext ? ctext : "";
+		out.avg_conf = pConf ? PyFloat_AsDouble(pConf) : 0.0;
+		out.char_count = pCount ? (int)PyLong_AsLong(pCount) : 0;
+		out.success = true;
+	}
+	Py_DECREF(pResult);
+	return out;
+}
+
+std::map<std::string, std::string> OCRWrapper::getStats() {
+	std::map<std::string, std::string> statsMap;
+	if (!pOCRInstance) return statsMap;
+	PyObject* pStats = PyObject_CallMethodObjArgs(pOCRInstance, PyUnicode_FromString("get_stats"), NULL);
+	if (!pStats || !PyDict_Check(pStats)) {
+		PyErr_Print();
+		if (pStats) Py_DECREF(pStats);
+		return statsMap;
+	}
+	PyObject *key, *value;
+	Py_ssize_t pos = 0;
+	while (PyDict_Next(pStats, &pos, &key, &value)) {
+		const char* k = PyUnicode_AsUTF8(key);
+		PyObject* vStr = PyObject_Str(value);
+		const char* v = vStr ? PyUnicode_AsUTF8(vStr) : "";
+		if (k && v) statsMap[k] = v;
+		if (vStr) Py_DECREF(vStr);
+	}
+	Py_DECREF(pStats);
+	return statsMap;
+}
+
+std::map<std::string, std::string> OCRWrapper::applyConfigFile(const std::string& jsonPath) {
+	std::map<std::string, std::string> applied;
+	if (!pOCRInstance) return applied;
+	PyObject* pRes = PyObject_CallMethodObjArgs(
+		pOCRInstance,
+		PyUnicode_FromString("apply_config_file"),
+		PyUnicode_FromString(jsonPath.c_str()),
+		NULL);
+	if (!pRes) {
+		PyErr_Print();
+		return applied;
+	}
+	if (PyDict_Check(pRes)) {
+		PyObject *key, *value; Py_ssize_t pos = 0;
+		while (PyDict_Next(pRes, &pos, &key, &value)) {
+			const char* k = PyUnicode_AsUTF8(key);
+			PyObject* vStr = PyObject_Str(value);
+			const char* v = vStr ? PyUnicode_AsUTF8(vStr) : "";
+			if (k && v) applied[k] = v;
+			if (vStr) Py_DECREF(vStr);
+		}
+	}
+	Py_DECREF(pRes);
+	return applied;
 }
